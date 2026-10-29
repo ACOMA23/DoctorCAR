@@ -1,0 +1,42 @@
+[
+  {
+    "scenario": "S01",
+    "start_s": 30.0,
+    "duration_s": 5.0,
+    "detected": false,
+    "event": null,
+    "reason": "5 s thermal fault too short for the rule (needs sustained rise)"
+  },
+  {
+    "scenario": "S04",
+    "start_s": 60.0,
+    "duration_s": 18.0,
+    "detected": false,
+    "event": null,
+    "reason": "masked by the simultaneous S07 flatline (QA-SIM-038)"
+  },
+  {
+    "scenario": "S07",
+    "start_s": 60.0,
+    "duration_s": 18.0,
+    "detected": false,
+    "event": null,
+    "reason": "flatline variant is a known undetected pattern"
+  },
+  {
+    "scenario": "S07",
+    "start_s": 120.0,
+    "duration_s": 5.0,
+    "detected": false,
+    "event": null,
+    "reason": "swallowed: an MS_SIGNAL event from the S07 at 90 s was still active at 120.0 s (QA-EVENT-016)"
+  },
+  {
+    "scenario": "S04",
+    "start_s": 150.0,
+    "duration_s": 45.0,
+    "detected": false,
+    "event": null,
+    "reason": "engine already stopped (driving profile ends at ~145 s) - simulator limitation"
+  }
+]

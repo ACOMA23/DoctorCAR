@@ -1,0 +1,95 @@
+{
+  "database": "C:\\doccar\\data\\cr002-e2e-1793183818135949100\\doctorcar.sqlite3",
+  "hardware_tested": false,
+  "phases": [
+    {
+      "name": "controlled short fault / save / report / export",
+      "event_id": "54269e97-dd58-5963-8fc0-32455fdde93e",
+      "trigger_ms": 63000,
+      "first_ms": 33000,
+      "last_ms": 93000,
+      "sample_count": 301,
+      "evaluation": {
+        "faults": [
+          {
+            "index": 0,
+            "duration_ms": 5000,
+            "fault_id": "thermal_sudden",
+            "severity": 1.0,
+            "start_ms": 60000,
+            "status": "DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "54269e97-dd58-5963-8fc0-32455fdde93e"
+            ]
+          },
+          {
+            "index": 1,
+            "duration_ms": 5000,
+            "fault_id": "maf_bias",
+            "severity": 1.0,
+            "start_ms": 60000,
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": false,
+            "event_ids": []
+          },
+          {
+            "index": 2,
+            "duration_ms": 5000,
+            "fault_id": "low_voltage",
+            "severity": 1.0,
+            "start_ms": 60000,
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": false,
+            "event_ids": []
+          }
+        ],
+        "unmatched_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "fault-schedule-1"
+      }
+    },
+    {
+      "name": "exported Replay validation and playback",
+      "replay": "C:\\doccar\\data\\cr002-e2e-1793183818135949100\\controlled.jsonl"
+    },
+    {
+      "name": "historical import and reconnect idempotency",
+      "events": [
+        {
+          "event_id": "36f2e784-1b82-566d-a2dc-b4bfcbb65a03",
+          "session_id": "eff2ebbb-ae57-53e0-a7bf-6a4b7f6a2822",
+          "trigger_ms": 63000,
+          "kind": "THERMAL_DEMO",
+          "status": "COMPLETE",
+          "origin": "HISTORICAL"
+        },
+        {
+          "event_id": "ab055a9a-f133-53b2-b118-eb8b7ee08a32",
+          "session_id": "b0e42edf-8bca-5aee-9fe8-753dd3d15524",
+          "trigger_ms": 60000,
+          "kind": "DATA_QUALITY",
+          "status": "COMPLETE",
+          "origin": "HISTORICAL"
+        }
+      ]
+    },
+    {
+      "name": "random seed and all readings independent of actual 10x/30x GUI speed",
+      "seed": 73,
+      "sample_count": 776
+    },
+    {
+      "name": "legacy thermal regression",
+      "trigger_ms": 89000
+    },
+    {
+      "name": "restart restores EN, Dark, LTR and identical report",
+      "event_id": "54269e97-dd58-5963-8fc0-32455fdde93e"
+    }
+  ],
+  "result": "PASS",
+  "errors": [],
+  "sqlite_integrity": "ok"
+}

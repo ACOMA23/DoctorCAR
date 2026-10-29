@@ -1,0 +1,83 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: 1afdb9b1-4ac3-5d93-bbbd-7813f35ec5a5
+Session: b85df979-d487-464c-ae50-8471d1192a46
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 66000 ms | correlated-evidence-1
+A. الأعراض المرصودة
+عدم توافق الهواء وتصحيح الوقود
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=36000..96000 ms | min=799.214 max=2903.595 mean=2071.120 delta=1589.030
+SPEED [km/h] n=301 t=36000..96000 ms | min=0.000 max=61.500 mean=43.337 delta=58.642
+COOLANT_TEMP [°C] n=301 t=36000..96000 ms | min=65.689 max=85.622 mean=78.363 delta=19.933
+ENGINE_LOAD [%] n=301 t=36000..96000 ms | min=5.200 max=69.504 mean=40.514 delta=31.737
+THROTTLE_POS [%] n=301 t=36000..96000 ms | min=4.000 max=48.000 mean=26.389 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=36000..96000 ms | min=33.380 max=75.178 mean=59.680 delta=20.629
+MAF [g/s] n=301 t=36000..96000 ms | min=1.931 max=21.952 mean=9.899 delta=9.944
+INTAKE_TEMP [°C] n=301 t=36000..96000 ms | min=24.416 max=29.560 mean=27.160 delta=2.539
+SHORT_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=-1.818 max=19.880 mean=9.073 delta=3.642
+LONG_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=1.669 max=5.698 mean=3.137 delta=0.131
+CONTROL_MODULE_VOLTAGE [V] n=301 t=36000..96000 ms | min=13.800 max=14.000 mean=13.919 delta=-0.001
+C. أدلة العلاقات حتى لحظة الكشف فقط
+maf_residual_pct=-13.8163 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2523.2405 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+حدود القاعدة التجريبية: STFT >10%; MAF residual <-12%; MAP residual >4kPa
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: ABNORMAL_OPERATION
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: ABNORMAL_OPERATION
+MAF: ABNORMAL_OPERATION
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: ABNORMAL_OPERATION
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. النظام المحتمل المتأثر
+منظومة الهواء والوقود
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+احتمال تسرب هواء غير مقاس
+F. الأدلة الداعمة:
+maf_residual_pct=-13.8163 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2523.2405 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين
+I. الفحوص المقترحة:
+اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة
+احتمال انحراف قياس الهواء أو قصور الوقود
+F. الأدلة الداعمة:
+maf_residual_pct=-13.8163 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2523.2405 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين
+I. الفحوص المقترحة:
+اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة ولا ML/XAI.
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=66000 ms | requested=36000..96000 ms
+actual=36000..96000 ms | n=301 | COMPLETE

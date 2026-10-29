@@ -1,0 +1,19 @@
+{
+  "desktop/tests/e2e/test_acceptance.py": "f701376902f012f756f8ad389e429c5246b9ed1fe5d11c43de509527d09bb4ee",
+  "desktop/tests/integration/test_device_source.py": "d484ad960a6a5183ffd1a5af2015509ed90628fbc714b213217653f51172c2d1",
+  "desktop/tests/integration/test_pipeline.py": "84a0990ae6958a97abca9d21c49561b6137f1485f7256f25adc80930239bff68",
+  "desktop/tests/integration/test_ui.py": "8eb325f4244a7862d6e9eb96bde63d1113ff422084f1b5f3b6352cbcfc9391c9",
+  "desktop/tests/unit/test_foundation.py": "dbfc992d2c607963bcd4694a9032ca6106737ba640fc6aa3408ea434f6e2ac7f",
+  "desktop/tests/unit/test_protocol.py": "d7bda914f9bd81a987966a83e2d15b3c11c9051f76236a053513211a84b0adbe",
+  "desktop/tests/unit/test_recording.py": "a3515f0acc855ffb296faf7dc523ba2dd3db55c86982df8f83fa8662a5bf9309",
+  "audits/test_m1_acceptance.py": "34d8eff2ba63b874a18b7afada92847c73e2566e89ae773424e8488db5356120",
+  "firmware/CMakeLists.txt": "902f67ccfd2c26e5c23a4838256d43e1e9cd61535670a182218d8b3d2f31f442",
+  "firmware/sdkconfig.defaults": "449fafe9f22dc53861a1c6f2d8674cedfa59ab5c5a460c39472dc6c313ed12f3",
+  "firmware/main/CMakeLists.txt": "e97d1030747a79b5db9ba3f0e89d2efb5e5422b2a4f5c7b82561176ded1cce2a",
+  "firmware/main/device_protocol.c": "c2b8bce32e973771eb2faa1923d1246da12f789de362e9f6552b4532bc54b3dc",
+  "firmware/main/device_protocol.h": "c563794713c0cc97f87accc49796cc6cc7fb0654c8c643c90a8e5ab2ca92d1ae",
+  "firmware/main/Kconfig.projbuild": "0ea0c6d602255660a153706922db8efeb5e25cf4c97118a5cc3d9c8a603ce4fc",
+  "firmware/main/main.c": "f173275a2a6d2c47cec2bc8aa792fc4481c242a87efb8dbdd0fcfc6bd1ad0135",
+  "firmware/main/test_data.c": "da29ee9f3d98eb580d2eacdda6010a7efbc4c28ca2a395301f1417413a34718b",
+  "firmware/main/test_data.h": "a4fe2a63608de1ae203a48df7aa3cdfda2fd58ac07f690f00cbecde6aaced952"
+}

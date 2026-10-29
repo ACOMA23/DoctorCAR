@@ -1,0 +1,44 @@
+{
+  "S01": {
+    "fault_windows": 120,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.552,
+    "cr005-iforest-v2": 0.704
+  },
+  "S02": {
+    "fault_windows": 80,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.87,
+    "cr005-iforest-v2": 0.779
+  },
+  "S03": {
+    "fault_windows": 90,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.891,
+    "cr005-iforest-v2": 0.801
+  },
+  "S04": {
+    "fault_windows": 120,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.678,
+    "cr005-iforest-v2": 0.784
+  },
+  "S05": {
+    "fault_windows": 100,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.985,
+    "cr005-iforest-v2": 0.851
+  },
+  "S06": {
+    "fault_windows": 120,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.574,
+    "cr005-iforest-v2": 0.734
+  },
+  "S07": {
+    "fault_windows": 124,
+    "normal_windows": 4530,
+    "cr004-iforest-v1": 0.454,
+    "cr005-iforest-v2": 0.733
+  }
+}

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doctorcar"
+version = "0.1.0"
+description = "DoctorCAR M1 Arabic desktop monitoring and end-to-end simulation"
+requires-python = ">=3.11"
+dependencies = ["PySide6>=6.8,<7", "pyserial>=3.5,<4", "jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+ml = ["numpy==2.5.4", "scikit-learn==1.9.1", "joblib==1.6.0"]
+train = ["pandas==3.1.0"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "types-pyserial>=3.5", "types-jsonschema>=4.23"]
+
+[project.scripts]
+doctorcar = "doctorcar.__main__:main"
+doctorcar-device-sim = "doctorcar.protocol.simulator:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+doctorcar = ["protocol/*.json", "analysis/models/*/metadata.json", "analysis/models/*/model.joblib"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --basetemp=.test-tmp"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["build", ".test-tmp"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Arabic UI strings and QSS blocks are intentionally long single literals.
+"src/doctorcar/ui/*.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+files = ["src/doctorcar"]
+
+[[tool.mypy.overrides]]
+module = ["PySide6.*"]
+follow_imports = "silent"
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "joblib", "pandas.*"]
+ignore_missing_imports = true

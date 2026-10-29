@@ -1,0 +1,83 @@
+{
+  "tools": {
+    "idf.py": null,
+    "cmake": null,
+    "ninja": null,
+    "gcc": null,
+    "clang": null,
+    "xtensa-esp32s3-elf-gcc": null
+  },
+  "target": {
+    "cmake_fatal_unless_esp32s3": true,
+    "sdkconfig_target": true,
+    "c_error_unless_s3": true,
+    "c_error_below_idf_5_5": true
+  },
+  "schema_required": [
+    "protocol_version",
+    "type",
+    "device_id",
+    "session_id",
+    "sequence_number",
+    "timestamp_ms",
+    "source",
+    "payload"
+  ],
+  "validated_in_handle_line": [
+    "protocol_version",
+    "type"
+  ],
+  "not_validated": [
+    "device_id",
+    "session_id",
+    "sequence_number",
+    "timestamp_ms",
+    "source",
+    "payload"
+  ],
+  "guards": {
+    "real_can_flag_zero": true,
+    "compile_error_if_enabled": true,
+    "twai_used": false,
+    "wifi_used": false,
+    "sd_used": false,
+    "adc_used": false,
+    "rtc_used": false
+  },
+  "buffers": {
+    "DC_MAX_LINE": [
+      "main/device_protocol.h:7: #define DC_MAX_LINE 4096"
+    ],
+    "input_buffer": [
+      "main/device_protocol.c:11: static char input[DC_MAX_LINE];"
+    ],
+    "overflow_guard": [
+      "main/device_protocol.c:133: if (input_length >= sizeof(input) - 1) { discarding = true; input_length = 0; }"
+    ],
+    "python_MAX_LINE_BYTES": 4096,
+    "usb_rx_tx": [
+      "main/main.c:30: .tx_buffer_size = 8192, .rx_buffer_size = 4096"
+    ]
+  },
+  "modes": {
+    "source_DEVICE_TEST": true,
+    "event_upload_false": true,
+    "test_data_kconfig": true
+  },
+  "send_error_sites": [
+    "main/device_protocol.c:113: send_error(\"INVALID_MESSAGE\", ms);",
+    "main/device_protocol.c:117: send_error(\"UNSUPPORTED_MESSAGE\", ms);",
+    "main/device_protocol.c:128: if (discarding) send_error(\"OVERSIZED_MESSAGE\", timestamp_ms);"
+  ],
+  "files": [
+    "CMakeLists.txt",
+    "main/CMakeLists.txt",
+    "main/Kconfig.projbuild",
+    "main/device_protocol.c",
+    "main/device_protocol.h",
+    "main/main.c",
+    "main/test_data.c",
+    "main/test_data.h",
+    "sdkconfig.defaults"
+  ]
+}

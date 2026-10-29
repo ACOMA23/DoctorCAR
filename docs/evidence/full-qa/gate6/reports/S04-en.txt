@@ -1,0 +1,37 @@
+DoctorCAR — Airflow measurement inconsistent with references
+
+What happened?
+A change was observed 66.2 seconds into the session. Values below distinguish detection from later recording; they do not prove a cause.
+Detected by the rules; the AI analyzed the data and found no anomaly.
+
+Key measurements
+• Air flow: at detection 8.0 g/s; recording peak 21.8; last 11.9 at 96.2 seconds.
+• Intake pressure: at detection 54.0 kPa; recording peak 75.2; last 54.0 at 96.2 seconds.
+• Short fuel correction: at detection -0.1 %; recording peak 2.0; last 1.8 at 96.2 seconds.
+
+What did AI observe?
+The AI analyzed the available data and found no anomaly under its current model.
+Analyzed 61.0 to 66.0 seconds. It ended about 0.2 seconds before detection. Its score is not a component failure probability and may disagree with rules.
+There are no anomaly factors to explain because the model did not rate this period unusual.
+
+Possible explanations
+• Possible MAF reporting or wiring bias — a measurement-based possibility requiring an independent check.
+• Possible actual airflow change or reference-model mismatch — a measurement-based possibility requiring an independent check.
+
+What should be checked?
+1. Inspect MAF and wiring; compare MAF/MAP, RPM and throttle across conditions
+Purpose: distinguish an operating change from measurement error. Mechanical or electrical work needs a technician and suitable equipment; do not replace a part based on this report.
+
+How certain is this?
+Suspicion requiring confirmation. Evidence cannot establish the mechanical cause.
+
+Data status
+Simulation or test device; no verified real vehicle source.
+Missing/invalid readings: 0; samples: 301.
+Recording: COMPLETE
+Origin: LIVE
+DTC: No code observed
+Freeze Frame: Unavailable
+
+Safety note
+This is a software experiment, not a real vehicle danger alert.

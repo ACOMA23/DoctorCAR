@@ -1,0 +1,78 @@
+{
+ "combinations": 144,
+ "clipped": [
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "QPushButton",
+   "text": "Choose data source",
+   "need": 198,
+   "have": 191
+  },
+  {
+   "where": "en/150%/980x640/page1",
+   "type": "QPushButton",
+   "text": "Verify source / connection",
+   "need": 254,
+   "have": 198
+  },
+  {
+   "where": "en/150%/980x640/page1",
+   "type": "QPushButton",
+   "text": "Export session for Replay",
+   "need": 244,
+   "have": 197
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QPushButton",
+   "text": "Start monitoring",
+   "need": 181,
+   "have": 178
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QPushButton",
+   "text": "Choose data source",
+   "need": 198,
+   "have": 177
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QPushButton",
+   "text": "Open latest report",
+   "need": 186,
+   "have": 177
+  }
+ ],
+ "horizontal_overflow": [
+  "ar/150%/980x640/page1",
+  "ar/150%/980x640/page3",
+  "en/125%/980x640/page1",
+  "en/125%/980x640/page3",
+  "en/150%/980x640/page1",
+  "en/150%/980x640/page3"
+ ],
+ "screen": [],
+ "unique_clipped": [
+  [
+   "QPushButton",
+   "Choose data source"
+  ],
+  [
+   "QPushButton",
+   "Export session for Replay"
+  ],
+  [
+   "QPushButton",
+   "Open latest report"
+  ],
+  [
+   "QPushButton",
+   "Start monitoring"
+  ],
+  [
+   "QPushButton",
+   "Verify source / connection"
+  ]
+ ]
+}

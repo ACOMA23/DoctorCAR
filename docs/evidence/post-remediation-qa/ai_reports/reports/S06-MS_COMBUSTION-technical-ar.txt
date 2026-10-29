@@ -1,0 +1,336 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: 2017b571-fef0-5e12-86dd-06d0e7f7af51
+Session: fea35ffc-bbcf-431a-9167-c8c0c3917ffd
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 68000 ms | correlated-evidence-1
+A. الأعراض المرصودة
+استجابة متقطعة غير مستقرة عند خانق مستقر
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=38000..98000 ms | min=798.390 max=2889.607 mean=2041.758 delta=1602.667
+SPEED [km/h] n=301 t=38000..98000 ms | min=0.000 max=61.500 mean=45.293 delta=59.113
+COOLANT_TEMP [°C] n=301 t=38000..98000 ms | min=67.039 max=85.865 mean=79.010 delta=18.826
+ENGINE_LOAD [%] n=301 t=38000..98000 ms | min=5.200 max=69.504 mean=43.438 delta=31.794
+THROTTLE_POS [%] n=301 t=38000..98000 ms | min=4.000 max=48.000 mean=27.020 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=38000..98000 ms | min=33.380 max=75.178 mean=58.235 delta=20.666
+MAF [g/s] n=301 t=38000..98000 ms | min=1.929 max=21.846 mean=11.539 delta=10.035
+INTAKE_TEMP [°C] n=301 t=38000..98000 ms | min=24.416 max=29.560 mean=27.245 delta=2.543
+SHORT_FUEL_TRIM [%] n=301 t=38000..98000 ms | min=-2.000 max=13.211 mean=2.999 delta=3.490
+LONG_FUEL_TRIM [%] n=301 t=38000..98000 ms | min=1.678 max=1.800 mean=1.761 delta=0.121
+CONTROL_MODULE_VOLTAGE [V] n=301 t=38000..98000 ms | min=13.800 max=14.000 mean=13.918 delta=-0.064
+C. أدلة العلاقات حتى لحظة الكشف فقط
+rpm_range=381.1990 [60000..68000 ms]
+load_range_pct=12.1510 [60000..68000 ms]
+stft_range_pct=13.1610 [60000..68000 ms]
+rpm_stft_correlation=-0.9667 [60000..68000 ms]
+throttle_range_pct=0.0000 [60000..68000 ms]
+rpm_reversals=15.0000 [60000..68000 ms]
+حدود القاعدة التجريبية: RPM range >100; load range >5; trim range >4; RPM/trim correlation <-0.5; >=2 reversals
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: ABNORMAL_OPERATION
+INTAKE_PRESSURE: UNRESOLVED
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: UNRESOLVED
+MAF: UNRESOLVED
+RPM: ABNORMAL_OPERATION
+SHORT_FUEL_TRIM: ABNORMAL_OPERATION
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. النظام المحتمل المتأثر
+استقرار الاحتراق أو القياس
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+احتمال عدم استقرار اشتعال أو وقود
+F. الأدلة الداعمة:
+rpm_range=381.1990 [60000..68000 ms]
+load_range_pct=12.1510 [60000..68000 ms]
+stft_range_pct=13.1610 [60000..68000 ms]
+rpm_stft_correlation=-0.9667 [60000..68000 ms]
+throttle_range_pct=0.0000 [60000..68000 ms]
+rpm_reversals=15.0000 [60000..68000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+لا عدادات Misfire أو دليل أسطوانة أو DTC مؤكد
+I. الفحوص المقترحة:
+قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة
+احتمال تغير تشغيل أو عدم اتساق قياس
+F. الأدلة الداعمة:
+rpm_range=381.1990 [60000..68000 ms]
+load_range_pct=12.1510 [60000..68000 ms]
+stft_range_pct=13.1610 [60000..68000 ms]
+rpm_stft_correlation=-0.9667 [60000..68000 ms]
+throttle_range_pct=0.0000 [60000..68000 ms]
+rpm_reversals=15.0000 [60000..68000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+لا عدادات Misfire أو دليل أسطوانة أو DTC مؤكد
+I. الفحوص المقترحة:
+الفحص نفسه المذكور تحت الفرضية 1.
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة .
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=68000 ms | requested=38000..98000 ms
+actual=38000..98000 ms | n=301 | COMPLETE
+=== تفاصيل الذكاء الاصطناعي ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.47593789594259023
+threshold: 0.6029934378184284
+window_start_ms: 63000
+window_end_ms: 68000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 68000
+recording_window_ms: 38000..98000
+samples: 301; missing_or_invalid: 0
+detection: rules=['MS_COMBUSTION'] (first 68000); ml=False (at None); quality=False; combined=False
+
+تحليل AI وXAI المحفوظ — التوقيت والميزات الأصلية
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 1.0,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 68000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2300.668923076923,
+    148.48488648290186,
+    -87.47572991452999,
+    1.0,
+    59.135846153846146,
+    0.42744506550394085,
+    -0.28241025641026185,
+    1.0,
+    79.52496153846154,
+    0.44883725684940173,
+    0.2991709401709346,
+    1.0,
+    41.11599999999999,
+    4.9013095345882975,
+    2.7828512820512823,
+    1.0,
+    23.0,
+    0.0,
+    -6.968084099463257e-16,
+    1.0,
+    56.72538461538461,
+    3.185838219333071,
+    1.8088615384615347,
+    1.0,
+    12.11073076923077,
+    0.10918599434426912,
+    0.03630256410256374,
+    1.0,
+    26.959692307692304,
+    0.00411160861996704,
+    -0.0027111111111112933,
+    1.0,
+    4.251730769230769,
+    4.586766571492487,
+    2.5355299145299153,
+    1.0,
+    1.766153846153846,
+    0.003438384098250314,
+    0.002283760683760559,
+    1.0,
+    13.803346153846153,
+    0.0033505717961184785,
+    -0.0012017094017096723,
+    1.0,
+    -7.958630680922528e-06,
+    -1.5384615384852814e-05,
+    -0.9935618706643053
+  ],
+  "inference_ms": 9.240300045348704,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.47593789594259023,
+  "session_id": "fea35ffc-bbcf-431a-9167-c8c0c3917ffd",
+  "start_ms": 63000,
+  "threshold": 0.6029934378184284
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "rpm_range=381.1990 [60000..68000 ms]",
+      "load_range_pct=12.1510 [60000..68000 ms]",
+      "stft_range_pct=13.1610 [60000..68000 ms]",
+      "rpm_stft_correlation=-0.9667 [60000..68000 ms]",
+      "throttle_range_pct=0.0000 [60000..68000 ms]",
+      "rpm_reversals=15.0000 [60000..68000 ms]"
+    ],
+    "kind": "MS_COMBUSTION",
+    "observation": "استجابة متقطعة غير مستقرة عند خانق مستقر",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 68000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 68000,
+  "hypotheses": [
+    {
+      "description": "احتمال عدم استقرار اشتعال أو وقود",
+      "supporting_evidence": [
+        "rpm_range=381.1990 [60000..68000 ms]",
+        "load_range_pct=12.1510 [60000..68000 ms]",
+        "stft_range_pct=13.1610 [60000..68000 ms]",
+        "rpm_stft_correlation=-0.9667 [60000..68000 ms]",
+        "throttle_range_pct=0.0000 [60000..68000 ms]",
+        "rpm_reversals=15.0000 [60000..68000 ms]"
+      ],
+      "missing_evidence": [
+        "لا عدادات Misfire أو دليل أسطوانة أو DTC مؤكد"
+      ],
+      "recommended_check": "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة",
+      "contradicting_evidence": [],
+      "description_en": "Possible ignition or fuel instability",
+      "missing_evidence_en": [
+        "No misfire counters, cylinder evidence or confirmed DTC"
+      ],
+      "recommended_check_en": "Read available misfire counters with a suitable tool; inspect ignition/fuel; no cylinder identification"
+    },
+    {
+      "description": "احتمال تغير تشغيل أو عدم اتساق قياس",
+      "supporting_evidence": [
+        "rpm_range=381.1990 [60000..68000 ms]",
+        "load_range_pct=12.1510 [60000..68000 ms]",
+        "stft_range_pct=13.1610 [60000..68000 ms]",
+        "rpm_stft_correlation=-0.9667 [60000..68000 ms]",
+        "throttle_range_pct=0.0000 [60000..68000 ms]",
+        "rpm_reversals=15.0000 [60000..68000 ms]"
+      ],
+      "missing_evidence": [
+        "لا عدادات Misfire أو دليل أسطوانة أو DTC مؤكد"
+      ],
+      "recommended_check": "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة",
+      "contradicting_evidence": [],
+      "description_en": "Possible operating transient or measurement inconsistency",
+      "missing_evidence_en": [
+        "No misfire counters, cylinder evidence or confirmed DTC"
+      ],
+      "recommended_check_en": "Read available misfire counters with a suitable tool; inspect ignition/fuel; no cylinder identification"
+    }
+  ]
+}

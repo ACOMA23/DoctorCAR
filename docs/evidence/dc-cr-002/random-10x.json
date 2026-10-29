@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "cycles": [
+      {
+        "fault_ids": [],
+        "start_ms": 30000
+      },
+      {
+        "fault_ids": [
+          "sensor_dropout",
+          "low_voltage",
+          "air_pattern"
+        ],
+        "start_ms": 60000
+      },
+      {
+        "fault_ids": [],
+        "start_ms": 90000
+      },
+      {
+        "fault_ids": [
+          "temperature_invalid",
+          "fuel_trim"
+        ],
+        "start_ms": 120000
+      },
+      {
+        "fault_ids": [
+          "thermal_sudden",
+          "fuel_trim"
+        ],
+        "start_ms": 150000
+      }
+    ],
+    "duration_ms": 155000,
+    "fault_schedule": [
+      {
+        "duration_ms": 5000,
+        "fault_id": "sensor_dropout",
+        "severity": 1.0,
+        "start_ms": 60000
+      },
+      {
+        "duration_ms": 12000,
+        "fault_id": "low_voltage",
+        "severity": 1.0,
+        "start_ms": 60000
+      },
+      {
+        "duration_ms": 5000,
+        "fault_id": "air_pattern",
+        "severity": 0.7,
+        "start_ms": 60000
+      },
+      {
+        "duration_ms": 5000,
+        "fault_id": "temperature_invalid",
+        "severity": 0.7,
+        "start_ms": 120000
+      },
+      {
+        "duration_ms": 5000,
+        "fault_id": "fuel_trim",
+        "severity": 0.7,
+        "start_ms": 120000
+      },
+      {
+        "duration_ms": 5000,
+        "fault_id": "thermal_sudden",
+        "severity": 0.7,
+        "start_ms": 150000
+      },
+      {
+        "duration_ms": 20000,
+        "fault_id": "fuel_trim",
+        "severity": 0.7,
+        "start_ms": 150000
+      }
+    ],
+    "legacy_scenario": "normal",
+    "max_faults": 3,
+    "mode": "RANDOM_FAULTS",
+    "normal_probability": 0.25,
+    "schedule_version": "fault-schedule-1",
+    "seed": 73,
+    "step_ms": 200
+  },
+  "evaluation": {
+    "faults": [
+      {
+        "index": 0,
+        "duration_ms": 5000,
+        "fault_id": "sensor_dropout",
+        "severity": 1.0,
+        "start_ms": 60000,
+        "status": "DETECTED",
+        "detectable_in_m1": true,
+        "event_ids": [
+          "b83a9c3a-a31a-5405-89ce-22efea017d09"
+        ]
+      },
+      {
+        "index": 1,
+        "duration_ms": 12000,
+        "fault_id": "low_voltage",
+        "severity": 1.0,
+        "start_ms": 60000,
+        "status": "NOT_DETECTED",
+        "detectable_in_m1": false,
+        "event_ids": []
+      },
+      {
+        "index": 2,
+        "duration_ms": 5000,
+        "fault_id": "air_pattern",
+        "severity": 0.7,
+        "start_ms": 60000,
+        "status": "NOT_DETECTED",
+        "detectable_in_m1": false,
+        "event_ids": []
+      },
+      {
+        "index": 3,
+        "duration_ms": 5000,
+        "fault_id": "temperature_invalid",
+        "severity": 0.7,
+        "start_ms": 120000,
+        "status": "DETECTED",
+        "detectable_in_m1": true,
+        "event_ids": [
+          "28bfd7c6-1151-5cb3-bf7c-60d5b26f6fd9"
+        ]
+      },
+      {
+        "index": 4,
+        "duration_ms": 5000,
+        "fault_id": "fuel_trim",
+        "severity": 0.7,
+        "start_ms": 120000,
+        "status": "NOT_DETECTED",
+        "detectable_in_m1": false,
+        "event_ids": []
+      },
+      {
+        "index": 5,
+        "duration_ms": 5000,
+        "fault_id": "thermal_sudden",
+        "severity": 0.7,
+        "start_ms": 150000,
+        "status": "NOT_DETECTED",
+        "detectable_in_m1": true,
+        "event_ids": []
+      },
+      {
+        "index": 6,
+        "duration_ms": 20000,
+        "fault_id": "fuel_trim",
+        "severity": 0.7,
+        "start_ms": 150000,
+        "status": "PENDING",
+        "detectable_in_m1": false,
+        "event_ids": []
+      }
+    ],
+    "unmatched_events": [],
+    "seed": 73,
+    "cycles": [
+      {
+        "fault_ids": [],
+        "start_ms": 30000
+      },
+      {
+        "fault_ids": [
+          "sensor_dropout",
+          "low_voltage",
+          "air_pattern"
+        ],
+        "start_ms": 60000
+      },
+      {
+        "fault_ids": [],
+        "start_ms": 90000
+      },
+      {
+        "fault_ids": [
+          "temperature_invalid",
+          "fuel_trim"
+        ],
+        "start_ms": 120000
+      },
+      {
+        "fault_ids": [
+          "thermal_sudden",
+          "fuel_trim"
+        ],
+        "start_ms": 150000
+      }
+    ],
+    "schedule_version": "fault-schedule-1"
+  },
+  "sample_count": 776
+}

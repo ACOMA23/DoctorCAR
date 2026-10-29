@@ -1,0 +1,180 @@
+##### BEFORE (DC-CR-004 linkage: no analysis attached, generic wording) #####
+
+DoctorCAR — نمط حراري متصاعد تحت حمل
+
+ماذا حدث؟
+رصد النظام تغيرًا عند 68.2 ثانية من بدء التسجيل. القراءات التالية تفرق بين لحظة الكشف وما سُجل بعدها؛ لا تثبت وحدها سبب التغير.
+اكتشفته القواعد.
+
+أهم القراءات
+• حرارة سائل التبريد: عند الكشف 105.0 °C؛ الأعلى خلال التسجيل 123.5؛ آخر قراءة 85.9 عند 98.2 ثانية.
+• سرعة المركبة: عند الكشف 58.5 km/h؛ الأعلى خلال التسجيل 61.5؛ آخر قراءة 59.2 عند 98.2 ثانية.
+• حمل المحرك: عند الكشف 36.9 %؛ الأعلى خلال التسجيل 69.5؛ آخر قراءة 37.0 عند 98.2 ثانية.
+
+ماذا لاحظ الذكاء الاصطناعي؟
+لم يُحلل هذا الحدث باستخدام الذكاء الاصطناعي؛ لا يوجد سجل لسبب ذلك (حدث أقدم من تسجيل حالة التحليل).
+
+ما المشكلة المحتملة؟ وش ممكن يكون السبب؟
+• احتمال انخفاض فعالية التبريد — احتمال مرتبط بالقياسات؛ يلزم فحص مستقل.
+• احتمال انحراف قياس الحرارة — احتمال مرتبط بالقياسات؛ يلزم فحص مستقل.
+
+وش أفحص؟
+1. فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة
+الهدف: التمييز بين تغير تشغيل حقيقي وانحراف القياس. الفحص الميكانيكي أو الكهربائي يحتاج فنيًا وأداة قياس مناسبة؛ لا تستبدل قطعة بهذا التقرير.
+
+هل النتيجة مؤكدة؟
+اشتباه يحتاج تأكيدًا. الأدلة غير كافية لتحديد السبب المحتمل بصورة قاطعة.
+
+حالة البيانات
+محاكاة أو جهاز تجريبي؛ لا مصدر مركبة حقيقي متحقق.
+القراءات الناقصة/غير الصالحة: 0؛ العينات: 301.
+التسجيل: مكتمل
+طريقة العرض: مباشر
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح
+
+ملاحظة السلامة
+هذه تجربة برمجية وليست بلاغ خطر من مركبة حقيقية.
+
+##### AFTER (DC-CR-005) #####
+
+DoctorCAR — نمط حراري متصاعد تحت حمل
+
+ماذا حدث؟
+رصد النظام تغيرًا عند 68.2 ثانية من بدء التسجيل. القراءات التالية تفرق بين لحظة الكشف وما سُجل بعدها؛ لا تثبت وحدها سبب التغير.
+اكتشفته القواعد؛ وحلل الذكاء الاصطناعي البيانات ولم يكتشف شذوذًا.
+
+أهم القراءات
+• حرارة سائل التبريد: عند الكشف 105.0 °C؛ الأعلى خلال التسجيل 123.5؛ آخر قراءة 85.9 عند 98.2 ثانية.
+• سرعة المركبة: عند الكشف 58.5 km/h؛ الأعلى خلال التسجيل 61.5؛ آخر قراءة 59.2 عند 98.2 ثانية.
+• حمل المحرك: عند الكشف 36.9 %؛ الأعلى خلال التسجيل 69.5؛ آخر قراءة 37.0 عند 98.2 ثانية.
+
+ماذا لاحظ الذكاء الاصطناعي؟
+حلل الذكاء الاصطناعي البيانات المتاحة ولم يكتشف شذوذًا وفق نموذجه الحالي.
+حلل النظام قياسات الفترة 63.0 إلى 68.0 ثانية. وانتهت قبل لحظة الكشف بنحو 0.2 ثانية. درجته ليست احتمال تلف قطعة؛ وقد تختلف عن القواعد.
+لا توجد عوامل شذوذ لتفسيرها لأن النموذج لم يعدّ هذه الفترة غير معتادة.
+
+ما المشكلة المحتملة؟ وش ممكن يكون السبب؟
+• احتمال انخفاض فعالية التبريد — احتمال مرتبط بالقياسات؛ يلزم فحص مستقل.
+• احتمال انحراف قياس الحرارة — احتمال مرتبط بالقياسات؛ يلزم فحص مستقل.
+
+وش أفحص؟
+1. فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة
+الهدف: التمييز بين تغير تشغيل حقيقي وانحراف القياس. الفحص الميكانيكي أو الكهربائي يحتاج فنيًا وأداة قياس مناسبة؛ لا تستبدل قطعة بهذا التقرير.
+
+هل النتيجة مؤكدة؟
+اشتباه يحتاج تأكيدًا. الأدلة غير كافية لتحديد السبب المحتمل بصورة قاطعة.
+
+حالة البيانات
+محاكاة أو جهاز تجريبي؛ لا مصدر مركبة حقيقي متحقق.
+القراءات الناقصة/غير الصالحة: 0؛ العينات: 301.
+التسجيل: مكتمل
+طريقة العرض: مباشر
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح
+
+ملاحظة السلامة
+هذه تجربة برمجية وليست بلاغ خطر من مركبة حقيقية.
+
+##### AFTER, English #####
+
+DoctorCAR — Rising thermal pattern under load
+
+What happened?
+A change was observed 68.2 seconds into the session. Values below distinguish detection from later recording; they do not prove a cause.
+Detected by the rules; the AI analyzed the data and found no anomaly.
+
+Key measurements
+• Coolant temperature: at detection 105.0 °C; recording peak 123.5; last 85.9 at 98.2 seconds.
+• Vehicle speed: at detection 58.5 km/h; recording peak 61.5; last 59.2 at 98.2 seconds.
+• Engine load: at detection 36.9 %; recording peak 69.5; last 37.0 at 98.2 seconds.
+
+What did AI observe?
+The AI analyzed the available data and found no anomaly under its current model.
+Analyzed 63.0 to 68.0 seconds. It ended about 0.2 seconds before detection. Its score is not a component failure probability and may disagree with rules.
+There are no anomaly factors to explain because the model did not rate this period unusual.
+
+Possible explanations
+• Possible reduced cooling effectiveness — a measurement-based possibility requiring an independent check.
+• Possible temperature measurement bias — a measurement-based possibility requiring an independent check.
+
+What should be checked?
+1. Check coolant level, fan and circulation; compare an independent temperature
+Purpose: distinguish an operating change from measurement error. Mechanical or electrical work needs a technician and suitable equipment; do not replace a part based on this report.
+
+How certain is this?
+Suspicion requiring confirmation. Evidence cannot establish the mechanical cause.
+
+Data status
+Simulation or test device; no verified real vehicle source.
+Missing/invalid readings: 0; samples: 301.
+Recording: COMPLETE
+Origin: LIVE
+DTC: No code observed
+Freeze Frame: Unavailable
+
+Safety note
+This is a software experiment, not a real vehicle danger alert.
+
+##### AFTER, technical (head) #####
+
+DoctorCAR — multisensor evidence report
+Event ID: a485d4a9-b595-53f7-a3b9-bedd443c076e
+Session: 65ef426a-8774-469a-81e3-ee9fa275fc50
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 68200 ms | correlated-evidence-1
+A. Observed Symptoms
+Rising thermal pattern under load
+B. Measurements in the actual event window
+RPM [rpm] n=301 t=38200..98200 ms | min=798.390 max=2889.607 mean=2128.880 delta=1609.855
+SPEED [km/h] n=301 t=38200..98200 ms | min=0.000 max=61.500 mean=45.489 delta=59.175
+COOLANT_TEMP [°C] n=301 t=38200..98200 ms | min=67.170 max=123.491 mean=96.304 delta=18.718
+ENGINE_LOAD [%] n=301 t=38200..98200 ms | min=5.200 max=69.504 mean=40.667 delta=31.801
+THROTTLE_POS [%] n=301 t=38200..98200 ms | min=4.000 max=48.000 mean=27.083 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=38200..98200 ms | min=33.380 max=75.178 mean=56.433 delta=20.671
+MAF [g/s] n=301 t=38200..98200 ms | min=1.929 max=21.846 mean=11.483 delta=10.025
+INTAKE_TEMP [°C] n=301 t=38200..98200 ms | min=24.416 max=29.996 mean=28.632 delta=2.544
+SHORT_FUEL_TRIM [%] n=301 t=38200..98200 ms | min=-2.000 max=2.000 mean=0.133 delta=3.459
+LONG_FUEL_TRIM [%] n=301 t=38200..98200 ms | min=1.678 max=1.800 mean=1.761 delta=0.121
+CONTROL_MODULE_VOLTAGE [V] n=301 t=38200..98200 ms | min=13.800 max=14.000 mean=13.918 delta=-0.069
+C. Cross-Sensor Evidence through detection only
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]
+load_mean_pct=37.0496 [60200..68200 ms]
+speed_mean_km_h=59.5804 [60200..68200 ms]
+rpm_mean=2427.2274 [60200..68200 ms]
+throttle_mean_pct=23.0000 [60200..68200 ms]
+Experimental rule criteria: temperature >=105°C; slope >0.12°C/s; >=1s valid observations
+Derived classification, separate from Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: ABNORMAL_OPERATION
+ENGINE_LOAD: NORMAL
+INTAKE_PRESSURE: NORMAL
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: NORMAL
+MAF: NORMAL
+RPM: NORMAL
+SHORT_FUEL_TRIM: NORMAL
+SPEED: UNRESOLVED
+THROTTLE_POS: NORMAL
+D. Suspected System
+Cooling or temperature measurement
+E. Possible Causes — testable hypotheses
+Possible reduced cooling effectiveness
+F. Supporting Evidence:
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]
+load_mean_pct=37.0496 [60200..68200 ms]
+speed_mean_km_h=59.5804 [60200..68200 ms]
+rpm_mean=2427.2274 [60200..68200 ms]
+throttle_mean_pct=23.0000 [60200..68200 ms]
+G. Contradicting Evidence:
+No independent contradiction available; this does not confirm the hypothesis.
+H. Missing Evidence:
+Vehicle specifications and independent temperature
+I. Recommended Checks:
+Check coolant level, fan and circulation; compare an independent temperature
+Possible temperature measurement bias
+F. Supporting Evidence:
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]

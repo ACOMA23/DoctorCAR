@@ -1,0 +1,69 @@
+{
+ "combinations": 144,
+ "clipped": [
+  {
+   "where": "ar/125%/980x640/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 154,
+   "have": 142
+  },
+  {
+   "where": "ar/125%/1280x720/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 154,
+   "have": 142
+  },
+  {
+   "where": "ar/125%/1366x768/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 154,
+   "have": 142
+  },
+  {
+   "where": "ar/125%/1920x1080/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 154,
+   "have": 142
+  },
+  {
+   "where": "ar/150%/980x640/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 172,
+   "have": 156
+  },
+  {
+   "where": "ar/150%/1280x720/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 172,
+   "have": 156
+  },
+  {
+   "where": "ar/150%/1366x768/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 172,
+   "have": 156
+  },
+  {
+   "where": "ar/150%/1920x1080/page2",
+   "type": "QComboBox",
+   "text": "كل الحساسات",
+   "need": 172,
+   "have": 156
+  }
+ ],
+ "horizontal_overflow": [],
+ "screen": [],
+ "unique_clipped": [
+  [
+   "QComboBox",
+   "كل الحساسات"
+  ]
+ ]
+}

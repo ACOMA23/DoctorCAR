@@ -1,0 +1,217 @@
+{
+  "seed11": {
+    "mode": "RANDOM_FAULTS",
+    "seed": 11,
+    "duration_ms": 155000,
+    "step_ms": 200,
+    "schedule_version": "fault-schedule-1",
+    "cycles": [],
+    "fault_schedule": [],
+    "max_faults": 2,
+    "normal_probability": 0.25,
+    "legacy_scenario": "normal",
+    "scenario_family": "multisensor",
+    "scenario_version": "correlated-schedule-1",
+    "calibration_profile": "DOCTORCAR_CORRELATED_MODEL_1",
+    "scenario_schedule": [
+      {
+        "scenario_id": "S01",
+        "start_ms": 30000,
+        "duration_ms": 5000,
+        "severity": 0.6,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S04",
+        "start_ms": 60000,
+        "duration_ms": 18000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S07",
+        "start_ms": 60000,
+        "duration_ms": 18000,
+        "severity": 0.85,
+        "variant": "flatline"
+      },
+      {
+        "scenario_id": "S04",
+        "start_ms": 90000,
+        "duration_ms": 45000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S07",
+        "start_ms": 90000,
+        "duration_ms": 5000,
+        "severity": 0.85,
+        "variant": "implausible"
+      },
+      {
+        "scenario_id": "S07",
+        "start_ms": 120000,
+        "duration_ms": 5000,
+        "severity": 0.6,
+        "variant": "dropout"
+      },
+      {
+        "scenario_id": "S04",
+        "start_ms": 150000,
+        "duration_ms": 45000,
+        "severity": 0.85,
+        "variant": "default"
+      }
+    ],
+    "scenario_cycles": [
+      {
+        "start_ms": 30000,
+        "new_instances": [
+          0
+        ],
+        "active_instances": [
+          0
+        ]
+      },
+      {
+        "start_ms": 60000,
+        "new_instances": [
+          1,
+          2
+        ],
+        "active_instances": [
+          1,
+          2
+        ]
+      },
+      {
+        "start_ms": 90000,
+        "new_instances": [
+          3,
+          4
+        ],
+        "active_instances": [
+          3,
+          4
+        ]
+      },
+      {
+        "start_ms": 120000,
+        "new_instances": [
+          5
+        ],
+        "active_instances": [
+          3,
+          5
+        ]
+      },
+      {
+        "start_ms": 150000,
+        "new_instances": [
+          6
+        ],
+        "active_instances": [
+          6
+        ]
+      }
+    ]
+  },
+  "seed12": {
+    "mode": "RANDOM_FAULTS",
+    "seed": 12,
+    "duration_ms": 155000,
+    "step_ms": 200,
+    "schedule_version": "fault-schedule-1",
+    "cycles": [],
+    "fault_schedule": [],
+    "max_faults": 2,
+    "normal_probability": 0.25,
+    "legacy_scenario": "normal",
+    "scenario_family": "multisensor",
+    "scenario_version": "correlated-schedule-1",
+    "calibration_profile": "DOCTORCAR_CORRELATED_MODEL_1",
+    "scenario_schedule": [
+      {
+        "scenario_id": "S04",
+        "start_ms": 30000,
+        "duration_ms": 18000,
+        "severity": 0.6,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S03",
+        "start_ms": 60000,
+        "duration_ms": 18000,
+        "severity": 0.85,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S03",
+        "start_ms": 90000,
+        "duration_ms": 5000,
+        "severity": 0.6,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S01",
+        "start_ms": 90000,
+        "duration_ms": 18000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      {
+        "scenario_id": "S02",
+        "start_ms": 120000,
+        "duration_ms": 18000,
+        "severity": 0.85,
+        "variant": "default"
+      }
+    ],
+    "scenario_cycles": [
+      {
+        "start_ms": 30000,
+        "new_instances": [
+          0
+        ],
+        "active_instances": [
+          0
+        ]
+      },
+      {
+        "start_ms": 60000,
+        "new_instances": [
+          1
+        ],
+        "active_instances": [
+          1
+        ]
+      },
+      {
+        "start_ms": 90000,
+        "new_instances": [
+          2,
+          3
+        ],
+        "active_instances": [
+          2,
+          3
+        ]
+      },
+      {
+        "start_ms": 120000,
+        "new_instances": [
+          4
+        ],
+        "active_instances": [
+          4
+        ]
+      },
+      {
+        "start_ms": 150000,
+        "new_instances": [],
+        "active_instances": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "summary": {
+    "Verified": 51,
+    "Partially Verified": 7,
+    "Not Implemented": 3,
+    "Failed": 2,
+    "Not Tested": 2
+  },
+  "items": [
+    {
+      "area": "APP",
+      "function": "Application launch on the native Windows platform",
+      "tests": [
+        "QA-APP-001",
+        "QA-E2E-012b"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "APP",
+      "function": "Console entry point (doctorcar --help)",
+      "tests": [
+        "QA-PKG-005"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Sidebar navigation: 6 pages",
+      "tests": [
+        "QA-UI-002",
+        "QA-UI-030"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Source center: fields shown per source / mode / family",
+      "tests": [
+        "QA-UI-003",
+        "QA-UI-004"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Combo boxes (9): all items selectable",
+      "tests": [
+        "QA-UI-031"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Spin boxes (7): range clamping and keyboard",
+      "tests": [
+        "QA-UI-032"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Text fields and AI check box",
+      "tests": [
+        "QA-UI-033"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Start / Stop buttons, source locking, second-session refusal",
+      "tests": [
+        "QA-UI-005",
+        "QA-UI-006",
+        "QA-UI-009",
+        "QA-UI-020"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Live sensor table updates",
+      "tests": [
+        "QA-UI-005",
+        "QA-SENSOR-003"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "AI status card (state, score, model version)",
+      "tests": [
+        "QA-UI-008"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Event list and 'تحديث السجل' button",
+      "tests": [
+        "QA-UI-034"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Open an event report (double-click and button)",
+      "tests": [
+        "QA-UI-010",
+        "QA-UI-035"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Technical details toggle and time-series plot",
+      "tests": [
+        "QA-UI-011"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Verify source / connection button",
+      "tests": [
+        "QA-UI-038",
+        "QA-UI-041",
+        "QA-UI-014",
+        "QA-UI-015"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Browse file dialog (real dialog)",
+      "tests": [
+        "QA-UI-037"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Export session to Replay (real dialog) and Replay from the UI",
+      "tests": [
+        "QA-UI-036",
+        "QA-UI-039"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Refresh serial ports button",
+      "tests": [
+        "QA-UI-040"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Arabic/English, RTL/LTR, no leftover Arabic in English mode",
+      "tests": [
+        "QA-UI-012",
+        "QA-UI-013"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Light / Dark theme and settings persistence across restart",
+      "tests": [
+        "QA-UI-018",
+        "QA-E2E-011"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Window close shuts the worker down",
+      "tests": [
+        "QA-UI-017"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Responsiveness during a running session",
+      "tests": [
+        "QA-UI-007",
+        "QA-PERF-006"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "No stale live data after restart",
+      "tests": [
+        "QA-UI-019"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Error messages for invalid input",
+      "tests": [
+        "QA-UI-014",
+        "QA-UI-015",
+        "QA-UI-016",
+        "QA-UI-023"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "UI",
+      "function": "Menu bar",
+      "tests": [],
+      "status": "Not Implemented"
+    },
+    {
+      "area": "UI",
+      "function": "Keyboard shortcuts",
+      "tests": [],
+      "status": "Not Implemented"
+    },
+    {
+      "area": "UI",
+      "function": "System theme mode",
+      "tests": [],
+      "status": "Not Implemented"
+    },
+    {
+      "area": "SENSOR",
+      "function": "Sensor registry (12 entries, units)",
+      "tests": [
+        "QA-SENSOR-001"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SENSOR",
+      "function": "Reading type, unit, quality and timing over a full trip",
+      "tests": [
+        "QA-SENSOR-002"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SENSOR",
+      "function": "Value-exact chain: simulation -> Session -> SQLite",
+      "tests": [
+        "QA-SENSOR-003"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SENSOR",
+      "function": "Validator: missing / unsupported / range / stale / duplicate / backward",
+      "tests": [
+        "QA-SENSOR-004"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SENSOR",
+      "function": "Operating relations across cold/warm/scale variants",
+      "tests": [
+        "QA-SENSOR-005",
+        "QA-SENSOR-006"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "Determinism by seed and trip length",
+      "tests": [
+        "QA-SIM-001",
+        "QA-SIM-002"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "Fault scenarios S01..S07: affected sensors and direction",
+      "tests": [
+        "QA-SIM-011",
+        "QA-SIM-012",
+        "QA-SIM-013",
+        "QA-SIM-014",
+        "QA-SIM-015",
+        "QA-SIM-016",
+        "QA-SIM-017",
+        "QA-SIM-030",
+        "QA-SIM-031",
+        "QA-SIM-032"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "Fault durations (5 s, 90 s) and recovery",
+      "tests": [
+        "QA-SIM-033",
+        "QA-SIM-034"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "Simultaneous faults and conflict rejection",
+      "tests": [
+        "QA-SIM-035"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "RANDOM_FAULTS 30 s cycles and ground-truth schedule",
+      "tests": [
+        "QA-SIM-036",
+        "QA-E2E-005"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SIM",
+      "function": "Simulation longer than the 155 s driving profile",
+      "tests": [
+        "QA-SIM-037"
+      ],
+      "status": "Failed"
+    },
+    {
+      "area": "EVENT",
+      "function": "T-30 / T+30 recording at 1 Hz, 5 Hz, irregular and with missing samples",
+      "tests": [
+        "QA-EVENT-001",
+        "QA-EVENT-002",
+        "QA-EVENT-003",
+        "QA-EVENT-004",
+        "QA-EVENT-005",
+        "QA-EVENT-006",
+        "QA-EVENT-010",
+        "QA-EVENT-013",
+        "QA-EVENT-014"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "EVENT",
+      "function": "Edge cases: trip start, trip end (PARTIAL), disappearing fault, manual stop",
+      "tests": [
+        "QA-EVENT-007",
+        "QA-EVENT-008",
+        "QA-EVENT-009",
+        "QA-EVENT-011",
+        "QA-E2E-004"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "EVENT",
+      "function": "Recovery after abrupt close",
+      "tests": [
+        "QA-EVENT-012",
+        "QA-E2E-008"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "EVENT",
+      "function": "Rule detection coverage by condition",
+      "tests": [
+        "QA-EVENT-015"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "DB",
+      "function": "Schema, pragmas, integrity, foreign keys",
+      "tests": [
+        "QA-DB-001",
+        "QA-DB-002",
+        "QA-DB-005"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "DB",
+      "function": "Reports stored and restored, duplicates, reopen",
+      "tests": [
+        "QA-DB-003",
+        "QA-DB-004",
+        "QA-DB-006"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "DB",
+      "function": "Old (v1) database upgrade and future-version refusal",
+      "tests": [
+        "QA-DB-007"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "DB",
+      "function": "Write failure, corrupt file, unavailable path (library and window)",
+      "tests": [
+        "QA-DB-008",
+        "QA-DB-009"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "DB",
+      "function": "Language/theme changes leave stored data untouched",
+      "tests": [
+        "QA-DB-010"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "AI",
+      "function": "Model facts, trusted loading",
+      "tests": [
+        "QA-AI-001",
+        "QA-AI-002"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "AI",
+      "function": "Determinism, window cases, no future leakage, no label use",
+      "tests": [
+        "QA-AI-003",
+        "QA-AI-004",
+        "QA-AI-005",
+        "QA-AI-006"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "AI",
+      "function": "ML performance: Rules vs ML vs Combined (window and event level)",
+      "tests": [
+        "QA-AI-010",
+        "QA-AI-011",
+        "QA-AI-007",
+        "QA-AI-008"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "XAI",
+      "function": "Explanations: deterministic, independent recomputation, safeguards",
+      "tests": [
+        "QA-XAI-001",
+        "QA-XAI-002",
+        "QA-XAI-003",
+        "QA-XAI-004"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "AI",
+      "function": "AI-to-event linking and AI state reporting",
+      "tests": [
+        "QA-AI-LINK-001",
+        "QA-AI-LINK-002",
+        "QA-AI-LINK-003",
+        "QA-AI-LINK-004",
+        "QA-AI-LINK-005",
+        "QA-AI-LINK-006"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "DIAG",
+      "function": "Evidence-based reports for S01..S07 and ambiguity handling",
+      "tests": [
+        "QA-DIAG-S01",
+        "QA-DIAG-S02",
+        "QA-DIAG-S03",
+        "QA-DIAG-S04",
+        "QA-DIAG-S05",
+        "QA-DIAG-S06",
+        "QA-DIAG-S07",
+        "QA-DIAG-AMBIG"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "IOT",
+      "function": "Protocol conformance and malformed input",
+      "tests": [
+        "QA-IOT-001",
+        "QA-IOT-002",
+        "QA-IOT-003",
+        "QA-IOT-004",
+        "QA-IOT-005",
+        "QA-IOT-006",
+        "QA-IOT-009",
+        "QA-IOT-012"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "IOT",
+      "function": "Historical event upload, integrity and de-duplication",
+      "tests": [
+        "QA-IOT-007",
+        "QA-IOT-008",
+        "QA-IOT-010",
+        "QA-IOT-011",
+        "QA-E2E-007"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "IOT",
+      "function": "TCP loopback failures: refused, silent, closed, oversized, bad config",
+      "tests": [
+        "QA-IOT-013",
+        "QA-IOT-014",
+        "QA-IOT-015",
+        "QA-IOT-016",
+        "QA-IOT-017"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "IOT",
+      "function": "Serial source with a fake port (never writes)",
+      "tests": [
+        "QA-IOT-018",
+        "QA-IOT-019"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "IOT",
+      "function": "Live loopback device, reconnect and isolation",
+      "tests": [
+        "QA-E2E-006",
+        "QA-E2E-010",
+        "QA-IOT-020"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "PERF",
+      "function": "Long run, memory, XAI/ML latency, event persistence",
+      "tests": [
+        "QA-PERF-001",
+        "QA-PERF-002",
+        "QA-PERF-003",
+        "QA-PERF-004"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "SEC",
+      "function": "Invalid data handling in replay files",
+      "tests": [
+        "QA-SEC-001",
+        "QA-SEC-002",
+        "QA-SEC-003"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "PKG",
+      "function": "Wheel, fresh install, installed run, entry point",
+      "tests": [
+        "QA-PKG-001",
+        "QA-PKG-002",
+        "QA-PKG-003",
+        "QA-PKG-004",
+        "QA-PKG-005",
+        "QA-E2E-012",
+        "QA-E2E-012b"
+      ],
+      "status": "Verified"
+    },
+    {
+      "area": "FW",
+      "function": "Firmware build (ESP-IDF)",
+      "tests": [
+        "QA-FW-001"
+      ],
+      "status": "Not Tested"
+    },
+    {
+      "area": "FW",
+      "function": "Firmware static review: target, CAN guard, buffers, test mode, errors",
+      "tests": [
+        "QA-FW-002",
+        "QA-FW-004",
+        "QA-FW-005",
+        "QA-FW-006",
+        "QA-FW-007"
+      ],
+      "status": "Partially Verified"
+    },
+    {
+      "area": "FW",
+      "function": "Firmware envelope validation (A07)",
+      "tests": [
+        "QA-FW-003"
+      ],
+      "status": "Failed"
+    },
+    {
+      "area": "FW",
+      "function": "Hardware: USB, Wi-Fi, CAN, MicroSD, ADC/RTC on a board",
+      "tests": [
+        "QA-FW-008",
+        "QA-FW-009",
+        "QA-FW-010",
+        "QA-FW-011",
+        "QA-FW-012"
+      ],
+      "status": "Not Tested"
+    },
+    {
+      "area": "E2E",
+      "function": "E2E-01..03, 09: normal, thermal, air/fuel, ML+XAI through the app",
+      "tests": [
+        "QA-E2E-001",
+        "QA-E2E-002",
+        "QA-E2E-003",
+        "QA-E2E-009"
+      ],
+      "status": "Verified"
+    }
+  ]
+}

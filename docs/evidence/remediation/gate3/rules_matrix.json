@@ -1,0 +1,342 @@
+{
+  "healthy": {
+    "trips": 30,
+    "trips_with_events": 0,
+    "events": {}
+  },
+  "coverage": {
+    "detected": 25,
+    "total": 35,
+    "missed": [
+      "S01@60s/5s",
+      "S02@60s/5s",
+      "S02@110s/35s",
+      "S02@135s/15s",
+      "S03@60s/5s",
+      "S03@110s/35s",
+      "S03@135s/15s",
+      "S04@60s/5s",
+      "S04@110s/35s",
+      "S04@135s/15s"
+    ],
+    "detail": {
+      "S01@60s/5s": [],
+      "S01@60s/9s": [
+        [
+          "MS_THERMAL",
+          68.2
+        ]
+      ],
+      "S01@60s/35s": [
+        [
+          "MS_THERMAL",
+          68.2
+        ]
+      ],
+      "S01@110s/35s": [
+        [
+          "MS_THERMAL",
+          117.2
+        ]
+      ],
+      "S01@135s/15s": [
+        [
+          "MS_THERMAL",
+          140.8
+        ]
+      ],
+      "S02@60s/5s": [],
+      "S02@60s/9s": [
+        [
+          "MS_AIR_FUEL",
+          66.0
+        ]
+      ],
+      "S02@60s/35s": [
+        [
+          "MS_AIR_FUEL",
+          66.0
+        ]
+      ],
+      "S02@110s/35s": [],
+      "S02@135s/15s": [],
+      "S03@60s/5s": [],
+      "S03@60s/9s": [
+        [
+          "MS_FUEL_RESPONSE",
+          66.0
+        ]
+      ],
+      "S03@60s/35s": [
+        [
+          "MS_FUEL_RESPONSE",
+          66.0
+        ]
+      ],
+      "S03@110s/35s": [],
+      "S03@135s/15s": [],
+      "S04@60s/5s": [],
+      "S04@60s/9s": [
+        [
+          "MS_AIRFLOW",
+          66.2
+        ]
+      ],
+      "S04@60s/35s": [
+        [
+          "MS_AIRFLOW",
+          66.2
+        ]
+      ],
+      "S04@110s/35s": [],
+      "S04@135s/15s": [],
+      "S05@60s/5s": [
+        [
+          "MS_SUPPLY",
+          61.0
+        ]
+      ],
+      "S05@60s/9s": [
+        [
+          "MS_SUPPLY",
+          61.0
+        ]
+      ],
+      "S05@60s/35s": [
+        [
+          "MS_SUPPLY",
+          61.0
+        ]
+      ],
+      "S05@110s/35s": [
+        [
+          "MS_SUPPLY",
+          111.0
+        ]
+      ],
+      "S05@135s/15s": [
+        [
+          "MS_SUPPLY",
+          136.0
+        ]
+      ],
+      "S06@60s/5s": [
+        [
+          "MS_COMBUSTION",
+          68.0
+        ]
+      ],
+      "S06@60s/9s": [
+        [
+          "MS_COMBUSTION",
+          68.0
+        ]
+      ],
+      "S06@60s/35s": [
+        [
+          "MS_COMBUSTION",
+          68.0
+        ]
+      ],
+      "S06@110s/35s": [
+        [
+          "MS_COMBUSTION",
+          113.0
+        ]
+      ],
+      "S06@135s/15s": [
+        [
+          "MS_COMBUSTION",
+          135.2
+        ]
+      ],
+      "S07@60s/5s": [
+        [
+          "MS_SIGNAL",
+          60.0
+        ]
+      ],
+      "S07@60s/9s": [
+        [
+          "MS_SIGNAL",
+          60.0
+        ]
+      ],
+      "S07@60s/35s": [
+        [
+          "MS_SIGNAL",
+          60.0
+        ]
+      ],
+      "S07@110s/35s": [
+        [
+          "MS_SIGNAL",
+          110.0
+        ]
+      ],
+      "S07@135s/15s": [
+        [
+          "MS_SIGNAL",
+          135.0
+        ]
+      ]
+    }
+  },
+  "singles_at_60s_18s": {
+    "S01": [
+      "MS_THERMAL"
+    ],
+    "S02": [
+      "MS_AIR_FUEL"
+    ],
+    "S03": [
+      "MS_FUEL_RESPONSE"
+    ],
+    "S04": [
+      "MS_AIRFLOW"
+    ],
+    "S05": [
+      "MS_SUPPLY"
+    ],
+    "S06": [
+      "MS_COMBUSTION"
+    ],
+    "S07": [
+      "MS_SIGNAL"
+    ]
+  },
+  "pairs": {
+    "total": 21,
+    "injectable": 7,
+    "kept_both": 7,
+    "lost_something": {},
+    "detail": {
+      "S01+S02": {
+        "events": [
+          "MS_AIR_FUEL",
+          "MS_THERMAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S01+S03": {
+        "events": [
+          "MS_FUEL_RESPONSE",
+          "MS_THERMAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S01+S04": {
+        "not_injectable": "Conflicting scenario writes: S01, S04",
+        "kept_both": null,
+        "lost": []
+      },
+      "S01+S05": {
+        "events": [
+          "MS_SUPPLY",
+          "MS_THERMAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S01+S06": {
+        "events": [
+          "MS_COMBUSTION",
+          "MS_THERMAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S01+S07": {
+        "events": [
+          "MS_SIGNAL",
+          "MS_THERMAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S02+S03": {
+        "not_injectable": "Conflicting scenario writes: S02, S03",
+        "kept_both": null,
+        "lost": []
+      },
+      "S02+S04": {
+        "not_injectable": "Conflicting scenario writes: S02, S04",
+        "kept_both": null,
+        "lost": []
+      },
+      "S02+S05": {
+        "not_injectable": "Conflicting scenario writes: S02, S05",
+        "kept_both": null,
+        "lost": []
+      },
+      "S02+S06": {
+        "not_injectable": "Conflicting scenario writes: S02, S06",
+        "kept_both": null,
+        "lost": []
+      },
+      "S02+S07": {
+        "not_injectable": "Conflicting scenario writes: S02, S07",
+        "kept_both": null,
+        "lost": []
+      },
+      "S03+S04": {
+        "not_injectable": "Conflicting scenario writes: S03, S04",
+        "kept_both": null,
+        "lost": []
+      },
+      "S03+S05": {
+        "not_injectable": "Conflicting scenario writes: S03, S05",
+        "kept_both": null,
+        "lost": []
+      },
+      "S03+S06": {
+        "not_injectable": "Conflicting scenario writes: S03, S06",
+        "kept_both": null,
+        "lost": []
+      },
+      "S03+S07": {
+        "not_injectable": "Conflicting scenario writes: S03, S07",
+        "kept_both": null,
+        "lost": []
+      },
+      "S04+S05": {
+        "not_injectable": "Conflicting scenario writes: S04, S05",
+        "kept_both": null,
+        "lost": []
+      },
+      "S04+S06": {
+        "not_injectable": "Conflicting scenario writes: S04, S06",
+        "kept_both": null,
+        "lost": []
+      },
+      "S04+S07": {
+        "events": [
+          "MS_AIRFLOW",
+          "MS_SIGNAL"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S05+S06": {
+        "not_injectable": "Conflicting scenario writes: S05, S06",
+        "kept_both": null,
+        "lost": []
+      },
+      "S05+S07": {
+        "events": [
+          "MS_SIGNAL",
+          "MS_SUPPLY"
+        ],
+        "lost": [],
+        "kept_both": true
+      },
+      "S06+S07": {
+        "not_injectable": "Conflicting scenario writes: S06, S07",
+        "kept_both": null,
+        "lost": []
+      }
+    }
+  }
+}

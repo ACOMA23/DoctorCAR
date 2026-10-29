@@ -1,0 +1,37 @@
+# Actual M1 environment constraints; install with pip -c, not as an application source.
+attrs==26.1.0
+colorama==0.4.6
+iniconfig==2.3.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+librt==0.16.0
+mypy==1.20.2
+mypy_extensions==1.1.0
+packaging==26.3
+pathspec==1.1.1
+pluggy==1.7.0
+Pygments==2.21.0
+pyserial==3.5
+PySide6==6.12.0
+PySide6_Addons==6.12.0
+PySide6_Essentials==6.12.0
+PySide6_Pdf==6.12.0.140
+PySide6_WebEngine==6.12.0.140
+pytest==9.2.0
+referencing==0.37.0
+rpds-py==2026.9.1
+ruff==0.17.3
+shiboken6==6.12.0
+types-jsonschema==4.26.0.20261006
+types-pyserial==3.5.0.20260712
+typing_extensions==4.16.0
+# DC-CR-005: optional AI extras ([ml] runtime, [train] offline training)
+joblib==1.6.0
+numpy==2.5.4
+pandas==3.1.0
+python-dateutil==3.0.0
+scikit-learn==1.9.1
+scipy==1.18.1
+six==1.17.0
+threadpoolctl==3.7.0
+tzdata==2026.6

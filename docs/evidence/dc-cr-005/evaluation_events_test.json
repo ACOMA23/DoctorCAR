@@ -1,0 +1,1733 @@
+{
+  "split": "test",
+  "dataset_version": "dataset-3",
+  "manifest_sha256": "9446bd71b8301f13983759483d3770bc42158041b1d84178573e8fc8433724b8",
+  "scoring_note": "Merged rule+ML events match an injection when any member detection falls in its window (scoring fix applied after the first test run; models and thresholds unchanged).",
+  "models": {
+    "cr004-iforest-v1": {
+      "version": "iforest-cr004-v1",
+      "sha256": "0970cd008d891a014bbcf26a08f85e2fd30bae1e495a1ec9cbb2b3a6caa197a7",
+      "threshold": 0.5649559648496754,
+      "policy": {
+        "consecutive": 3,
+        "hysteresis": 0.02
+      }
+    },
+    "cr005-iforest-v2": {
+      "version": "iforest-cr005-v2",
+      "sha256": "03153e0da6e1fc2bd87bc1f3b19598bdbb82a0da1bc893cbd8a7ffb9bfd85d87",
+      "threshold": 0.581281744658954,
+      "policy": {
+        "consecutive": 5,
+        "hysteresis": 0.02
+      }
+    }
+  },
+  "match_rule": {
+    "truth_window": "[start_ms, start_ms + duration_ms + grace_ms]",
+    "grace_ms": 10000,
+    "refractory_ms": 30000,
+    "merge_nearby_ms": 10000
+  },
+  "event_level": {
+    "rules": {
+      "truth_events": 40,
+      "detected_events": 40,
+      "missed_events": 0,
+      "recall": 1.0,
+      "alarm_events": 52,
+      "true_alarm_events": 52,
+      "false_alarm_events": 0,
+      "precision": 1.0,
+      "false_alarms_per_simulated_hour": 0.0,
+      "false_alarm_events_on_normal_trips": 0,
+      "normal_trips": 30,
+      "false_alarms_per_normal_hour": 0.0,
+      "simulated_hours": 2.841666666666667,
+      "detection_delay_s_median": 6.0,
+      "detection_delay_s_mean": 5.14
+    },
+    "ml:cr004-iforest-v1": {
+      "truth_events": 40,
+      "detected_events": 18,
+      "missed_events": 22,
+      "recall": 0.45,
+      "alarm_events": 149,
+      "true_alarm_events": 18,
+      "false_alarm_events": 131,
+      "precision": 0.12080536912751678,
+      "false_alarms_per_simulated_hour": 46.09970674486803,
+      "false_alarm_events_on_normal_trips": 59,
+      "normal_trips": 30,
+      "false_alarms_per_normal_hour": 45.677419354838705,
+      "simulated_hours": 2.841666666666667,
+      "detection_delay_s_median": 3.0,
+      "detection_delay_s_mean": 3.3333333333333335
+    },
+    "combined:cr004-iforest-v1": {
+      "truth_events": 40,
+      "detected_events": 40,
+      "missed_events": 0,
+      "recall": 1.0,
+      "alarm_events": 183,
+      "true_alarm_events": 52,
+      "false_alarm_events": 131,
+      "precision": 0.28415300546448086,
+      "false_alarms_per_simulated_hour": 46.09970674486803,
+      "false_alarm_events_on_normal_trips": 59,
+      "normal_trips": 30,
+      "false_alarms_per_normal_hour": 45.677419354838705,
+      "simulated_hours": 2.841666666666667,
+      "detection_delay_s_median": 3.0,
+      "detection_delay_s_mean": 4.095000000000001
+    },
+    "ml:cr005-iforest-v2": {
+      "truth_events": 40,
+      "detected_events": 4,
+      "missed_events": 36,
+      "recall": 0.1,
+      "alarm_events": 7,
+      "true_alarm_events": 4,
+      "false_alarm_events": 3,
+      "precision": 0.5714285714285714,
+      "false_alarms_per_simulated_hour": 1.0557184750733137,
+      "false_alarm_events_on_normal_trips": 1,
+      "normal_trips": 30,
+      "false_alarms_per_normal_hour": 0.7741935483870968,
+      "simulated_hours": 2.841666666666667,
+      "detection_delay_s_median": 14.0,
+      "detection_delay_s_mean": 11.25
+    },
+    "combined:cr005-iforest-v2": {
+      "truth_events": 40,
+      "detected_events": 40,
+      "missed_events": 0,
+      "recall": 1.0,
+      "alarm_events": 55,
+      "true_alarm_events": 53,
+      "false_alarm_events": 2,
+      "precision": 0.9636363636363636,
+      "false_alarms_per_simulated_hour": 0.7038123167155425,
+      "false_alarm_events_on_normal_trips": 1,
+      "normal_trips": 30,
+      "false_alarms_per_normal_hour": 0.7741935483870968,
+      "simulated_hours": 2.841666666666667,
+      "detection_delay_s_median": 6.0,
+      "detection_delay_s_mean": 5.04
+    }
+  },
+  "window_level": {
+    "cr004-iforest-v1": {
+      "TP": 336,
+      "FP": 1332,
+      "FN": 628,
+      "TN": 7610,
+      "precision": 0.2014388489208633,
+      "recall": 0.34854771784232363,
+      "f1": 0.25531914893617025,
+      "false_positive_windows_per_simulated_hour": 484.0702604482132,
+      "confusion_matrix_actual_rows_predicted_columns": [
+        [
+          7610,
+          1332
+        ],
+        [
+          628,
+          336
+        ]
+      ]
+    },
+    "cr005-iforest-v2": {
+      "TP": 101,
+      "FP": 543,
+      "FN": 863,
+      "TN": 8399,
+      "precision": 0.15683229813664595,
+      "recall": 0.10477178423236515,
+      "f1": 0.12562189054726366,
+      "false_positive_windows_per_simulated_hour": 197.3349485160509,
+      "confusion_matrix_actual_rows_predicted_columns": [
+        [
+          8399,
+          543
+        ],
+        [
+          863,
+          101
+        ]
+      ]
+    }
+  },
+  "by_scenario": {
+    "S01": {
+      "rules": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 10.4
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 1,
+        "recall": 0.2,
+        "delay_s_median": 4.0
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 10.4
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 10.4
+      }
+    },
+    "S02": {
+      "rules": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 6.6
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 6.6
+      }
+    },
+    "S03": {
+      "rules": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 7.0
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 2,
+        "recall": 0.4,
+        "delay_s_median": 8.0
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 7.0
+      }
+    },
+    "S04": {
+      "rules": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 8.0
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 2,
+        "recall": 0.4,
+        "delay_s_median": 3.0
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 6.2
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 8.0
+      }
+    },
+    "S05": {
+      "rules": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 1.0
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 2.0
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 1.0
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 1,
+        "recall": 0.2,
+        "delay_s_median": 18.0
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 5,
+        "detected": 5,
+        "recall": 1.0,
+        "delay_s_median": 1.0
+      }
+    },
+    "S06": {
+      "rules": {
+        "events": 7,
+        "detected": 7,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 7,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 7,
+        "detected": 7,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 7,
+        "detected": 1,
+        "recall": 0.14285714285714285,
+        "delay_s_median": 14.0
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 7,
+        "detected": 7,
+        "recall": 1.0,
+        "delay_s_median": 3.0
+      }
+    },
+    "S07": {
+      "rules": {
+        "events": 8,
+        "detected": 8,
+        "recall": 1.0,
+        "delay_s_median": 0.0
+      },
+      "ml:cr004-iforest-v1": {
+        "events": 8,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr004-iforest-v1": {
+        "events": 8,
+        "detected": 8,
+        "recall": 1.0,
+        "delay_s_median": 0.0
+      },
+      "ml:cr005-iforest-v2": {
+        "events": 8,
+        "detected": 0,
+        "recall": 0.0,
+        "delay_s_median": null
+      },
+      "combined:cr005-iforest-v2": {
+        "events": 8,
+        "detected": 8,
+        "recall": 1.0,
+        "delay_s_median": 0.0
+      }
+    }
+  },
+  "false_alarms": {
+    "rules": [],
+    "ml:cr004-iforest-v1": [
+      {
+        "trip": "test-7096",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7096",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7096",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7097",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7098",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7098",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7099",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 35.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 37.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7102",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7102",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7103",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7103",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 31.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7105",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 37.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7107",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7109",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7109",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7111",
+        "t_s": 9.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7111",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7112",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7112",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7113",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7114",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7114",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7115",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7115",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7116",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7116",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7117",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7118",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7118",
+        "t_s": 146.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7119",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7120",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7120",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7121",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7121",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7122",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7122",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7123",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7123",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7124",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7124",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7125",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7126",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7126",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7127",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7127",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7128",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7129",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7129",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 46.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7131",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7132",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 37.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7134",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7135",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 44.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7138",
+        "t_s": 12.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7138",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7139",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7140",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7140",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7141",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7141",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7142",
+        "t_s": 9.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7142",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7143",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7143",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 31.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7145",
+        "t_s": 13.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7145",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7146",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7146",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 45.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7148",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7148",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7149",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7150",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7150",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7151",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7152",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7152",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7153",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7155",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7156",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7156",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7158",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7159",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7159",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 148.0,
+        "normal_trip": false
+      }
+    ],
+    "combined:cr004-iforest-v1": [
+      {
+        "trip": "test-7096",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7096",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7096",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7097",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7098",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7098",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7099",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 35.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7100",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 37.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7101",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7102",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7102",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7103",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7103",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 31.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7104",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7105",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 37.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7106",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7107",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7108",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7109",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7109",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 38.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7110",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7111",
+        "t_s": 9.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7111",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7112",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7112",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7113",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7114",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7114",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7115",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7115",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7116",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7116",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7117",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7118",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7118",
+        "t_s": 146.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7119",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7120",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7120",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7121",
+        "t_s": 14.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7121",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7122",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7122",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7123",
+        "t_s": 10.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7123",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7124",
+        "t_s": 7.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7124",
+        "t_s": 148.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7125",
+        "t_s": 147.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7126",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7126",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7127",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7127",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7128",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7129",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7129",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 46.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7130",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7131",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7132",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 37.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7133",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7134",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7135",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7136",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 44.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7138",
+        "t_s": 12.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7138",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7139",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7140",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7140",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7141",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7141",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7142",
+        "t_s": 9.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7142",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7143",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7143",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 31.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7144",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7145",
+        "t_s": 13.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7145",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7146",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7146",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 45.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7147",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7148",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7148",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7149",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7150",
+        "t_s": 10.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7150",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7151",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7152",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7152",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7153",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7154",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7155",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7156",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7156",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7157",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7158",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7159",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7159",
+        "t_s": 148.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7160",
+        "t_s": 147.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 7.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 36.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7161",
+        "t_s": 148.0,
+        "normal_trip": false
+      }
+    ],
+    "ml:cr005-iforest-v2": [
+      {
+        "trip": "test-7096",
+        "t_s": 64.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 63.0,
+        "normal_trip": false
+      },
+      {
+        "trip": "test-7148",
+        "t_s": 64.0,
+        "normal_trip": false
+      }
+    ],
+    "combined:cr005-iforest-v2": [
+      {
+        "trip": "test-7096",
+        "t_s": 64.0,
+        "normal_trip": true
+      },
+      {
+        "trip": "test-7137",
+        "t_s": 63.0,
+        "normal_trip": false
+      }
+    ]
+  }
+}

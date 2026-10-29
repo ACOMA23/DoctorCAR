@@ -1,0 +1,114 @@
+{
+  "default_model": "cr005-iforest-v2",
+  "cr004-iforest-v1": {
+    "algorithm": "IsolationForest",
+    "n_estimators": 96,
+    "max_samples": "256",
+    "model_version": "iforest-cr004-v1",
+    "sha256": "0970cd008d891a014bbcf26a08f85e2fd30bae1e495a1ec9cbb2b3a6caa197a7",
+    "feature_schema": "timeseries-1",
+    "feature_count_schema": 47,
+    "feature_count_used_by_model": 12,
+    "window": {
+      "length_ms": 5000,
+      "stride_ms": 1000,
+      "sampling_ms": 200,
+      "minimum_coverage": 0.8
+    },
+    "threshold": 0.5649559648496754,
+    "policy": {
+      "consecutive": 3,
+      "hysteresis": 0.02
+    },
+    "threshold_policy": "maximum validation window F1 on fixed 201 quantile grid; tie highest threshold; test-3000 exploratory retired",
+    "trained_with_sklearn": "1.9.1",
+    "runtime_sklearn": "1.9.1",
+    "numpy_trained": "2.5.4",
+    "runtime_numpy": "2.5.4",
+    "training_rows": 1812,
+    "train_trips": 12,
+    "validation_trips": 16,
+    "preprocessing_steps": [
+      "ColumnTransformer",
+      "SimpleImputer",
+      "StandardScaler",
+      "IsolationForest"
+    ],
+    "used_feature_names": [
+      "COOLANT_TEMP.mean",
+      "COOLANT_TEMP.slope",
+      "SHORT_FUEL_TRIM.mean",
+      "SHORT_FUEL_TRIM.std",
+      "LONG_FUEL_TRIM.mean",
+      "CONTROL_MODULE_VOLTAGE.mean",
+      "CONTROL_MODULE_VOLTAGE.std",
+      "MAF.relative_residual",
+      "INTAKE_PRESSURE.residual",
+      "RPM.trim_correlation",
+      "MAF.coverage",
+      "INTAKE_PRESSURE.coverage"
+    ]
+  },
+  "cr005-iforest-v2": {
+    "algorithm": "IsolationForest",
+    "n_estimators": 200,
+    "max_samples": "256",
+    "model_version": "iforest-cr005-v2",
+    "sha256": "03153e0da6e1fc2bd87bc1f3b19598bdbb82a0da1bc893cbd8a7ffb9bfd85d87",
+    "feature_schema": "timeseries-1",
+    "feature_count_schema": 47,
+    "feature_count_used_by_model": 25,
+    "window": {
+      "length_ms": 5000,
+      "stride_ms": 1000,
+      "sampling_ms": 200,
+      "minimum_coverage": 0.8
+    },
+    "threshold": 0.581281744658954,
+    "policy": {
+      "consecutive": 5,
+      "hysteresis": 0.02
+    },
+    "threshold_policy": "Lowest threshold on a 401-level validation-score quantile grid whose persistence policy gives <= 0 validation false-alarm events, maximizing validation event recall; one grid step above for margin. Test split never used.",
+    "trained_with_sklearn": "1.9.1",
+    "runtime_sklearn": "1.9.1",
+    "numpy_trained": "2.5.4",
+    "runtime_numpy": "2.5.4",
+    "training_rows": 9060,
+    "train_trips": 60,
+    "validation_trips": 36,
+    "preprocessing_steps": [
+      "ColumnTransformer",
+      "SimpleImputer",
+      "StandardScaler",
+      "IsolationForest"
+    ],
+    "used_feature_names": [
+      "RPM.mean",
+      "RPM.slope",
+      "SPEED.mean",
+      "SPEED.slope",
+      "COOLANT_TEMP.mean",
+      "COOLANT_TEMP.slope",
+      "ENGINE_LOAD.mean",
+      "ENGINE_LOAD.slope",
+      "THROTTLE_POS.mean",
+      "THROTTLE_POS.slope",
+      "INTAKE_PRESSURE.mean",
+      "INTAKE_PRESSURE.slope",
+      "MAF.mean",
+      "MAF.slope",
+      "INTAKE_TEMP.mean",
+      "INTAKE_TEMP.slope",
+      "SHORT_FUEL_TRIM.mean",
+      "SHORT_FUEL_TRIM.slope",
+      "LONG_FUEL_TRIM.mean",
+      "LONG_FUEL_TRIM.slope",
+      "CONTROL_MODULE_VOLTAGE.mean",
+      "CONTROL_MODULE_VOLTAGE.slope",
+      "MAF.relative_residual",
+      "INTAKE_PRESSURE.residual",
+      "RPM.trim_correlation"
+    ]
+  }
+}

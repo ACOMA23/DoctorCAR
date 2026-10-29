@@ -1,0 +1,336 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: 9b886809-b15e-52e2-a461-e3530ca23144
+Session: 0d859c37-1591-4457-8ab5-a3a31dd677f7
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 68200 ms | correlated-evidence-1
+A. الأعراض المرصودة
+نمط حراري متصاعد تحت حمل
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=38200..98200 ms | min=798.390 max=2889.607 mean=2128.880 delta=1609.855
+SPEED [km/h] n=301 t=38200..98200 ms | min=0.000 max=61.500 mean=45.489 delta=59.175
+COOLANT_TEMP [°C] n=301 t=38200..98200 ms | min=67.170 max=123.491 mean=96.304 delta=18.718
+ENGINE_LOAD [%] n=301 t=38200..98200 ms | min=5.200 max=69.504 mean=40.667 delta=31.801
+THROTTLE_POS [%] n=301 t=38200..98200 ms | min=4.000 max=48.000 mean=27.083 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=38200..98200 ms | min=33.380 max=75.178 mean=56.433 delta=20.671
+MAF [g/s] n=301 t=38200..98200 ms | min=1.929 max=21.846 mean=11.483 delta=10.025
+INTAKE_TEMP [°C] n=301 t=38200..98200 ms | min=24.416 max=29.996 mean=28.632 delta=2.544
+SHORT_FUEL_TRIM [%] n=301 t=38200..98200 ms | min=-2.000 max=2.000 mean=0.133 delta=3.459
+LONG_FUEL_TRIM [%] n=301 t=38200..98200 ms | min=1.678 max=1.800 mean=1.761 delta=0.121
+CONTROL_MODULE_VOLTAGE [V] n=301 t=38200..98200 ms | min=13.800 max=14.000 mean=13.918 delta=-0.069
+C. أدلة العلاقات حتى لحظة الكشف فقط
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]
+load_mean_pct=37.0496 [60200..68200 ms]
+speed_mean_km_h=59.5804 [60200..68200 ms]
+rpm_mean=2427.2274 [60200..68200 ms]
+throttle_mean_pct=23.0000 [60200..68200 ms]
+حدود القاعدة التجريبية: temperature >=105°C; slope >0.12°C/s; >=1s valid observations
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: ABNORMAL_OPERATION
+ENGINE_LOAD: NORMAL
+INTAKE_PRESSURE: NORMAL
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: NORMAL
+MAF: NORMAL
+RPM: NORMAL
+SHORT_FUEL_TRIM: NORMAL
+SPEED: UNRESOLVED
+THROTTLE_POS: NORMAL
+D. النظام المحتمل المتأثر
+منظومة التبريد أو قياس الحرارة
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+احتمال انخفاض فعالية التبريد
+F. الأدلة الداعمة:
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]
+load_mean_pct=37.0496 [60200..68200 ms]
+speed_mean_km_h=59.5804 [60200..68200 ms]
+rpm_mean=2427.2274 [60200..68200 ms]
+throttle_mean_pct=23.0000 [60200..68200 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+مواصفات المركبة وقياس حرارة مستقل
+I. الفحوص المقترحة:
+فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة
+احتمال انحراف قياس الحرارة
+F. الأدلة الداعمة:
+coolant_current_C=105.0000 [60200..68200 ms]
+coolant_slope_C_per_s=3.2788 [60200..68200 ms]
+load_mean_pct=37.0496 [60200..68200 ms]
+speed_mean_km_h=59.5804 [60200..68200 ms]
+rpm_mean=2427.2274 [60200..68200 ms]
+throttle_mean_pct=23.0000 [60200..68200 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+مواصفات المركبة وقياس حرارة مستقل
+I. الفحوص المقترحة:
+فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة .
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=68200 ms | requested=38200..98200 ms
+actual=38200..98200 ms | n=301 | COMPLETE
+=== تفاصيل الذكاء الاصطناعي ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr005-v2
+model_sha256: 03153e0da6e1fc2bd87bc1f3b19598bdbb82a0da1bc893cbd8a7ffb9bfd85d87
+score: 0.48216111782283055
+threshold: 0.581281744658954
+window_start_ms: 63000
+window_end_ms: 68000
+age_ms: 200
+max_age_ms: 2000
+detection_ms: 68200
+recording_window_ms: 38200..98200
+samples: 301; missing_or_invalid: 0
+detection: rules=['MS_THERMAL'] (first 68200); ml=False (at None); quality=False; combined=False
+
+تحليل AI وXAI المحفوظ — التوقيت والميزات الأصلية
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 1.0,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 68000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2416.2586153846155,
+    14.306910339673479,
+    -8.537678632478762,
+    1.0,
+    59.135846153846146,
+    0.42744506550394085,
+    -0.28241025641026185,
+    1.0,
+    98.30973076923077,
+    4.137476558685094,
+    2.7503128205128196,
+    1.0,
+    36.996307692307695,
+    0.05127810241206559,
+    -0.033876923076922534,
+    1.0,
+    23.0,
+    0.0,
+    -6.968084099463257e-16,
+    1.0,
+    54.047615384615376,
+    0.033299430490714356,
+    -0.022003418803424435,
+    1.0,
+    11.983923076923077,
+    0.0799980399168164,
+    -0.04889914529914589,
+    1.0,
+    28.462538461538454,
+    0.29107562204945864,
+    0.19339145299145138,
+    1.0,
+    0.13203846153846158,
+    0.4218148044935607,
+    -0.2811982905982907,
+    1.0,
+    1.766153846153846,
+    0.003438384098250314,
+    0.002283760683760559,
+    1.0,
+    13.803346153846153,
+    0.0033505717961184785,
+    -0.0012017094017096723,
+    1.0,
+    -4.895019419005217e-06,
+    1.538461538457953e-05,
+    0.8945385398316953
+  ],
+  "inference_ms": 10.01730002462864,
+  "model_sha256": "03153e0da6e1fc2bd87bc1f3b19598bdbb82a0da1bc893cbd8a7ffb9bfd85d87",
+  "model_version": "iforest-cr005-v2",
+  "score": 0.48216111782283055,
+  "session_id": "0d859c37-1591-4457-8ab5-a3a31dd677f7",
+  "start_ms": 63000,
+  "threshold": 0.581281744658954
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "coolant_current_C=105.0000 [60200..68200 ms]",
+      "coolant_slope_C_per_s=3.2788 [60200..68200 ms]",
+      "load_mean_pct=37.0496 [60200..68200 ms]",
+      "speed_mean_km_h=59.5804 [60200..68200 ms]",
+      "rpm_mean=2427.2274 [60200..68200 ms]",
+      "throttle_mean_pct=23.0000 [60200..68200 ms]"
+    ],
+    "kind": "MS_THERMAL",
+    "observation": "نمط حراري متصاعد تحت حمل",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 68200
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 68200,
+  "hypotheses": [
+    {
+      "description": "احتمال انخفاض فعالية التبريد",
+      "supporting_evidence": [
+        "coolant_current_C=105.0000 [60200..68200 ms]",
+        "coolant_slope_C_per_s=3.2788 [60200..68200 ms]",
+        "load_mean_pct=37.0496 [60200..68200 ms]",
+        "speed_mean_km_h=59.5804 [60200..68200 ms]",
+        "rpm_mean=2427.2274 [60200..68200 ms]",
+        "throttle_mean_pct=23.0000 [60200..68200 ms]"
+      ],
+      "missing_evidence": [
+        "مواصفات المركبة وقياس حرارة مستقل"
+      ],
+      "recommended_check": "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة",
+      "contradicting_evidence": [],
+      "description_en": "Possible reduced cooling effectiveness",
+      "missing_evidence_en": [
+        "Vehicle specifications and independent temperature"
+      ],
+      "recommended_check_en": "Check coolant level, fan and circulation; compare an independent temperature"
+    },
+    {
+      "description": "احتمال انحراف قياس الحرارة",
+      "supporting_evidence": [
+        "coolant_current_C=105.0000 [60200..68200 ms]",
+        "coolant_slope_C_per_s=3.2788 [60200..68200 ms]",
+        "load_mean_pct=37.0496 [60200..68200 ms]",
+        "speed_mean_km_h=59.5804 [60200..68200 ms]",
+        "rpm_mean=2427.2274 [60200..68200 ms]",
+        "throttle_mean_pct=23.0000 [60200..68200 ms]"
+      ],
+      "missing_evidence": [
+        "مواصفات المركبة وقياس حرارة مستقل"
+      ],
+      "recommended_check": "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة",
+      "contradicting_evidence": [],
+      "description_en": "Possible temperature measurement bias",
+      "missing_evidence_en": [
+        "Vehicle specifications and independent temperature"
+      ],
+      "recommended_check_en": "Check coolant level, fan and circulation; compare an independent temperature"
+    }
+  ]
+}

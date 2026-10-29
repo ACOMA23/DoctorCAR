@@ -1,0 +1,488 @@
+{
+ "combinations": 144,
+ "clipped": [
+  {
+   "where": "ar/125%/1280x720/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 191
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 134,
+   "have": 129
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 134,
+   "have": 128
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 134,
+   "have": 129
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 134,
+   "have": 128
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 162
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 134,
+   "have": 129
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 148
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 148
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 148
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 148
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 182
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 148
+  },
+  {
+   "where": "ar/150%/980x640/page4",
+   "type": "QLabel",
+   "text": "تفاصيل الحدث والتقرير",
+   "need": 351,
+   "have": 309
+  },
+  {
+   "where": "ar/150%/1280x720/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 191
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 128
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 127
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 128
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 127
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 162
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  لم تصل بيانات",
+   "need": 157,
+   "have": 128
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 153
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 152
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 153
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 152
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 186
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 153
+  },
+  {
+   "where": "en/125%/980x640/page4",
+   "type": "QLabel",
+   "text": "Event details and report",
+   "need": 315,
+   "have": 296
+  },
+  {
+   "where": "en/125%/1280x720/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 191
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 129
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 128
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 129
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 128
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "QLabel",
+   "text": "Control module voltage",
+   "need": 178,
+   "have": 162
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 162
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 160,
+   "have": 129
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "QLabel",
+   "text": "Coolant temperature",
+   "need": 184,
+   "have": 162
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 128
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "QLabel",
+   "text": "Control module voltage",
+   "need": 209,
+   "have": 163
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 163
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/980x640/page2",
+   "type": "QLabel",
+   "text": "Sensor readings",
+   "need": 254,
+   "have": 245
+  },
+  {
+   "where": "en/150%/980x640/page4",
+   "type": "QLabel",
+   "text": "Event details and report",
+   "need": 382,
+   "have": 245
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QLabel",
+   "text": "Coolant temperature",
+   "need": 184,
+   "have": 162
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 128
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QLabel",
+   "text": "Control module voltage",
+   "need": 209,
+   "have": 163
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 163
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "QLabel",
+   "text": "Coolant temperature",
+   "need": 184,
+   "have": 162
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 128
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "QLabel",
+   "text": "Control module voltage",
+   "need": 209,
+   "have": 163
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "QLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 163
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "StatusPill",
+   "text": "○  No data received",
+   "need": 188,
+   "have": 129
+  }
+ ],
+ "horizontal_overflow": [
+  "ar/125%/980x640/page0",
+  "ar/125%/980x640/page1",
+  "ar/150%/980x640/page0",
+  "ar/150%/980x640/page1",
+  "en/100%/980x640/page0",
+  "en/125%/980x640/page0",
+  "en/125%/980x640/page1",
+  "en/150%/980x640/page0",
+  "en/150%/980x640/page1",
+  "en/150%/980x640/page3",
+  "en/150%/1280x720/page0",
+  "en/150%/1366x768/page0"
+ ],
+ "screen": [],
+ "unique_clipped": [
+  [
+   "QLabel",
+   "CONTROL_MODULE_VOLTAGE"
+  ],
+  [
+   "QLabel",
+   "Control module voltage"
+  ],
+  [
+   "QLabel",
+   "Coolant temperature"
+  ],
+  [
+   "QLabel",
+   "Event details and report"
+  ],
+  [
+   "QLabel",
+   "Sensor readings"
+  ],
+  [
+   "QLabel",
+   "تفاصيل الحدث والتقرير"
+  ],
+  [
+   "StatusPill",
+   "○  No data received"
+  ],
+  [
+   "StatusPill",
+   "○  لم تصل بيانات"
+  ]
+ ]
+}

@@ -1,0 +1,4 @@
+pip wheel ./desktop --no-deps  ->  doctorcar-0.1.0-py3-none-any.whl (1,162,139 bytes)
+sha256 b84b803b5b67f4747ed2a739b62ed5d8344da499cb202ae09027d0aa50f160c6
+Installed in a fresh venv with doctorcar[ml] and -c desktop/requirements-lock.txt; pip check: no broken requirements.
+Verified with python -I from a neutral directory: package and models loaded from site-packages.

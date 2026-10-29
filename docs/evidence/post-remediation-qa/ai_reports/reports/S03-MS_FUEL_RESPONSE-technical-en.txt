@@ -1,0 +1,344 @@
+DoctorCAR — multisensor evidence report
+Event ID: 080f8f54-3bf3-5f1e-afff-413ce2348b1a
+Session: fddb9b36-357c-49ca-afc6-7beceac64cf0
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 66000 ms | correlated-evidence-1
+A. Observed Symptoms
+High fuel correction under load with consistent air references
+B. Measurements in the actual event window
+RPM [rpm] n=301 t=36000..96000 ms | min=798.390 max=2889.607 mean=2021.941 delta=1604.551
+SPEED [km/h] n=301 t=36000..96000 ms | min=0.000 max=61.500 mean=43.337 delta=58.642
+COOLANT_TEMP [°C] n=301 t=36000..96000 ms | min=65.689 max=85.622 mean=78.363 delta=19.933
+ENGINE_LOAD [%] n=301 t=36000..96000 ms | min=5.200 max=69.504 mean=41.495 delta=31.737
+THROTTLE_POS [%] n=301 t=36000..96000 ms | min=4.000 max=48.000 mean=26.389 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=36000..96000 ms | min=33.380 max=75.178 mean=57.005 delta=20.629
+MAF [g/s] n=301 t=36000..96000 ms | min=1.929 max=21.846 mean=11.017 delta=9.994
+INTAKE_TEMP [°C] n=301 t=36000..96000 ms | min=24.416 max=29.560 mean=27.160 delta=2.539
+SHORT_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=-1.818 max=17.753 mean=8.953 delta=3.642
+LONG_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=1.669 max=5.025 mean=3.021 delta=0.131
+CONTROL_MODULE_VOLTAGE [V] n=301 t=36000..96000 ms | min=13.800 max=14.000 mean=13.919 delta=-0.001
+C. Cross-Sensor Evidence through detection only
+maf_residual_pct=-1.9461 [58000..66000 ms]
+map_residual_kPa=0.0337 [58000..66000 ms]
+stft_mean_pct=10.1112 [58000..66000 ms]
+load_mean_pct=46.9143 [58000..66000 ms]
+rpm_mean=2470.9013 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.1778 [58000..66000 ms]
+Experimental rule criteria: STFT >10%; |MAF residual|<15%; |MAP residual|<4kPa
+Derived classification, separate from Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: UNRESOLVED
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: ABNORMAL_OPERATION
+MAF: UNRESOLVED
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: ABNORMAL_OPERATION
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. Suspected System
+Air and fuel system
+E. Possible Causes — testable hypotheses
+Possible fuel supply limitation
+F. Supporting Evidence:
+maf_residual_pct=-1.9461 [58000..66000 ms]
+map_residual_kPa=0.0337 [58000..66000 ms]
+stft_mean_pct=10.1112 [58000..66000 ms]
+load_mean_pct=46.9143 [58000..66000 ms]
+rpm_mean=2470.9013 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.1778 [58000..66000 ms]
+G. Contradicting Evidence:
+No independent contradiction available; this does not confirm the hypothesis.
+H. Missing Evidence:
+No fuel pressure PID or actual pressure measurement
+I. Recommended Checks:
+Measure actual fuel pressure with suitable external equipment; inspect supply and compare loads
+Possible intake leak or measurement bias
+F. Supporting Evidence:
+maf_residual_pct=-1.9461 [58000..66000 ms]
+map_residual_kPa=0.0337 [58000..66000 ms]
+stft_mean_pct=10.1112 [58000..66000 ms]
+load_mean_pct=46.9143 [58000..66000 ms]
+rpm_mean=2470.9013 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.1778 [58000..66000 ms]
+G. Contradicting Evidence:
+MAP residual=0.034 kPa; large intake-pressure mismatch absent
+H. Missing Evidence:
+No fuel pressure PID or actual pressure measurement
+I. Recommended Checks:
+Same check as listed under hypothesis 1.
+J. Limitations
+Evidence is insufficient to identify the probable cause.
+These rules are calibrated to a declared toy simulation, not universal limits or validated physics.
+A pattern proves no failed part, misfire or cylinder; no calibrated mechanical confidence .
+Module voltage is not battery current; no invented fuel pressure PID, DTC or Freeze Frame.
+DTC: No code observed
+Freeze Frame: Unavailable; this window is not ECU Freeze Frame
+K. Event Window
+T=66000 ms | requested=36000..96000 ms
+actual=36000..96000 ms | n=301 | COMPLETE
+=== AI details ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.5094417520631793
+threshold: 0.6029934378184284
+window_start_ms: 61000
+window_end_ms: 66000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 66000
+recording_window_ms: 36000..96000
+samples: 301; missing_or_invalid: 0
+detection: rules=['MS_FUEL_RESPONSE'] (first 66000); ml=False (at None); quality=False; combined=False
+
+Stored AI/XAI — original timing and features
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 1.0,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 66000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2358.4680384615385,
+    25.96997527246354,
+    -16.49212478632538,
+    1.0,
+    59.7678076923077,
+    0.5320811837442433,
+    -0.3545145299145378,
+    1.0,
+    78.90892307692307,
+    0.47521508677463603,
+    0.31675213675213143,
+    1.0,
+    40.1075,
+    0.4433170639968295,
+    0.26455897435897024,
+    1.0,
+    23.0,
+    0.0,
+    -1.1747711772638558e-15,
+    1.0,
+    56.1205,
+    0.2966772722103156,
+    0.17721196581196305,
+    1.0,
+    11.925384615384617,
+    0.10929954497867034,
+    -0.06926153846153944,
+    1.0,
+    26.965769230769226,
+    0.005108873820714285,
+    -0.003398290598292659,
+    1.0,
+    14.335423076923075,
+    1.9073691541588604,
+    1.1175538461538443,
+    1.0,
+    2.418346153846154,
+    0.32386641860586857,
+    0.21571111111111096,
+    1.0,
+    13.811076923076921,
+    0.010141017537031867,
+    -0.006543589743590531,
+    1.0,
+    -0.029167232724016376,
+    0.05062499999999823,
+    -0.9178899756816298
+  ],
+  "inference_ms": 8.347599999979138,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.5094417520631793,
+  "session_id": "fddb9b36-357c-49ca-afc6-7beceac64cf0",
+  "start_ms": 61000,
+  "threshold": 0.6029934378184284
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "maf_residual_pct=-1.9461 [58000..66000 ms]",
+      "map_residual_kPa=0.0337 [58000..66000 ms]",
+      "stft_mean_pct=10.1112 [58000..66000 ms]",
+      "load_mean_pct=46.9143 [58000..66000 ms]",
+      "rpm_mean=2470.9013 [58000..66000 ms]",
+      "throttle_mean_pct=29.0976 [58000..66000 ms]",
+      "ltft_mean_pct=2.1778 [58000..66000 ms]"
+    ],
+    "kind": "MS_FUEL_RESPONSE",
+    "observation": "تصحيح وقود مرتفع تحت حمل مع مراجع هواء متقاربة",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 66000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 66000,
+  "hypotheses": [
+    {
+      "description": "احتمال قصور إمداد الوقود",
+      "supporting_evidence": [
+        "maf_residual_pct=-1.9461 [58000..66000 ms]",
+        "map_residual_kPa=0.0337 [58000..66000 ms]",
+        "stft_mean_pct=10.1112 [58000..66000 ms]",
+        "load_mean_pct=46.9143 [58000..66000 ms]",
+        "rpm_mean=2470.9013 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.1778 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "لا يوجد Fuel Pressure PID أو قياس ضغط فعلي"
+      ],
+      "recommended_check": "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال",
+      "contradicting_evidence": [],
+      "description_en": "Possible fuel supply limitation",
+      "missing_evidence_en": [
+        "No fuel pressure PID or actual pressure measurement"
+      ],
+      "recommended_check_en": "Measure actual fuel pressure with suitable external equipment; inspect supply and compare loads"
+    },
+    {
+      "description": "احتمال تسرب هواء أو انحراف قياس",
+      "supporting_evidence": [
+        "maf_residual_pct=-1.9461 [58000..66000 ms]",
+        "map_residual_kPa=0.0337 [58000..66000 ms]",
+        "stft_mean_pct=10.1112 [58000..66000 ms]",
+        "load_mean_pct=46.9143 [58000..66000 ms]",
+        "rpm_mean=2470.9013 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.1778 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "لا يوجد Fuel Pressure PID أو قياس ضغط فعلي"
+      ],
+      "recommended_check": "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال",
+      "contradicting_evidence": [
+        "MAP residual=0.034 kPa; large intake-pressure mismatch absent"
+      ],
+      "description_en": "Possible intake leak or measurement bias",
+      "missing_evidence_en": [
+        "No fuel pressure PID or actual pressure measurement"
+      ],
+      "recommended_check_en": "Measure actual fuel pressure with suitable external equipment; inspect supply and compare loads"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "S01",
+    "start_s": 30.0,
+    "duration_s": 5.0,
+    "detected": false,
+    "event": null,
+    "reason": "5 s thermal fault too short for the rule (needs sustained rise)"
+  },
+  {
+    "scenario": "S07",
+    "start_s": 90.0,
+    "duration_s": 5.0,
+    "detected": false,
+    "event": null,
+    "reason": "unexplained"
+  },
+  {
+    "scenario": "S04",
+    "start_s": 150.0,
+    "duration_s": 45.0,
+    "detected": false,
+    "event": null,
+    "reason": "engine already stopped (driving profile ends at ~145 s) - simulator limitation"
+  }
+]

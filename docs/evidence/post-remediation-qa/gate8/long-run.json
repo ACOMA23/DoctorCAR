@@ -1,0 +1,93 @@
+{
+  "trips": 12,
+  "simulated_seconds": 1860,
+  "samples_generated": 9324,
+  "samples_accepted": 9312,
+  "samples_rejected": 0,
+  "expected_samples": 9312,
+  "wall_s": 46.4,
+  "cpu_s": 40.9,
+  "throughput_samples_per_s": 200.6,
+  "realtime_factor": 40.1,
+  "sessions": 12,
+  "events": 56,
+  "event_status": {
+    "COMPLETE": 53,
+    "PARTIAL": 3
+  },
+  "event_kinds": {
+    "DATA_QUALITY": 17,
+    "ML_ANOMALY": 4,
+    "MS_AIRFLOW": 2,
+    "MS_COMBUSTION": 5,
+    "MS_FUEL_RESPONSE": 3,
+    "MS_SIGNAL": 10,
+    "MS_SUPPLY": 8,
+    "MS_THERMAL": 7
+  },
+  "event_save_ms_median": 0.54,
+  "event_save_ms_p95": 0.87,
+  "event_save_ms_max": 58.92,
+  "ml_inference_ms_median": 9.08,
+  "ml_inference_ms_p95": 15.4,
+  "memory_mb_after_trip1": 291.6,
+  "memory_mb_end": 296.6,
+  "memory_growth_mb_after_trip1": 5.0,
+  "db_size_mb": 50.8,
+  "db_growth_mb_per_simulated_hour": 98.3,
+  "integrity": "ok",
+  "memory_curve": [
+    [
+      0,
+      81.3
+    ],
+    [
+      777,
+      291.6
+    ],
+    [
+      1554,
+      294.4
+    ],
+    [
+      2331,
+      295.4
+    ],
+    [
+      3108,
+      295.7
+    ],
+    [
+      3885,
+      295.7
+    ],
+    [
+      4662,
+      295.7
+    ],
+    [
+      5439,
+      295.7
+    ],
+    [
+      6216,
+      295.9
+    ],
+    [
+      6993,
+      295.9
+    ],
+    [
+      7770,
+      295.9
+    ],
+    [
+      8547,
+      295.9
+    ],
+    [
+      9324,
+      296.6
+    ]
+  ]
+}

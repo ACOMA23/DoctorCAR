@@ -1,0 +1,133 @@
+{
+  "cycles": 5,
+  "ground_truth_schedule": [
+    {
+      "duration_ms": 5000,
+      "scenario_id": "S01",
+      "severity": 0.6,
+      "start_ms": 30000,
+      "variant": "default"
+    },
+    {
+      "duration_ms": 18000,
+      "scenario_id": "S04",
+      "severity": 1.0,
+      "start_ms": 60000,
+      "variant": "default"
+    },
+    {
+      "duration_ms": 18000,
+      "scenario_id": "S07",
+      "severity": 0.85,
+      "start_ms": 60000,
+      "variant": "flatline"
+    },
+    {
+      "duration_ms": 45000,
+      "scenario_id": "S04",
+      "severity": 1.0,
+      "start_ms": 90000,
+      "variant": "default"
+    },
+    {
+      "duration_ms": 5000,
+      "scenario_id": "S07",
+      "severity": 0.85,
+      "start_ms": 90000,
+      "variant": "implausible"
+    },
+    {
+      "duration_ms": 5000,
+      "scenario_id": "S07",
+      "severity": 0.6,
+      "start_ms": 120000,
+      "variant": "dropout"
+    },
+    {
+      "duration_ms": 45000,
+      "scenario_id": "S04",
+      "severity": 0.85,
+      "start_ms": 150000,
+      "variant": "default"
+    }
+  ],
+  "detected_events": [
+    [
+      "ML_ANOMALY",
+      64.0
+    ],
+    [
+      "DATA_QUALITY",
+      90.0
+    ],
+    [
+      "MS_SIGNAL",
+      90.0
+    ],
+    [
+      "MS_AIRFLOW",
+      96.2
+    ],
+    [
+      "DATA_QUALITY",
+      124.0
+    ]
+  ],
+  "comparison": [
+    {
+      "scenario": "S01",
+      "start_s": 30.0,
+      "duration_s": 5.0,
+      "detected": false,
+      "event": null
+    },
+    {
+      "scenario": "S04",
+      "start_s": 60.0,
+      "duration_s": 18.0,
+      "detected": false,
+      "event": null
+    },
+    {
+      "scenario": "S07",
+      "start_s": 60.0,
+      "duration_s": 18.0,
+      "detected": false,
+      "event": null
+    },
+    {
+      "scenario": "S04",
+      "start_s": 90.0,
+      "duration_s": 45.0,
+      "detected": true,
+      "event": [
+        "MS_AIRFLOW",
+        96200
+      ]
+    },
+    {
+      "scenario": "S07",
+      "start_s": 90.0,
+      "duration_s": 5.0,
+      "detected": true,
+      "event": [
+        "MS_SIGNAL",
+        90000
+      ]
+    },
+    {
+      "scenario": "S07",
+      "start_s": 120.0,
+      "duration_s": 5.0,
+      "detected": false,
+      "event": null
+    },
+    {
+      "scenario": "S04",
+      "start_s": 150.0,
+      "duration_s": 45.0,
+      "detected": false,
+      "event": null
+    }
+  ]
+}

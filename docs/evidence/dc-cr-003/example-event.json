@@ -1,0 +1,183 @@
+{
+  "event_id": "1afdb9b1-4ac3-5d93-bbbd-7813f35ec5a5",
+  "kind": "MS_AIR_FUEL",
+  "trigger_ms": 66000,
+  "first_ms": 36000,
+  "last_ms": 96000,
+  "samples": 301,
+  "measurements": {
+    "RPM": {
+      "unit": "rpm",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 799.214,
+      "maximum": 2903.595,
+      "mean": 2071.1195249169436,
+      "delta": 1589.0299999999997
+    },
+    "SPEED": {
+      "unit": "km/h",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 0.0,
+      "maximum": 61.5,
+      "mean": 43.33655481727575,
+      "delta": 58.642
+    },
+    "COOLANT_TEMP": {
+      "unit": "°C",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 65.689,
+      "maximum": 85.622,
+      "mean": 78.36340199335548,
+      "delta": 19.933000000000007
+    },
+    "ENGINE_LOAD": {
+      "unit": "%",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 5.2,
+      "maximum": 69.504,
+      "mean": 40.51363455149502,
+      "delta": 31.737
+    },
+    "THROTTLE_POS": {
+      "unit": "%",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 4.0,
+      "maximum": 48.0,
+      "mean": 26.388704318936878,
+      "delta": 19.0
+    },
+    "INTAKE_PRESSURE": {
+      "unit": "kPa",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 33.38,
+      "maximum": 75.178,
+      "mean": 59.680096345514954,
+      "delta": 20.628999999999998
+    },
+    "MAF": {
+      "unit": "g/s",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 1.931,
+      "maximum": 21.952,
+      "mean": 9.899401993355482,
+      "delta": 9.943999999999999
+    },
+    "INTAKE_TEMP": {
+      "unit": "°C",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 24.416,
+      "maximum": 29.56,
+      "mean": 27.160461794019934,
+      "delta": 2.538999999999998
+    },
+    "SHORT_FUEL_TRIM": {
+      "unit": "%",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": -1.818,
+      "maximum": 19.88,
+      "mean": 9.073305647840531,
+      "delta": 3.6420000000000003
+    },
+    "LONG_FUEL_TRIM": {
+      "unit": "%",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 1.669,
+      "maximum": 5.698,
+      "mean": 3.1367441860465117,
+      "delta": 0.131
+    },
+    "CONTROL_MODULE_VOLTAGE": {
+      "unit": "V",
+      "count": 301,
+      "start_ms": 36000,
+      "end_ms": 96000,
+      "minimum": 13.8,
+      "maximum": 14.0,
+      "mean": 13.918993355481728,
+      "delta": -0.0009999999999994458
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "MS_AIR_FUEL",
+      "start_ms": 58000,
+      "end_ms": 66000,
+      "metrics": {
+        "maf_residual_pct": -13.816345792426402,
+        "map_residual_kPa": 4.072991463414633,
+        "stft_mean_pct": 12.054878048780488,
+        "load_mean_pct": 46.11948780487805,
+        "rpm_mean": 2523.240536585366,
+        "throttle_mean_pct": 29.097560975609756,
+        "ltft_mean_pct": 2.385073170731707
+      },
+      "contradicting_evidence": []
+    }
+  ],
+  "hypotheses": [
+    {
+      "description": "احتمال تسرب هواء غير مقاس",
+      "supporting_evidence": [
+        "maf_residual_pct=-13.8163 [58000..66000 ms]",
+        "map_residual_kPa=4.0730 [58000..66000 ms]",
+        "stft_mean_pct=12.0549 [58000..66000 ms]",
+        "load_mean_pct=46.1195 [58000..66000 ms]",
+        "rpm_mean=2523.2405 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.3851 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين"
+      ],
+      "recommended_check": "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+      "contradicting_evidence": [],
+      "description_en": "Possible unmetered intake air",
+      "missing_evidence_en": [
+        "Independent leak test and actual fuel pressure unavailable"
+      ],
+      "recommended_check_en": "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads"
+    },
+    {
+      "description": "احتمال انحراف قياس الهواء أو قصور الوقود",
+      "supporting_evidence": [
+        "maf_residual_pct=-13.8163 [58000..66000 ms]",
+        "map_residual_kPa=4.0730 [58000..66000 ms]",
+        "stft_mean_pct=12.0549 [58000..66000 ms]",
+        "load_mean_pct=46.1195 [58000..66000 ms]",
+        "rpm_mean=2523.2405 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.3851 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين"
+      ],
+      "recommended_check": "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+      "contradicting_evidence": [],
+      "description_en": "Possible air measurement bias or fuel limitation",
+      "missing_evidence_en": [
+        "Independent leak test and actual fuel pressure unavailable"
+      ],
+      "recommended_check_en": "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads"
+    }
+  ]
+}

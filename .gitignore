@@ -1,0 +1,55 @@
+# --- Python / tooling caches ---
+.venv/
+.verification-env/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.test-tmp/
+.audit-test-tmp/
+.coverage
+htmlcov/
+
+# --- Build output ---
+build/
+dist/
+desktop/build/
+desktop/dist/
+firmware/build/
+firmware/managed_components/
+firmware/sdkconfig
+firmware/sdkconfig.old
+
+# --- Local data (user databases, generated datasets, test scratch) ---
+data/
+*.sqlite3
+*.sqlite3-*
+*.sqlite
+*.db
+*.settings.ini
+
+# --- Secrets / local configuration ---
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+.claude/settings.local.json
+
+# --- Logs and temporary files ---
+*.log
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+
+# --- Machine-specific caches ---
+.vscode/
+.idea/
+
+# Evidence screenshots may show local user names/paths
+docs/evidence/**/*.png

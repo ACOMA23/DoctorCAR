@@ -1,0 +1,110 @@
+{
+  "label": "source",
+  "python": "C:/doccar/.venv/Scripts/python.exe",
+  "database_path": "C:\\Users\\user\\AppData\\Local\\Temp\\dc-ux-splash-4c11g4i6\\مجلد تجربة\\قاعدة بيانات.sqlite3",
+  "splash_visible_after_s": 0.338,
+  "main_visible_after_s": 2.305,
+  "splash_frames": [
+    {
+      "t_s": 0.338,
+      "file": "source-splash-00.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.683,
+      "file": "source-splash-01.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.828,
+      "file": "source-splash-02.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.957,
+      "file": "source-splash-03.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.08,
+      "file": "source-splash-04.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.205,
+      "file": "source-splash-05.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.331,
+      "file": "source-splash-06.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.455,
+      "file": "source-splash-07.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.581,
+      "file": "source-splash-08.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.706,
+      "file": "source-splash-09.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.835,
+      "file": "source-splash-10.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.961,
+      "file": "source-splash-11.png",
+      "size": [
+        580,
+        380
+      ]
+    }
+  ],
+  "splash_still_visible_after_main": false,
+  "main_windows": 1,
+  "exit_code_after_close": 0,
+  "database_created": true,
+  "stderr_tail": ""
+}

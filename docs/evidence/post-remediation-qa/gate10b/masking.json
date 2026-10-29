@@ -1,0 +1,40 @@
+{
+  "S04 alone": [
+    [
+      "MS_AIRFLOW",
+      66.2
+    ]
+  ],
+  "S07 flatline alone": [
+    [
+      "MS_SIGNAL",
+      68.0
+    ]
+  ],
+  "S04 + S07 flatline together": [
+    [
+      "MS_SIGNAL",
+      68.0
+    ],
+    [
+      "MS_AIRFLOW",
+      66.2
+    ]
+  ],
+  "S04 + S07 dropout (5 s at 120 s) together": [
+    [
+      "MS_SIGNAL",
+      120.0
+    ],
+    [
+      "MS_AIRFLOW",
+      96.2
+    ]
+  ],
+  "S07 dropout alone": [
+    [
+      "MS_SIGNAL",
+      120.0
+    ]
+  ]
+}

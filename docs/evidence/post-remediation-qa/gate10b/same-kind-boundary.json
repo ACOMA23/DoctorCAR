@@ -1,0 +1,42 @@
+{
+  "S07 dropout at 90 s and again at 120.0 s": [
+    [
+      "MS_SIGNAL",
+      120.0
+    ],
+    [
+      "MS_SIGNAL",
+      90.0
+    ]
+  ],
+  "S07 dropout at 90 s and again at 120.2 s": [
+    [
+      "MS_SIGNAL",
+      120.2
+    ],
+    [
+      "MS_SIGNAL",
+      90.0
+    ]
+  ],
+  "S07 dropout at 90 s and again at 121.0 s": [
+    [
+      "MS_SIGNAL",
+      121.0
+    ],
+    [
+      "MS_SIGNAL",
+      90.0
+    ]
+  ],
+  "S07 dropout at 90 s and again at 125.0 s": [
+    [
+      "MS_SIGNAL",
+      125.0
+    ],
+    [
+      "MS_SIGNAL",
+      90.0
+    ]
+  ]
+}

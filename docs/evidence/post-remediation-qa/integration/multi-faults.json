@@ -1,0 +1,17 @@
+{
+  "S04+S07": [
+    "MS_AIRFLOW",
+    "MS_SIGNAL"
+  ],
+  "S01+S05": [
+    "MS_SUPPLY",
+    "MS_THERMAL"
+  ],
+  "S02+S06": "not injectable: Conflicting scenario writes: S02, S06",
+  "S03+S05": "not injectable: Conflicting scenario writes: S03, S05",
+  "S01+S07": [
+    "MS_SIGNAL",
+    "MS_THERMAL"
+  ],
+  "S02+S07": "not injectable: Conflicting scenario writes: S02, S07"
+}

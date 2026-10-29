@@ -1,0 +1,17 @@
+{
+  "package_file": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--doccar\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\scratchpad\\fresh-venv\\Lib\\site-packages\\doctorcar\\__init__.py",
+  "from_site_packages": true,
+  "models_root": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--doccar\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\scratchpad\\fresh-venv\\Lib\\site-packages\\doctorcar\\analysis\\models",
+  "available": [
+    "cr004-iforest-v1",
+    "cr005-iforest-v2"
+  ],
+  "default": "cr005-iforest-v2",
+  "cr004-iforest-v1": "0970cd008d891a014bbcf26a08f85e2fd30bae1e495a1ec9cbb2b3a6caa197a7",
+  "cr005-iforest-v2": "03153e0da6e1fc2bd87bc1f3b19598bdbb82a0da1bc893cbd8a7ffb9bfd85d87",
+  "model_version": "iforest-cr005-v2",
+  "windows_scored": 151,
+  "score_sum": 72.941821,
+  "triggers": [],
+  "cwd": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--doccar\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\scratchpad"
+}

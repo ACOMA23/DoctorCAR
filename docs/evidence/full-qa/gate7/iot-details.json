@@ -1,0 +1,215 @@
+{
+  "e2e06": {
+    "accepted": 776,
+    "states": [
+      "RECEIVING_DATA"
+    ],
+    "historical": 2,
+    "live": [
+      "MS_AIR_FUEL"
+    ],
+    "sessions": [
+      61,
+      776,
+      61
+    ],
+    "info": {
+      "state": "DISCONNECTED",
+      "device_id": "doctorcar-loopback-simulator",
+      "session_id": "c15c136e-7476-4f1b-8988-65ebcaefd102",
+      "source": "SIMULATION",
+      "firmware_version": "software-tcp-1",
+      "protocol_version": 1,
+      "capabilities": {
+        "sensors": [
+          "RPM",
+          "SPEED",
+          "COOLANT_TEMP",
+          "ENGINE_LOAD",
+          "THROTTLE_POS",
+          "INTAKE_PRESSURE",
+          "MAF",
+          "INTAKE_TEMP",
+          "SHORT_FUEL_TRIM",
+          "LONG_FUEL_TRIM",
+          "CONTROL_MODULE_VOLTAGE",
+          "DTC"
+        ],
+        "can": false,
+        "microsd": false,
+        "event_upload": true
+      },
+      "last_timestamp_ms": 155000,
+      "transport": "TCP_LOOPBACK",
+      "host": "127.0.0.1",
+      "port": 40214,
+      "reconnects": 0,
+      "vehicle_verified": false
+    },
+    "reconnects": 0
+  },
+  "e2e07": [
+    {
+      "accepted": 776,
+      "states": [
+        "RECEIVING_DATA"
+      ],
+      "historical": 2,
+      "live": [
+        "MS_AIR_FUEL"
+      ],
+      "sessions": [
+        776,
+        61,
+        61
+      ],
+      "info": {
+        "state": "DISCONNECTED",
+        "device_id": "doctorcar-loopback-simulator",
+        "session_id": "0ba9ddfa-2e2a-4faa-bfd4-c5fd6c10ecac",
+        "source": "SIMULATION",
+        "firmware_version": "software-tcp-1",
+        "protocol_version": 1,
+        "capabilities": {
+          "sensors": [
+            "RPM",
+            "SPEED",
+            "COOLANT_TEMP",
+            "ENGINE_LOAD",
+            "THROTTLE_POS",
+            "INTAKE_PRESSURE",
+            "MAF",
+            "INTAKE_TEMP",
+            "SHORT_FUEL_TRIM",
+            "LONG_FUEL_TRIM",
+            "CONTROL_MODULE_VOLTAGE",
+            "DTC"
+          ],
+          "can": false,
+          "microsd": false,
+          "event_upload": true
+        },
+        "last_timestamp_ms": 155000,
+        "transport": "TCP_LOOPBACK",
+        "host": "127.0.0.1",
+        "port": 40216,
+        "reconnects": 0,
+        "vehicle_verified": false
+      },
+      "reconnects": 0
+    },
+    {
+      "accepted": 776,
+      "states": [
+        "RECEIVING_DATA"
+      ],
+      "historical": 2,
+      "live": [
+        "MS_AIR_FUEL",
+        "MS_AIR_FUEL"
+      ],
+      "sessions": [
+        776,
+        61,
+        776,
+        61
+      ],
+      "info": {
+        "state": "DISCONNECTED",
+        "device_id": "doctorcar-loopback-simulator",
+        "session_id": "d253e96b-62d5-40b6-b900-b31b48f4ffd3",
+        "source": "SIMULATION",
+        "firmware_version": "software-tcp-1",
+        "protocol_version": 1,
+        "capabilities": {
+          "sensors": [
+            "RPM",
+            "SPEED",
+            "COOLANT_TEMP",
+            "ENGINE_LOAD",
+            "THROTTLE_POS",
+            "INTAKE_PRESSURE",
+            "MAF",
+            "INTAKE_TEMP",
+            "SHORT_FUEL_TRIM",
+            "LONG_FUEL_TRIM",
+            "CONTROL_MODULE_VOLTAGE",
+            "DTC"
+          ],
+          "can": false,
+          "microsd": false,
+          "event_upload": true
+        },
+        "last_timestamp_ms": 155000,
+        "transport": "TCP_LOOPBACK",
+        "host": "127.0.0.1",
+        "port": 40218,
+        "reconnects": 0,
+        "vehicle_verified": false
+      },
+      "reconnects": 0
+    }
+  ],
+  "e2e10": {
+    "accepted": 102,
+    "states": [
+      "HANDSHAKE_PENDING",
+      "RECEIVING_DATA",
+      "RECONNECTING",
+      "RUNNING",
+      "RECEIVING_DATA"
+    ],
+    "historical": 2,
+    "live": [],
+    "sessions": [
+      51,
+      51,
+      61,
+      61
+    ],
+    "info": {
+      "state": "DISCONNECTED",
+      "device_id": "doctorcar-loopback-simulator",
+      "session_id": "a0028ece-d2d5-4d18-be95-3c66fc9c5418",
+      "source": "SIMULATION",
+      "firmware_version": "software-tcp-1",
+      "protocol_version": 1,
+      "capabilities": {
+        "sensors": [
+          "RPM",
+          "SPEED",
+          "COOLANT_TEMP",
+          "ENGINE_LOAD",
+          "THROTTLE_POS",
+          "INTAKE_PRESSURE",
+          "MAF",
+          "INTAKE_TEMP",
+          "SHORT_FUEL_TRIM",
+          "LONG_FUEL_TRIM",
+          "CONTROL_MODULE_VOLTAGE",
+          "DTC"
+        ],
+        "can": false,
+        "microsd": false,
+        "event_upload": true
+      },
+      "last_timestamp_ms": 10000,
+      "transport": "TCP_LOOPBACK",
+      "host": "127.0.0.1",
+      "port": 40220,
+      "reconnects": 1,
+      "vehicle_verified": false
+    },
+    "reconnects": 1
+  },
+  "tcp_config": {
+    "LAN host": "rejected",
+    "hostname": "rejected",
+    "ipv6": "rejected",
+    "port 0": "rejected",
+    "port 70000": "rejected",
+    "timeout 0": "rejected",
+    "reconnects 9": "rejected",
+    "localhost": "accepted"
+  }
+}

@@ -1,0 +1,6 @@
+{"mode": "direct", "process_to_ready_s": 1.431, "start_click_to_running_s": 1.75}
+{"mode": "launcher", "process_to_ready_s": 2.188, "start_click_to_running_s": 0.058}
+{"mode": "direct", "process_to_ready_s": 0.904, "start_click_to_running_s": 1.643}
+{"mode": "launcher", "process_to_ready_s": 2.196, "start_click_to_running_s": 0.061}
+{"mode": "direct", "process_to_ready_s": 0.933, "start_click_to_running_s": 1.653}
+{"mode": "launcher", "process_to_ready_s": 2.204, "start_click_to_running_s": 0.06}

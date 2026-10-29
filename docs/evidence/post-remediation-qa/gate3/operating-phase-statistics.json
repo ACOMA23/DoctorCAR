@@ -1,0 +1,242 @@
+{
+  "cold": {
+    "coolant_start": 22.0,
+    "coolant_end": 89.189,
+    "بدء المحرك": {
+      "n": 15,
+      "rpm_mean": 709.0,
+      "load_mean": 15.6,
+      "throttle_mean": 12.0,
+      "speed_mean": 0.0,
+      "maf_mean": 2.3
+    },
+    "إحماء": {
+      "n": 160,
+      "rpm_mean": 972.8,
+      "load_mean": 10.4,
+      "throttle_mean": 8.0,
+      "speed_mean": 0.0,
+      "maf_mean": 2.75
+    },
+    "خمول": {
+      "n": 150,
+      "rpm_mean": 811.3,
+      "load_mean": 5.2,
+      "throttle_mean": 4.0,
+      "speed_mean": 0.0,
+      "maf_mean": 1.96
+    },
+    "تسارع": {
+      "n": 75,
+      "rpm_mean": 1947.8,
+      "load_mean": 66.0,
+      "throttle_mean": 48.0,
+      "speed_mean": 29.6,
+      "maf_mean": 14.26
+    },
+    "سير مستقر": {
+      "n": 225,
+      "rpm_mean": 2435.6,
+      "load_mean": 37.1,
+      "throttle_mean": 23.0,
+      "speed_mean": 59.8,
+      "maf_mean": 12.1
+    },
+    "تباطؤ": {
+      "n": 100,
+      "rpm_mean": 1416.9,
+      "load_mean": 7.5,
+      "throttle_mean": 3.0,
+      "speed_mean": 30.3,
+      "maf_mean": 3.75
+    },
+    "محرك متوقف": {
+      "n": 51,
+      "rpm_mean": 0.0,
+      "load_mean": 0.0,
+      "throttle_mean": 0.0,
+      "speed_mean": 0.0,
+      "maf_mean": 0.0
+    }
+  },
+  "warm": {
+    "coolant_start": 85.0,
+    "coolant_end": 89.94,
+    "بدء المحرك": {
+      "n": 15,
+      "rpm_mean": 709.0,
+      "load_mean": 15.6,
+      "throttle_mean": 12.0,
+      "speed_mean": 0.0,
+      "maf_mean": 2.3
+    },
+    "إحماء": {
+      "n": 160,
+      "rpm_mean": 972.8,
+      "load_mean": 10.4,
+      "throttle_mean": 8.0,
+      "speed_mean": 0.0,
+      "maf_mean": 2.75
+    },
+    "خمول": {
+      "n": 150,
+      "rpm_mean": 811.3,
+      "load_mean": 5.2,
+      "throttle_mean": 4.0,
+      "speed_mean": 0.0,
+      "maf_mean": 1.96
+    },
+    "تسارع": {
+      "n": 75,
+      "rpm_mean": 1947.8,
+      "load_mean": 66.0,
+      "throttle_mean": 48.0,
+      "speed_mean": 29.6,
+      "maf_mean": 14.26
+    },
+    "سير مستقر": {
+      "n": 225,
+      "rpm_mean": 2435.6,
+      "load_mean": 37.1,
+      "throttle_mean": 23.0,
+      "speed_mean": 59.8,
+      "maf_mean": 12.1
+    },
+    "تباطؤ": {
+      "n": 100,
+      "rpm_mean": 1416.9,
+      "load_mean": 7.5,
+      "throttle_mean": 3.0,
+      "speed_mean": 30.3,
+      "maf_mean": 3.75
+    },
+    "محرك متوقف": {
+      "n": 51,
+      "rpm_mean": 0.0,
+      "load_mean": 0.0,
+      "throttle_mean": 0.0,
+      "speed_mean": 0.0,
+      "maf_mean": 0.0
+    }
+  },
+  "cold-1.14": {
+    "coolant_start": 22.0,
+    "coolant_end": 89.189,
+    "بدء المحرك": {
+      "n": 15,
+      "rpm_mean": 808.2,
+      "load_mean": 17.8,
+      "throttle_mean": 13.7,
+      "speed_mean": 0.0,
+      "maf_mean": 2.77
+    },
+    "إحماء": {
+      "n": 160,
+      "rpm_mean": 1108.9,
+      "load_mean": 11.9,
+      "throttle_mean": 9.1,
+      "speed_mean": 0.0,
+      "maf_mean": 3.27
+    },
+    "خمول": {
+      "n": 150,
+      "rpm_mean": 924.9,
+      "load_mean": 5.9,
+      "throttle_mean": 4.6,
+      "speed_mean": 0.0,
+      "maf_mean": 2.29
+    },
+    "تسارع": {
+      "n": 75,
+      "rpm_mean": 2220.5,
+      "load_mean": 75.2,
+      "throttle_mean": 54.7,
+      "speed_mean": 33.7,
+      "maf_mean": 17.92
+    },
+    "سير مستقر": {
+      "n": 225,
+      "rpm_mean": 2776.6,
+      "load_mean": 42.3,
+      "throttle_mean": 26.2,
+      "speed_mean": 68.2,
+      "maf_mean": 14.94
+    },
+    "تباطؤ": {
+      "n": 100,
+      "rpm_mean": 1615.2,
+      "load_mean": 8.6,
+      "throttle_mean": 3.4,
+      "speed_mean": 34.5,
+      "maf_mean": 4.42
+    },
+    "محرك متوقف": {
+      "n": 51,
+      "rpm_mean": 0.0,
+      "load_mean": 0.0,
+      "throttle_mean": 0.0,
+      "speed_mean": 0.0,
+      "maf_mean": 0.0
+    }
+  },
+  "cold-0.86": {
+    "coolant_start": 22.0,
+    "coolant_end": 89.189,
+    "بدء المحرك": {
+      "n": 15,
+      "rpm_mean": 609.7,
+      "load_mean": 13.4,
+      "throttle_mean": 10.3,
+      "speed_mean": 0.0,
+      "maf_mean": 1.87
+    },
+    "إحماء": {
+      "n": 160,
+      "rpm_mean": 836.6,
+      "load_mean": 8.9,
+      "throttle_mean": 6.9,
+      "speed_mean": 0.0,
+      "maf_mean": 2.27
+    },
+    "خمول": {
+      "n": 150,
+      "rpm_mean": 697.7,
+      "load_mean": 4.5,
+      "throttle_mean": 3.4,
+      "speed_mean": 0.0,
+      "maf_mean": 1.64
+    },
+    "تسارع": {
+      "n": 75,
+      "rpm_mean": 1675.1,
+      "load_mean": 56.7,
+      "throttle_mean": 41.3,
+      "speed_mean": 25.5,
+      "maf_mean": 11.02
+    },
+    "سير مستقر": {
+      "n": 225,
+      "rpm_mean": 2094.6,
+      "load_mean": 31.9,
+      "throttle_mean": 19.8,
+      "speed_mean": 51.5,
+      "maf_mean": 9.53
+    },
+    "تباطؤ": {
+      "n": 100,
+      "rpm_mean": 1218.5,
+      "load_mean": 6.5,
+      "throttle_mean": 2.6,
+      "speed_mean": 26.1,
+      "maf_mean": 3.11
+    },
+    "محرك متوقف": {
+      "n": 51,
+      "rpm_mean": 0.0,
+      "load_mean": 0.0,
+      "throttle_mean": 0.0,
+      "speed_mean": 0.0,
+      "maf_mean": 0.0
+    }
+  }
+}

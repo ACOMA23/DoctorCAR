@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="77" time="14.005" timestamp="2026-10-28T13:09:57.068201+03:00" hostname="MSI"><testcase classname="tests.e2e.test_acceptance" name="test_e2e_01_normal_trip_has_no_thermal_event" time="0.176" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_02_thermal_event_has_time_based_pre_and_post" time="0.210" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_03_detection_without_dtc" time="0.214" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_04_invalid_reading_is_not_sensor_failure" time="0.226" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_05_disconnect_is_not_vehicle_electrical_fault" time="0.010" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_06_restart_retrieves_identical_report" time="0.219" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_07_same_event_wire_import_is_idempotent" time="0.540" /><testcase classname="tests.e2e.test_acceptance" name="test_e2e_08_ui_pages_keep_one_source_and_restore_report" time="10.504" /><testcase classname="tests.integration.test_device_source" name="test_device_simulator_parser_shared_pipeline" time="0.330" /><testcase classname="tests.integration.test_device_source" name="test_uploaded_event_passes_same_quality_validator" time="0.026" /><testcase classname="tests.integration.test_pipeline" name="test_simulation_pipeline_event_storage_report_reload" time="0.120" /><testcase classname="tests.integration.test_pipeline" name="test_normal_has_no_spurious_thermal_event_and_restart" time="0.106" /><testcase classname="tests.integration.test_pipeline" name="test_invalid_reading_is_quality_event_without_definitive_part" time="0.114" /><testcase classname="tests.integration.test_pipeline" name="test_missing_contradictory_evidence_never_invents_temperature" time="0.000" /><testcase classname="tests.integration.test_pipeline" name="test_connection_loss_is_transport_not_vehicle_diagnosis" time="0.011" /><testcase classname="tests.integration.test_pipeline" name="test_source_resources_released_even_if_checkpoint_fails" time="0.010" /><testcase classname="tests.integration.test_pipeline" name="test_live_source_age_is_checked_in_shared_pipeline" time="0.009" /><testcase classname="tests.integration.test_ui" name="test_rtl_navigation_single_session_and_async_close" time="0.165" /><testcase classname="tests.integration.test_ui" name="test_backend_storage_error_is_visible_and_gui_survives" time="0.022" /><testcase classname="tests.unit.test_foundation" name="test_registry" time="0.000" /><testcase classname="tests.unit.test_foundation" name="test_bad_reading_types[True]" time="0.000" /><testcase classname="tests.unit.test_foundation" name="test_bad_reading_types[12]" time="0.000" /><testcase classname="tests.unit.test_foundation" name="test_bad_reading_types[nan]" time="0.000" /><testcase classname="tests.unit.test_foundation" name="test_bad_reading_types[inf]" time="0.000" /><testcase classname="tests.unit.test_foundation" name="test_invalid_sample[timestamp_ms--1]" time="0.003" /><testcase classname="tests.unit.test_foundation" name="test_invalid_sample[sequence_number-True]" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_invalid_sample[session_id-]" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_invalid_sample[source-REAL]" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_round_trip_and_required_fields" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_deterministic_time_dependent_correlated_simulation" time="0.009" /><testcase classname="tests.unit.test_foundation" name="test_quality_preserves_raw_and_checks_unit_missing_unsupported" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_time_age_order_duplicate_and_gap" time="0.003" /><testcase classname="tests.unit.test_foundation" name="test_demo_invalid_value_flagged_without_inventing_zero" time="0.002" /><testcase classname="tests.unit.test_foundation" name="test_replay_lifecycle_provenance_and_closing" time="0.014" /><testcase classname="tests.unit.test_foundation" name="test_source_requires_connection" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_roundtrip_every_type_and_fragmented_simulator" time="0.293" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;0]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;1]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;2]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;3]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;4]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;5]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_invalid_envelope[&lt;lambda&gt;6]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[{}]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[{bad}\n]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[[]\n]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[\xff\n]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[{&quot;x&quot;:NaN}\n]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[{&quot;x&quot;:1,&quot;x&quot;:2}\n]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_reject_malformed_framing[wire6]" time="0.000" /><testcase classname="tests.unit.test_protocol" name="test_oversize_resynchronization" time="0.001" /><testcase classname="tests.unit.test_protocol" name="test_handshake_required_duplicate_gap_reconnect_and_source_mismatch" time="0.012" /><testcase classname="tests.unit.test_protocol" name="test_partial_sensor_support_is_not_zero" time="0.007" /><testcase classname="tests.unit.test_protocol" name="test_chunk_reassembly_integrity_repeat_import" time="0.022" /><testcase classname="tests.unit.test_protocol" name="test_incomplete_or_corrupt_event_not_imported[corrupt]" time="0.008" /><testcase classname="tests.unit.test_protocol" name="test_incomplete_or_corrupt_event_not_imported[missing]" time="0.007" /><testcase classname="tests.unit.test_protocol" name="test_incomplete_or_corrupt_event_not_imported[wrong_end]" time="0.008" /><testcase classname="tests.unit.test_protocol" name="test_incomplete_or_corrupt_event_not_imported[disconnect]" time="0.008" /><testcase classname="tests.unit.test_protocol" name="test_serial_fake_transport_cleanup_disconnect_reconnect" time="0.017" /><testcase classname="tests.unit.test_protocol" name="test_ack_error_roundtrip[ACK-payload0]" time="0.001" /><testcase classname="tests.unit.test_protocol" name="test_ack_error_roundtrip[ERROR-payload1]" time="0.001" /><testcase classname="tests.unit.test_protocol" name="test_serial_attach_midstream_then_handshake_and_timeout" time="0.010" /><testcase classname="tests.unit.test_protocol" name="test_event_nonincreasing_times_and_session_rejected" time="0.005" /><testcase classname="tests.unit.test_recording" name="test_time_buffer_irregular_samples" time="0.000" /><testcase classname="tests.unit.test_recording" name="test_pre_post_overlap_dedup_and_reopen" time="0.045" /><testcase classname="tests.unit.test_recording" name="test_partial_on_stop_and_short_pre_window" time="0.011" /><testcase classname="tests.unit.test_recording" name="test_abrupt_interruption_recovers_checkpoint" time="0.015" /><testcase classname="tests.unit.test_recording" name="test_atomic_conflict_and_finalized_immutability" time="0.009" /><testcase classname="tests.unit.test_recording" name="test_future_schema_rejected" time="0.008" /><testcase classname="tests.unit.test_recording" name="test_thermal_rule_requires_duration_and_context" time="0.000" /><testcase classname="tests.unit.test_recording" name="test_no_dtc_required_and_constant_normal_value_is_not_fault" time="0.000" /><testcase classname="" name="test_fr002_replay_must_not_advertise_explicitly_unsupported_sensor" time="0.007"><failure message="AssertionError: assert 'MAF' not in frozenset({'CONTROL_MODULE_VOLTAGE', 'COOLANT_TEMP', 'DTC', 'ENGINE_LOAD', 'INTAKE_PRESSURE', 'INTAKE_TEMP', ...})&#10;[+3 more lines; full report in element text]">tmp_path = WindowsPath('C:/doccar/data/cr002-baseline-tests/test_fr002_replay_must_not_adv0')
+
+    def test_fr002_replay_must_not_advertise_explicitly_unsupported_sensor(tmp_path):
+        sample = fresh_sample()
+        readings = dict(sample.readings)
+        readings["MAF"] = Reading(None, "g/s", Quality.UNSUPPORTED)
+        sample = replace(sample, readings=readings)
+        path = tmp_path / "unsupported.jsonl"
+        path.write_text(json.dumps(sample.to_dict()) + "\n", encoding="utf-8")
+        source = ReplaySource(path)
+        source.connect()
+        source.start()
+        try:
+            replayed = source.read_measurements()
+            assert replayed.readings["MAF"].quality == Quality.UNSUPPORTED
+&gt;           assert "MAF" not in source.get_capabilities().sensors
+E           AssertionError: assert 'MAF' not in frozenset({'CONTROL_MODULE_VOLTAGE', 'COOLANT_TEMP', 'DTC', 'ENGINE_LOAD', 'INTAKE_PRESSURE', 'INTAKE_TEMP', ...})
+E            +  where frozenset({'CONTROL_MODULE_VOLTAGE', 'COOLANT_TEMP', 'DTC', 'ENGINE_LOAD', 'INTAKE_PRESSURE', 'INTAKE_TEMP', ...}) = Capabilities(sensors=frozenset({'CONTROL_MODULE_VOLTAGE', 'SHORT_FUEL_TRIM', 'MAF', 'INTAKE_PRESSURE', 'COOLANT_TEMP',...RIM', 'ENGINE_LOAD', 'RPM', 'DTC', 'SPEED', 'INTAKE_TEMP'}), source='REPLAY', test_mode=True, can=False, microsd=False).sensors
+E            +    where Capabilities(sensors=frozenset({'CONTROL_MODULE_VOLTAGE', 'SHORT_FUEL_TRIM', 'MAF', 'INTAKE_PRESSURE', 'COOLANT_TEMP',...RIM', 'ENGINE_LOAD', 'RPM', 'DTC', 'SPEED', 'INTAKE_TEMP'}), source='REPLAY', test_mode=True, can=False, microsd=False) = get_capabilities()
+E            +      where get_capabilities = &lt;doctorcar.sources.replay.ReplaySource object at 0x000002097922F9D0&gt;.get_capabilities
+
+audits\test_m1_acceptance.py:49: AssertionError</failure></testcase><testcase classname="" name="test_fr004_data001_replay_rejects_boolean_contract_version" time="0.012"><failure message="Failed: DID NOT RAISE ValueError">tmp_path = WindowsPath('C:/doccar/data/cr002-baseline-tests/test_fr004_data001_replay_reje0')
+
+    def test_fr004_data001_replay_rejects_boolean_contract_version(tmp_path):
+        data = fresh_sample().to_dict()
+        data["sample_version"] = True  # JSON boolean is not integer version 1.
+        path = tmp_path / "invalid-version.jsonl"
+        path.write_text(json.dumps(data) + "\n", encoding="utf-8")
+        source = ReplaySource(path)
+        source.connect()
+        source.start()
+        try:
+&gt;           with pytest.raises(ValueError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE ValueError
+
+audits\test_m1_acceptance.py:64: Failed</failure></testcase><testcase classname="" name="test_data001_finalized_event_rejects_end_before_trigger_and_last_sample" time="0.000"><failure message="Failed: DID NOT RAISE ValueError">def test_data001_finalized_event_rejects_end_before_trigger_and_last_sample():
+        sample = replace(fresh_sample(), timestamp_ms=1000)
+        data = {
+            "event_version": 1,
+            "event_id": "invalid-timing",
+            "session_id": sample.session_id,
+            "trigger": {
+                "kind": "DATA_QUALITY",
+                "observation": "audit",
+                "reason": "audit",
+                "rule_version": "audit-v1",
+                "timestamp_ms": 1000,
+                "evidence": [],
+            },
+            "samples": [sample.to_dict()],
+            "status": "COMPLETE",
+            "end_ms": 0,
+            "limitations": [],
+        }
+&gt;       with pytest.raises(ValueError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+audits\test_m1_acceptance.py:90: Failed</failure></testcase><testcase classname="" name="test_fr012_boot_transition_preserves_already_accepted_pending_samples" time="0.025"><failure message="AssertionError: assert ['da2e9ccc-2e...1b8cecff065d'] == ['0a871718-d7...1b8cecff065d']&#10;  &#10;  At index 0 diff: 'da2e9ccc-2ea8-422e-b57e-1b8cecff065d' != '0a871718-d7ce-40f1-85d2-cf00ebc5b314'&#10;  Right contains one more item: 'da2e9ccc-2ea8-422e-b57e-1b8cecff065d'&#10;  Use -v to get more diff">def test_fr012_boot_transition_preserves_already_accepted_pending_samples():
+        first = list(device_messages(step_ms=1000))[:3]
+        second = list(device_messages(step_ms=1000))[:3]
+        assert first[0]["session_id"] != second[0]["session_id"]
+        receiver = ProtocolReceiver()
+        receiver.feed(b"".join(encode_message(m) for m in first + second))
+        assert not receiver.errors
+&gt;       assert [s.session_id for s in receiver.samples] == [
+            first[0]["session_id"],
+            second[0]["session_id"],
+        ]
+E       AssertionError: assert ['da2e9ccc-2e...1b8cecff065d'] == ['0a871718-d7...1b8cecff065d']
+E         
+E         At index 0 diff: 'da2e9ccc-2ea8-422e-b57e-1b8cecff065d' != '0a871718-d7ce-40f1-85d2-cf00ebc5b314'
+E         Right contains one more item: 'da2e9ccc-2ea8-422e-b57e-1b8cecff065d'
+E         Use -v to get more diff
+
+audits\test_m1_acceptance.py:101: AssertionError</failure></testcase><testcase classname="" name="test_fr012_live_samples_then_matching_event_upload_are_importable" time="0.028"><failure message="ValueError: Conflicting sample identity">tmp_path = WindowsPath('C:/doccar/data/cr002-baseline-tests/test_fr012_live_samples_then_m0')
+
+    def test_fr012_live_samples_then_matching_event_upload_are_importable(tmp_path):
+        initial = list(device_messages(step_ms=1000))[:3]
+        sample = Sample.from_dict(initial[2]["payload"]["sample"])
+        event = Event(
+            "same-sample-upload",
+            sample.session_id,
+            Trigger("DATA_QUALITY", "audit", "audit", "audit-v1", sample.timestamp_ms),
+            [sample],
+            "COMPLETE",
+            sample.timestamp_ms,
+        )
+        wire = initial + event_messages(
+            event, start_sequence=3, device_id=initial[0]["device_id"]
+        )
+        path = tmp_path / "samples-and-upload.jsonl"
+        path.write_bytes(b"".join(encode_message(m) for m in wire))
+        with SQLiteRepository(tmp_path / "import.db") as repo:
+            session = Session(ProtocolFileSource(path), repo)
+            session.start()
+            try:
+                while not session.source.exhausted:
+&gt;                   session.step()
+
+audits\test_m1_acceptance.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+desktop\src\doctorcar\core\session.py:52: in step
+    self.repository.save_event(replace(imported, samples=normalized))
+desktop\src\doctorcar\storage\sqlite_repository.py:160: in save_event
+    self._save_measurement(sample)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;doctorcar.storage.sqlite_repository.SQLiteRepository object at 0x000002097A4DEF30&gt;
+sample = Sample(session_id='cd365bba-5b25-4037-904e-09b3f363c15a', source=&lt;Source.SIMULATION: 'SIMULATION'&gt;, sequence_number=0,...me': None, 'raw': None, 'dtc_quality': 'AVAILABLE', 'sample_version': 1}, dtc_quality=&lt;Quality.AVAILABLE: 'AVAILABLE'&gt;)
+
+    def _save_measurement(self, sample: Sample) -&gt; None:
+        data = serialize(sample.to_dict())
+        previous = self.connection.execute(
+            "SELECT data_json FROM measurements WHERE session_id=? AND sequence_number=?",
+            (sample.session_id, sample.sequence_number),
+        ).fetchone()
+        if previous and previous[0] != data:
+&gt;           raise ValueError("Conflicting sample identity")
+E           ValueError: Conflicting sample identity
+
+desktop\src\doctorcar\storage\sqlite_repository.py:105: ValueError</failure></testcase><testcase classname="" name="test_fr006_nfr001_export_file_error_is_not_a_connection_loss" time="0.075"><failure message="AssertionError: A local export FileNotFoundError generated a connection-loss event despite a healthy source&#10;assert 'CONNECTION' not in ['CONNECTION']">tmp_path = WindowsPath('C:/doccar/data/cr002-baseline-tests/test_fr006_nfr001_export_file_0')
+
+    def test_fr006_nfr001_export_file_error_is_not_a_connection_loss(tmp_path):
+        app = QApplication.instance() or QApplication([])
+        worker = BackendWorker(tmp_path / "export.db")
+        ready, samples, errors = [], [], []
+        worker.initialized.connect(lambda: ready.append(True))
+        worker.snapshot.connect(samples.append)
+        worker.error.connect(errors.append)
+    
+        def wait_until(condition):
+            deadline = time.monotonic() + 5
+            while time.monotonic() &lt; deadline:
+                app.processEvents()
+                if condition():
+                    return
+                time.sleep(0.005)
+            raise AssertionError("Audit worker condition timed out")
+    
+        worker.start()
+        try:
+            wait_until(lambda: bool(ready))
+            worker.submit("start", source="simulation", scenario="normal", speed=1)
+            wait_until(lambda: bool(samples))
+            worker.submit(
+                "export",
+                session_id=samples[-1].session_id,
+                path=str(tmp_path / "missing-parent" / "export.jsonl"),
+            )
+            wait_until(lambda: bool(errors))
+        finally:
+            worker.shutdown()
+            assert worker.wait(5000), "Audit cleanup could not stop worker"
+            app.processEvents()
+        with sqlite3.connect(tmp_path / "export.db") as connection:
+            kinds = [row[0] for row in connection.execute("SELECT kind FROM events")]
+&gt;       assert "CONNECTION" not in kinds, (
+            "A local export FileNotFoundError generated a connection-loss event despite a healthy source"
+        )
+E       AssertionError: A local export FileNotFoundError generated a connection-loss event despite a healthy source
+E       assert 'CONNECTION' not in ['CONNECTION']
+
+audits\test_m1_acceptance.py:168: AssertionError</failure></testcase></testsuite></testsuites>

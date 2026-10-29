@@ -1,0 +1,151 @@
+{
+  "gate": "gate2_controls",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-UI-030",
+      "requirement": "UI-001",
+      "title": "Dashboard button 'اختيار مصدر البيانات' navigates to the source center",
+      "input": "click",
+      "expected": "page index 1",
+      "actual": "page=1",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-031",
+      "requirement": "UI-001",
+      "title": "Every combo box: all items can be selected",
+      "input": "iterate items of 9 combos",
+      "expected": "each item selectable",
+      "actual": "{\"language_combo\": {\"items\": 2, \"all_selectable\": true}, \"theme_combo\": {\"items\": 2, \"all_selectable\": true}, \"source_combo\": {\"items\": 6, \"all_selectable\": true}, \"family_combo\": {\"items\": 2, \"all_selectable\": true}, \"mode_combo\": {\"items\": 4, \"all_selectable\": true}, \"scenario_combo\": {\"items\": 4, \"all_selectable\": true}, \"variant_combo\": {\"items\": 3, \"all_selectable\": true}, \"speed_combo\": {\"items\": 3, \"all_selectable\": true}, \"port_combo\": {\"items\": 0, \"all_selectable\": true}}",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-032",
+      "requirement": "UI-001",
+      "title": "Spin boxes clamp out-of-range values and respond to the keyboard",
+      "input": "set below min / above max; arrow keys",
+      "expected": "value clamped to the range; Up increases",
+      "actual": "{\"network_port\": {\"min\": 1, \"max\": 65535, \"below->\": 1, \"above->\": 65535, \"up_key\": 2, \"clamped\": true}, \"fault_start\": {\"min\": 0, \"max\": 150, \"below->\": 0, \"above->\": 150, \"up_key\": 1, \"clamped\": true}, \"fault_duration\": {\"min\": 1, \"max\": 90, \"below->\": 1, \"above->\": 90, \"up_key\": 2, \"clamped\": true}, \"seed_input\": {\"min\": 0, \"max\": 2000000000, \"below->\": 0, \"above->\": 2000000000, \"up_key\": 1, \"clamped\": true}, \"max_faults_input\": {\"min\": 1, \"max\": 2, \"below->\": 1, \"above->\": 2, \"up_key\": 2, \"clamped\": true}, \"severity_input\": {\"min\": 0.1, \"max\": 1.0, \"below->\": 0.1, \"above->\": 1.0, \"up_key\": 0.2, \"clamped\": true}, \"normal_probability\": {\"min\": 0.0, \"max\": 1.0, \"below->\": 0.0, \"above->\": 1.0, \"up_key\": 0.05, \"clamped\": true}}",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-033",
+      "requirement": "UI-001",
+      "title": "Typing into host/path fields and toggling the AI check box with the mouse",
+      "input": "keyClicks + mouse clicks",
+      "expected": "text appears; checkbox toggles",
+      "actual": "typed=('127.0.0.1', 'abc.jsonl') toggles=True,False (indicator hit at x=1229; the middle of the widget does not toggle)",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-034",
+      "requirement": "UI-001",
+      "title": "'تحديث السجل' refreshes the event list without losing rows",
+      "input": "click refresh",
+      "expected": "same rows",
+      "actual": "rows 1->1",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-035",
+      "requirement": "UI-001",
+      "title": "'عرض تقرير الحدث المحدد' opens the selected event's report",
+      "input": "select a row, click the button",
+      "expected": "report page with text",
+      "actual": "page=4 chars=1597",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-036",
+      "requirement": "REPLAY",
+      "title": "Export button: real file dialog -> session written as a Replay file that verifies",
+      "input": "click export, choose a path in the dialog",
+      "expected": "file created and ReplaySource.verify ok",
+      "actual": "exists=True bytes=1616466 verify={'ok': True, 'stages': ['FILE_VALID', 'SAMPLE_VALID'], 'samples': 776}",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-037",
+      "requirement": "REPLAY",
+      "title": "Browse button: real file dialog fills the path field",
+      "input": "click browse, select exported file",
+      "expected": "path_input equals the chosen file",
+      "actual": "path='C:/Users/user/AppData/Local/Temp/claude/C--doccar/d8a9af6d-01f7-4fb1-be56-5ec89ed33b45/scratchpad/doctorcar-qa/controls/exported.jsonl'",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-038",
+      "requirement": "REPLAY",
+      "title": "Verify button on a replay file reports success",
+      "input": "click 'فحص المصدر / الاتصال' with a valid replay",
+      "expected": "details label changes and no error",
+      "actual": "details='فحص ناجح\nالملف صالح → العينات صالحة\n' error_visible=False",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate2_controls/screenshots/controls-verify-replay.png",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-039",
+      "requirement": "REPLAY",
+      "title": "Replaying the exported session through the UI yields events with origin REPLAY",
+      "input": "start with the replay source",
+      "expected": ">=1 event with origin REPLAY",
+      "actual": "replay events=[]",
+      "status": "FAIL",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-UI-040",
+      "requirement": "CONN-001",
+      "title": "'تحديث المنافذ' fills the port list from the system; no port is opened",
+      "input": "click refresh ports",
+      "expected": "combo items == system COM ports",
+      "actual": "combo=4 system=['COM3', 'COM4', 'COM7', 'COM8']",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": "No serial port was opened or written to."
+    },
+    {
+      "test_id": "QA-UI-041",
+      "requirement": "IOT-001..003",
+      "title": "Network source from the UI: verify shows handshake stages, session runs, historical events are imported",
+      "input": "type host/port, click verify, start, stop (loopback simulator)",
+      "expected": "details mention RECEIVING_DATA; 2 HISTORICAL events; status shows the source",
+      "actual": "verify='فحص ناجح\nHELLO → CAPABILITIES → تصل البيانات\n\nFirmware: software-tcp-1 | JSONL: 1' historical=2 status='قيد التشغيل — DEVICE_TEST'",
+      "status": "FAIL",
+      "evidence": "docs/evidence/full-qa/gate2_controls/screenshots/controls-verify-network.png",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

@@ -1,0 +1,23 @@
+{
+  "label": "source",
+  "windows_titles_seen": [
+    "DoctorCAR"
+  ],
+  "main_window_ever_visible": false,
+  "frames": [
+    {
+      "title": "DoctorCAR",
+      "file": "source-fail-0.png"
+    },
+    {
+      "title": "DoctorCAR",
+      "file": "source-fail-1.png"
+    }
+  ],
+  "closed": [
+    "DoctorCAR",
+    "DoctorCAR"
+  ],
+  "exit_code_after_closing_dialog": 0,
+  "stderr_tail": "rue)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\pathlib\\__init__.py\", line 1011, in mkdir\n    os.mkdir(self, mode)\n    ~~~~~~~~^^^^^^^^^^^^\nFileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\dc-ux-fail-tr7gm2ff\\\\ليس مجلدا.txt'\n2026-10-29 22:55:15,832 ERROR doctorcar.ui.startup Startup failed: تعذر فتح التخزين المحلي؛ تحقق من المسار وصلاحيات الكتابة\n"
+}

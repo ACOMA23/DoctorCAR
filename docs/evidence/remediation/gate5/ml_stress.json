@@ -1,0 +1,94 @@
+{
+  "cold_high_scale_1.08_1.15": {
+    "trips": 15,
+    "models": {
+      "cr004-iforest-v1": {
+        "alarm_events": 32,
+        "trips_with_alarm": 15,
+        "anomalous_windows": 379,
+        "windows": 2265
+      },
+      "cr005-iforest-v2": {
+        "alarm_events": 10,
+        "trips_with_alarm": 10,
+        "anomalous_windows": 224,
+        "windows": 2265
+      },
+      "cr006-iforest-v3": {
+        "alarm_events": 1,
+        "trips_with_alarm": 1,
+        "anomalous_windows": 110,
+        "windows": 2265
+      }
+    }
+  },
+  "cold_mid_scale_0.95_1.05": {
+    "trips": 15,
+    "models": {
+      "cr004-iforest-v1": {
+        "alarm_events": 35,
+        "trips_with_alarm": 15,
+        "anomalous_windows": 427,
+        "windows": 2265
+      },
+      "cr005-iforest-v2": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 158,
+        "windows": 2265
+      },
+      "cr006-iforest-v3": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 53,
+        "windows": 2265
+      }
+    }
+  },
+  "warm_high_scale_1.08_1.15": {
+    "trips": 15,
+    "models": {
+      "cr004-iforest-v1": {
+        "alarm_events": 20,
+        "trips_with_alarm": 15,
+        "anomalous_windows": 113,
+        "windows": 2265
+      },
+      "cr005-iforest-v2": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 176,
+        "windows": 2265
+      },
+      "cr006-iforest-v3": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 86,
+        "windows": 2265
+      }
+    }
+  },
+  "cold_low_scale_0.85_0.92": {
+    "trips": 15,
+    "models": {
+      "cr004-iforest-v1": {
+        "alarm_events": 36,
+        "trips_with_alarm": 15,
+        "anomalous_windows": 485,
+        "windows": 2265
+      },
+      "cr005-iforest-v2": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 91,
+        "windows": 2265
+      },
+      "cr006-iforest-v3": {
+        "alarm_events": 0,
+        "trips_with_alarm": 0,
+        "anomalous_windows": 16,
+        "windows": 2265
+      }
+    }
+  }
+}

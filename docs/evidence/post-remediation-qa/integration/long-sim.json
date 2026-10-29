@@ -1,0 +1,20 @@
+{
+  "600000": {
+    "samples": 3001,
+    "expected": 3001,
+    "contiguous": true,
+    "min_rpm_after_45s": 798.064,
+    "max_speed_after_150s": 61.5,
+    "min_speed_after_150s": 0.0,
+    "rule_events": []
+  },
+  "900000": {
+    "samples": 4501,
+    "expected": 4501,
+    "contiguous": true,
+    "min_rpm_after_45s": 798.072,
+    "max_speed_after_150s": 61.5,
+    "min_speed_after_150s": 0.0,
+    "rule_events": []
+  }
+}

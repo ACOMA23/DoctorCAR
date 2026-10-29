@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(doctorcar_device_test VERSION 0.1.0)
+if(NOT IDF_TARGET STREQUAL "esp32s3")
+    message(FATAL_ERROR "DoctorCAR M1 targets ESP32-S3 only")
+endif()

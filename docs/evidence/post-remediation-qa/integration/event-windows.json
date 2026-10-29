@@ -1,0 +1,13 @@
+[
+  {
+    "kind": "MS_THERMAL",
+    "T_s": 68.2,
+    "first_s": 38.2,
+    "last_s": 98.2,
+    "n": 301,
+    "status": "COMPLETE",
+    "pre_ok": true,
+    "post_ok": true,
+    "ordered": true
+  }
+]

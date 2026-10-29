@@ -1,0 +1,236 @@
+{
+  "S01:default": {
+    "declared_writes": [
+      "COOLANT_TEMP",
+      "INTAKE_TEMP"
+    ],
+    "affected_inside": {
+      "COOLANT_TEMP": {
+        "n": 174,
+        "max_abs": 38.028,
+        "mean_delta": 29.811
+      },
+      "INTAKE_TEMP": {
+        "n": 174,
+        "max_abs": 3.042,
+        "mean_delta": 2.385
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S02:default": {
+    "declared_writes": [
+      "MAF",
+      "INTAKE_PRESSURE",
+      "RPM",
+      "ENGINE_LOAD",
+      "SHORT_FUEL_TRIM",
+      "LONG_FUEL_TRIM"
+    ],
+    "affected_inside": {
+      "RPM": {
+        "n": 174,
+        "max_abs": 13.442,
+        "mean_delta": -0.01
+      },
+      "ENGINE_LOAD": {
+        "n": 174,
+        "max_abs": 2.261,
+        "mean_delta": 1.744
+      },
+      "INTAKE_PRESSURE": {
+        "n": 174,
+        "max_abs": 8.964,
+        "mean_delta": 6.922
+      },
+      "MAF": {
+        "n": 174,
+        "max_abs": 2.796,
+        "mean_delta": -2.112
+      },
+      "SHORT_FUEL_TRIM": {
+        "n": 174,
+        "max_abs": 20.346,
+        "mean_delta": 15.693
+      },
+      "LONG_FUEL_TRIM": {
+        "n": 174,
+        "max_abs": 3.902,
+        "mean_delta": 2.388
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S03:default": {
+    "declared_writes": [
+      "SHORT_FUEL_TRIM",
+      "LONG_FUEL_TRIM",
+      "MAF",
+      "INTAKE_PRESSURE",
+      "RPM",
+      "ENGINE_LOAD"
+    ],
+    "affected_inside": {
+      "RPM": {
+        "n": 174,
+        "max_abs": 89.47,
+        "mean_delta": -83.837
+      },
+      "ENGINE_LOAD": {
+        "n": 174,
+        "max_abs": 3.597,
+        "mean_delta": 3.441
+      },
+      "INTAKE_PRESSURE": {
+        "n": 174,
+        "max_abs": 2.398,
+        "mean_delta": 2.294
+      },
+      "MAF": {
+        "n": 174,
+        "max_abs": 0.186,
+        "mean_delta": -0.173
+      },
+      "SHORT_FUEL_TRIM": {
+        "n": 174,
+        "max_abs": 16.186,
+        "mean_delta": 15.485
+      },
+      "LONG_FUEL_TRIM": {
+        "n": 174,
+        "max_abs": 3.225,
+        "mean_delta": 2.188
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S04:default": {
+    "declared_writes": [
+      "MAF",
+      "INTAKE_TEMP"
+    ],
+    "affected_inside": {
+      "MAF": {
+        "n": 174,
+        "max_abs": 4.009,
+        "mean_delta": -3.228
+      },
+      "INTAKE_TEMP": {
+        "n": 174,
+        "max_abs": 1.15,
+        "mean_delta": 1.104
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S05:default": {
+    "declared_writes": [
+      "CONTROL_MODULE_VOLTAGE",
+      "RPM",
+      "MAF"
+    ],
+    "affected_inside": {
+      "RPM": {
+        "n": 175,
+        "max_abs": 124.369,
+        "mean_delta": -89.329
+      },
+      "CONTROL_MODULE_VOLTAGE": {
+        "n": 175,
+        "max_abs": 3.247,
+        "mean_delta": -2.378
+      },
+      "MAF": {
+        "n": 30,
+        "max_abs": 0.0,
+        "mean_delta": 0.0
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 30
+  },
+  "S06:default": {
+    "declared_writes": [
+      "RPM",
+      "ENGINE_LOAD",
+      "SHORT_FUEL_TRIM",
+      "MAF",
+      "INTAKE_PRESSURE"
+    ],
+    "affected_inside": {
+      "RPM": {
+        "n": 90,
+        "max_abs": 345.631,
+        "mean_delta": -273.891
+      },
+      "ENGINE_LOAD": {
+        "n": 90,
+        "max_abs": 12.0,
+        "mean_delta": 9.622
+      },
+      "INTAKE_PRESSURE": {
+        "n": 90,
+        "max_abs": 7.8,
+        "mean_delta": 6.255
+      },
+      "MAF": {
+        "n": 90,
+        "max_abs": 0.319,
+        "mean_delta": 0.3
+      },
+      "SHORT_FUEL_TRIM": {
+        "n": 90,
+        "max_abs": 12.0,
+        "mean_delta": 9.622
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S07:dropout": {
+    "declared_writes": [
+      "INTAKE_PRESSURE"
+    ],
+    "affected_inside": {
+      "INTAKE_PRESSURE": {
+        "n": 45,
+        "max_abs": 0.0,
+        "mean_delta": 0.0
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 45
+  },
+  "S07:flatline": {
+    "declared_writes": [
+      "INTAKE_PRESSURE"
+    ],
+    "affected_inside": {
+      "INTAKE_PRESSURE": {
+        "n": 175,
+        "max_abs": 9.232,
+        "mean_delta": -9.103
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 0
+  },
+  "S07:implausible": {
+    "declared_writes": [
+      "INTAKE_PRESSURE"
+    ],
+    "affected_inside": {
+      "INTAKE_PRESSURE": {
+        "n": 45,
+        "max_abs": 454.229,
+        "mean_delta": -454.108
+      }
+    },
+    "changed_outside_window": 0,
+    "non_available_readings": 45
+  }
+}

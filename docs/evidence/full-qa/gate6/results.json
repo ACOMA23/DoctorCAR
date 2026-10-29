@@ -1,0 +1,103 @@
+{
+  "gate": "gate6",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-DIAG-S01",
+      "requirement": "AT-MS/S01",
+      "title": "S01: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_THERMAL",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S01-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S02",
+      "requirement": "AT-MS/S02",
+      "title": "S02: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_AIR_FUEL",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S02-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S03",
+      "requirement": "AT-MS/S03",
+      "title": "S03: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_FUEL_RESPONSE",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S03-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S04",
+      "requirement": "AT-MS/S04",
+      "title": "S04: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_AIRFLOW",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S04-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S05",
+      "requirement": "AT-MS/S05",
+      "title": "S05: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_SUPPLY",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S05-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S06",
+      "requirement": "AT-MS/S06",
+      "title": "S06: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_COMBUSTION",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S06-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-S07",
+      "requirement": "AT-MS/S07",
+      "title": "S07: report is evidence-based, numerically correct, hedged and free of injected-fault names",
+      "input": "S at 60 s / 35 s; event MS_SIGNAL",
+      "expected": ">=2 hypotheses (alternatives), contradiction/missing-evidence fields, checks, measurements equal stored values, no scenario/ground-truth wording, no definitive part failure, disclaimers",
+      "actual": "hyp=2 contra_field=True missing=True checks=True values_ok=True/True leaks=[] definitive=[] disclaimers=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/reports/S07-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-DIAG-AMBIG",
+      "requirement": "INT-002",
+      "title": "Confusable air/fuel/airflow patterns: reports must not pretend to separate causes the evidence cannot separate",
+      "input": "compare hypothesis sets of S02 (air), S03 (fuel), S04 (airflow measurement)",
+      "expected": "different evidence -> different hypothesis sets; shared hypotheses declared as shared; no definitive single cause",
+      "actual": "hypothesis sets: {\"S02\": [\"Possible air measurement bias or fuel limitation\", \"Possible unmetered intake air\"], \"S03\": [\"Possible fuel supply limitation\", \"Possible intake leak or measurement bias\"], \"S04\": [\"Possible MAF reporting or wiring bias\", \"Possible actual airflow change or reference-model mismatch\"]}; shared={\"S02~S03\": [], \"S02~S04\": [], \"S03~S04\": []}; identical_sets=False",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate6/diagnostic-review.json",
+      "duration_s": null,
+      "notes": "Each report keeps >=2 alternatives and states that evidence cannot establish the cause; distinguishing S02 from S04 relies on the MAF/MAP residuals, which the technical report shows."
+    }
+  ],
+  "defects": []
+}

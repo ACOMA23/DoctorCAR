@@ -1,0 +1,147 @@
+[
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "license": "MIT"
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "license": "see package license files"
+  },
+  {
+    "name": "doctorcar",
+    "version": "0.1.0",
+    "license": "see package license files"
+  },
+  {
+    "name": "doctorcar",
+    "version": "0.1.0",
+    "license": "see package license files"
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "license": "MIT"
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.26.0",
+    "license": "MIT"
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "license": "MIT"
+  },
+  {
+    "name": "librt",
+    "version": "0.16.0",
+    "license": "MIT"
+  },
+  {
+    "name": "mypy",
+    "version": "1.20.2",
+    "license": "MIT"
+  },
+  {
+    "name": "mypy_extensions",
+    "version": "1.1.0",
+    "license": "MIT"
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license": "Apache-2.0 OR BSD-2-Clause"
+  },
+  {
+    "name": "pathspec",
+    "version": "1.1.1",
+    "license": "see package license files"
+  },
+  {
+    "name": "pip",
+    "version": "26.1.2",
+    "license": "MIT"
+  },
+  {
+    "name": "pluggy",
+    "version": "1.7.0",
+    "license": "MIT"
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0",
+    "license": "BSD-2-Clause"
+  },
+  {
+    "name": "pyserial",
+    "version": "3.5",
+    "license": "BSD"
+  },
+  {
+    "name": "PySide6",
+    "version": "6.12.0",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "PySide6_Addons",
+    "version": "6.12.0",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "PySide6_Essentials",
+    "version": "6.12.0",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "PySide6_Pdf",
+    "version": "6.12.0.140",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "PySide6_WebEngine",
+    "version": "6.12.0.140",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "pytest",
+    "version": "9.2.0",
+    "license": "MIT"
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "license": "MIT"
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "license": "MIT"
+  },
+  {
+    "name": "ruff",
+    "version": "0.17.3",
+    "license": "MIT"
+  },
+  {
+    "name": "shiboken6",
+    "version": "6.12.0",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  },
+  {
+    "name": "types-jsonschema",
+    "version": "4.26.0.20261006",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "types-pyserial",
+    "version": "3.5.0.20260712",
+    "license": "Apache-2.0"
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license": "PSF-2.0"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "42": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  },
+  "777": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  },
+  "2026": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  },
+  "4100": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  },
+  "8001": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  },
+  "8002": {
+    "samples": 776,
+    "events": [],
+    "all_available": true,
+    "in_bounds": true,
+    "step_200ms": true
+  }
+}

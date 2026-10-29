@@ -1,0 +1,10 @@
+{
+  "normal_windows": 151,
+  "normal_min": 0.39659616043515034,
+  "normal_max": 0.6150590357870926,
+  "normal_std": 0.052763275709939245,
+  "fault_S05_peak": 0.6447988605555469,
+  "normal_peak": 0.6150590357870926,
+  "threshold": 0.6029934378184284,
+  "deterministic": true
+}

@@ -1,0 +1,151 @@
+{
+  "gate": "gate9_fw",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-FW-001",
+      "requirement": "TEST-002",
+      "title": "Firmware build (ESP-IDF 5.5.x, esp32s3)",
+      "input": "locate idf.py/cmake/ninja/toolchain",
+      "expected": "build succeeds without flashing",
+      "actual": "FIRMWARE BUILD — NOT TESTED: tools not found {'idf.py': None, 'cmake': None, 'ninja': None, 'gcc': None, 'clang': None, 'xtensa-esp32s3-elf-gcc': None}; IDF_PATH unset",
+      "status": "NOT TESTED",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Per project rules the build is attempted only when the SDK is present. No flashing was ever attempted."
+    },
+    {
+      "test_id": "QA-FW-002",
+      "requirement": "FR-011",
+      "title": "Target and SDK guards in CMake/sdkconfig/C",
+      "input": "read CMakeLists, sdkconfig.defaults, main.c",
+      "expected": "ESP32-S3 only and IDF >= 5.5 enforced at configure/compile time",
+      "actual": "{\"cmake_fatal_unless_esp32s3\": true, \"sdkconfig_target\": true, \"c_error_unless_s3\": true, \"c_error_below_idf_5_5\": true}",
+      "status": "PARTIAL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Static reading only; the guards have not been compiled."
+    },
+    {
+      "test_id": "QA-FW-003",
+      "requirement": "FR-012/A07",
+      "title": "A07: C receiver validates only part of the mandatory envelope (static reproduction)",
+      "input": "compare schema 'required' with the fields handle_line() inspects",
+      "expected": "all 8 mandatory fields validated before acting (as the Python decoder does)",
+      "actual": "validated: ['protocol_version', 'type']; NOT validated: ['device_id', 'session_id', 'sequence_number', 'timestamp_ms', 'source', 'payload']. A HELLO such as {\"protocol_version\":1,\"type\":\"HELLO\"} reaches dc_announce() in C but is rejected by the Python parser (QA-IOT-002)",
+      "status": "FAIL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Defect A07 is still open; reproduction is by source inspection only, not execution."
+    },
+    {
+      "test_id": "QA-FW-004",
+      "requirement": "SAF-001",
+      "title": "Real CAN is disabled and guarded; Wi-Fi/MicroSD/ADC/RTC are not implemented",
+      "input": "grep sources",
+      "expected": "CAN guard present; no TWAI/Wi-Fi/SD/ADC/RTC usage",
+      "actual": "{\"real_can_flag_zero\": true, \"compile_error_if_enabled\": true, \"twai_used\": false, \"wifi_used\": false, \"sd_used\": false, \"adc_used\": false, \"rtc_used\": false}",
+      "status": "PARTIAL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Static. Those features are Not Implemented in M1, hence also not tested."
+    },
+    {
+      "test_id": "QA-FW-005",
+      "requirement": "FR-013",
+      "title": "Line-size limit is consistent between C (4096) and Python (4096 incl. LF); oversize is discarded with an ERROR",
+      "input": "read buffers and discard logic",
+      "expected": "same limit; overflow discards until LF and sends OVERSIZED_MESSAGE",
+      "actual": "{\"DC_MAX_LINE\": [\"main/device_protocol.h:7: #define DC_MAX_LINE 4096\"], \"input_buffer\": [\"main/device_protocol.c:11: static char input[DC_MAX_LINE];\"], \"overflow_guard\": [\"main/device_protocol.c:133: if (input_length >= sizeof(input) - 1) { discarding = true; input_length = 0; }\"], \"python_MAX_LINE_BYTES\": 4096, \"usb_rx_tx\": [\"main/main.c:30: .tx_buffer_size = 8192, .rx_buffer_size = 4096\"]}",
+      "status": "PARTIAL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Static only."
+    },
+    {
+      "test_id": "QA-FW-006",
+      "requirement": "FR-013",
+      "title": "Test mode: data labelled DEVICE_TEST, event upload not advertised",
+      "input": "grep",
+      "expected": "DEVICE_TEST label and event_upload=false",
+      "actual": "{\"source_DEVICE_TEST\": true, \"event_upload_false\": true, \"test_data_kconfig\": true}",
+      "status": "PARTIAL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "Static."
+    },
+    {
+      "test_id": "QA-FW-007",
+      "requirement": "FR-013",
+      "title": "Error behaviour in the C receiver",
+      "input": "grep send_error",
+      "expected": "INVALID_MESSAGE / UNSUPPORTED_MESSAGE / OVERSIZED_MESSAGE exist; no vehicle-changing command",
+      "actual": "main/device_protocol.c:113: send_error(\"INVALID_MESSAGE\", ms);; main/device_protocol.c:117: send_error(\"UNSUPPORTED_MESSAGE\", ms);; main/device_protocol.c:128: if (discarding) send_error(\"OVERSIZED_MESSAGE\", timestamp_ms);",
+      "status": "PARTIAL",
+      "evidence": "docs/evidence/full-qa/gate9/firmware-static-review.json",
+      "duration_s": null,
+      "notes": "No command handler writes to hardware: only HELLO (re-announce) and ACK (ignored) are accepted."
+    },
+    {
+      "test_id": "QA-FW-008",
+      "requirement": "FR-011/M5/M6",
+      "title": "USB Serial/JTAG on a physical ESP32-S3",
+      "input": "-",
+      "expected": "hardware test",
+      "actual": "NOT TESTED: no board connected; no COM port opened",
+      "status": "NOT TESTED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-FW-009",
+      "requirement": "FR-011/M5/M6",
+      "title": "Wi-Fi on ESP32",
+      "input": "-",
+      "expected": "hardware test",
+      "actual": "NOT TESTED: no board, no toolchain, feature not implemented in M1",
+      "status": "NOT TESTED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-FW-010",
+      "requirement": "FR-011/M5/M6",
+      "title": "CAN (TWAI)",
+      "input": "-",
+      "expected": "hardware test",
+      "actual": "NOT TESTED: no board, no toolchain, feature not implemented in M1",
+      "status": "NOT TESTED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-FW-011",
+      "requirement": "FR-011/M5/M6",
+      "title": "MicroSD",
+      "input": "-",
+      "expected": "hardware test",
+      "actual": "NOT TESTED: no board, no toolchain, feature not implemented in M1",
+      "status": "NOT TESTED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-FW-012",
+      "requirement": "FR-011/M5/M6",
+      "title": "ADC / RTC / vehicle power",
+      "input": "-",
+      "expected": "hardware test",
+      "actual": "NOT TESTED: no board, no toolchain, feature not implemented in M1",
+      "status": "NOT TESTED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

@@ -1,0 +1,151 @@
+{
+  "gate": "integration",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-REG-001",
+      "requirement": "SIM-001",
+      "title": "Natural trips (6 seeds): 776 samples, 11 sensors AVAILABLE and physically plausible, 0 rule events, 200 ms axis",
+      "input": "SimulationSource NORMAL default length through Session + SQLite",
+      "expected": "all 6 seeds clean",
+      "actual": "{\"42\": [776, 0], \"777\": [776, 0], \"2026\": [776, 0], \"4100\": [776, 0], \"8001\": [776, 0], \"8002\": [776, 0]}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/normal-trips.json",
+      "duration_s": 9.46,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-002",
+      "requirement": "SIM-001",
+      "title": "Every sensor changes over the trip (stored readings come from the simulator, not constants)",
+      "input": "count distinct stored values per sensor over 776 samples",
+      "expected": ">= 5 distinct values for every sensor except possibly trims",
+      "actual": "{\"RPM\": 723, \"SPEED\": 374, \"COOLANT_TEMP\": 776, \"ENGINE_LOAD\": 372, \"THROTTLE_POS\": 7, \"INTAKE_PRESSURE\": 354, \"MAF\": 560, \"INTAKE_TEMP\": 207, \"SHORT_FUEL_TRIM\": 730, \"LONG_FUEL_TRIM\": 301, \"CONTROL_MODULE_VOLTAGE\": 202}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/sensor-values.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-003",
+      "requirement": "SIM-004 (DEF-006)",
+      "title": "Long simulation (600 s and 900 s) keeps driving: no engine stop, continuous time axis, no false events",
+      "input": "duration_ms 600000 / 900000 through Session",
+      "expected": "3001/4501 samples, RPM > 500 after 45 s, speed still varies after 150 s, 0 events",
+      "actual": "{\"600000\": {\"samples\": 3001, \"expected\": 3001, \"contiguous\": true, \"min_rpm_after_45s\": 798.064, \"max_speed_after_150s\": 61.5, \"min_speed_after_150s\": 0.0, \"rule_events\": []}, \"900000\": {\"samples\": 4501, \"expected\": 4501, \"contiguous\": true, \"min_rpm_after_45s\": 798.072, \"max_speed_after_150s\": 61.5, \"min_speed_after_150s\": 0.0, \"rule_events\": []}}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/long-sim.json",
+      "duration_s": 15.95,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-004",
+      "requirement": "SIM-004",
+      "title": "Default 155 s trip unchanged by the long-run fix (776 samples ending at 155.0 s)",
+      "input": "default duration",
+      "expected": "776 samples, last timestamp 155000",
+      "actual": "776 samples; last=155000",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-005",
+      "requirement": "SIM-002",
+      "title": "Seven single faults (60 s, 35 s) each raise their own rule event",
+      "input": "S01..S07 FAULT_INJECTION",
+      "expected": "each expected MS_* kind present",
+      "actual": "S01->['MS_THERMAL']; S02->['MS_AIR_FUEL']; S03->['MS_FUEL_RESPONSE']; S04->['MS_AIRFLOW']; S05->['MS_SUPPLY']; S06->['MS_COMBUSTION']; S07->['MS_SIGNAL']",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/single-faults.json",
+      "duration_s": 13.46,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-006",
+      "requirement": "SIM-002 (DEF-004)",
+      "title": "Simultaneous faults keep every event (S04+S07 included)",
+      "input": "six pairs injected at 60 s for 35 s",
+      "expected": "both expected kinds for every injectable pair (masking fixed); non-injectable pairs reported",
+      "actual": "{\"S04+S07\": [\"MS_AIRFLOW\", \"MS_SIGNAL\"], \"S01+S05\": [\"MS_SUPPLY\", \"MS_THERMAL\"], \"S02+S06\": \"not injectable: Conflicting scenario writes: S02, S06\", \"S03+S05\": \"not injectable: Conflicting scenario writes: S03, S05\", \"S01+S07\": [\"MS_SIGNAL\", \"MS_THERMAL\"], \"S02+S07\": \"not injectable: Conflicting scenario writes: S02, S07\"}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/multi-faults.json",
+      "duration_s": 7.47,
+      "notes": "Pairs rejected by the simulator are not counted as failures; they conflict on the sensors they write (documented in DC-FIX-001)."
+    },
+    {
+      "test_id": "QA-REG-007",
+      "requirement": "SIM-003",
+      "title": "Random multisensor faults (12 seeds): runs finish, events complete, no crash",
+      "input": "RANDOM_FAULTS max 3",
+      "expected": "no exception; every event COMPLETE",
+      "actual": "seeds=12 with_events=11 bad=[310, 311]",
+      "status": "FAIL",
+      "evidence": "docs/evidence/post-remediation-qa/integration/random-faults.json",
+      "duration_s": 39.08,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-008",
+      "requirement": "FR-005",
+      "title": "T+30 repeat",
+      "input": "S02 6 s",
+      "expected": "event",
+      "actual": "first run produced no MS_AIR_FUEL, repeat not constructible",
+      "status": "BLOCKED",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-009",
+      "requirement": "FR-005",
+      "title": "Event window holds T-30..T+30, saved to SQLite, restored identically by a new connection; export verifies as Replay",
+      "input": "S01 at 60 s -> events -> reopen DB -> export -> ReplaySource.verify",
+      "expected": "pre/post coverage, ordered, restored == saved, export 776 samples",
+      "actual": "[{\"kind\": \"MS_THERMAL\", \"T_s\": 68.2, \"first_s\": 38.2, \"last_s\": 98.2, \"n\": 301, \"status\": \"COMPLETE\", \"pre_ok\": true, \"post_ok\": true, \"ordered\": true}]; restored_identical=True; replay_verify={'ok': True, 'stages': ['FILE_VALID', 'SAMPLE_VALID'], 'samples': 776}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/event-windows.json",
+      "duration_s": 2.87,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-010",
+      "requirement": "SAF/DATA (DEF-007)",
+      "title": "Replay with RPM=1e308 / NaN / Infinity / -5000, temperature 500 C and MAF 1e9: nothing implausible is stored or shown as AVAILABLE; no crash",
+      "input": "mutate 8 samples of an exported session and replay it through Session",
+      "expected": "no AVAILABLE reading outside physical bounds; process survives",
+      "actual": "{\"verify\": \"ValueError: reading must be a finite number or null\", \"run\": \"ValueError: reading must be a finite number or null\"}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/replay-implausible.json",
+      "duration_s": 0.59,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-REG-011",
+      "requirement": "AI-005 (DEF-001)",
+      "title": "App policy (ml_alerts=False): ML never opens an event; rule events identical with/without ML; ML hits are only advisory",
+      "input": "same trips with analyzer None / ml_alerts False / ml_alerts True",
+      "expected": "rules_only == app policy; no ML_ANOMALY event in app policy",
+      "actual": "{\"fault S01\": [1, 1, 1, 0], \"fault S05\": [1, 1, 1, 0], \"cold stress 15000\": [0, 0, 0, 0], \"cold stress 15001\": [0, 0, 0, 0], \"cold stress 15002\": [0, 0, 0, 0], \"cold stress 15003\": [0, 0, 0, 0]}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/integration/rules-vs-ml.json",
+      "duration_s": 58.12,
+      "notes": "tuple = (rule events, app-policy events, ml_alerts=True events, advisory ML hits)"
+    },
+    {
+      "test_id": "QA-REG-012",
+      "requirement": "DATA-002",
+      "title": "All temp databases pass integrity_check/foreign_key_check and have user_version=2",
+      "input": "53 databases written by this script",
+      "expected": "none with issues",
+      "actual": "checked=53 issues=[]",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

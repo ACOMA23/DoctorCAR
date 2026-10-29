@@ -1,0 +1,43 @@
+DoctorCAR — Low voltage with concurrent measurement disturbance
+
+What happened?
+A change was observed 61.0 seconds into the session. Values below distinguish detection from later recording; they do not prove a cause.
+Detected by both the AI and the rules.
+
+Key measurements
+• Module voltage: at detection 10.6 V; recording peak 14.0; last 10.7 at 91.0 seconds.
+• Engine speed: at detection 2340.1 rpm; recording peak 2889.6; last 2301.7 at 91.0 seconds.
+• Air flow: at detection Unavailable g/s; recording peak 21.8; last Unavailable at 91.0 seconds.
+
+What did AI observe?
+The AI detected an unusual pattern in the data.
+Analyzed 56.0 to 61.0 seconds. It ended at the moment of detection. Its score is not a component failure probability and may disagree with rules.
+Factors that most raised the model's anomaly score: Air/fuel and operating relationships, Supply voltage, Temperature behavior
+Measured vs expected air flow (above the training norm) contributed to raising the anomaly score the model computed.
+These are model effects, not mechanical causes. Correlated features and reference replacement may not represent realistic operation.
+After the first detection the AI detected an unusual pattern in the window ending at 62.0 seconds. This is a later analysis and does not describe what was known at detection.
+Factors that most raised the model's anomaly score: Air/fuel and operating relationships, Supply voltage, Temperature behavior
+Measured vs expected air flow (above the training norm) contributed to raising the anomaly score the model computed.
+These are model effects, not mechanical causes. Correlated features and reference replacement may not represent realistic operation.
+
+Possible explanations
+• Possible supply or ground disturbance — a measurement-based possibility requiring an independent check.
+• Possible voltage-reporting or separate acquisition issue — a measurement-based possibility requiring an independent check.
+
+What should be checked?
+1. Measure supply voltage independently; inspect connections, ground and charging as warranted
+Purpose: distinguish an operating change from measurement error. Mechanical or electrical work needs a technician and suitable equipment; do not replace a part based on this report.
+
+How certain is this?
+Suspicion requiring confirmation. Evidence cannot establish the mechanical cause.
+
+Data status
+Simulation or test device; no verified real vehicle source.
+Missing/invalid readings: 26; samples: 301.
+Recording: COMPLETE
+Origin: LIVE
+DTC: No code observed
+Freeze Frame: Unavailable
+
+Safety note
+This is a software experiment, not a real vehicle danger alert.

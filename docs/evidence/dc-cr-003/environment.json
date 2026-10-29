@@ -1,0 +1,12 @@
+{
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "PySide6": "6.12.0",
+  "idf.py": null,
+  "cmake": null,
+  "ninja": null,
+  "firmware_build": "NOT RUN",
+  "physical_usb": "NOT RUN",
+  "vehicle": "NOT RUN",
+  "flash": "NOT RUN",
+  "inference_generator_imports": []
+}

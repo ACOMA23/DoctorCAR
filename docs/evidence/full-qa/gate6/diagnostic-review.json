@@ -1,0 +1,121 @@
+{
+  "S01": {
+    "detected_rule": "MS_THERMAL",
+    "time_s": 68.2,
+    "hypotheses": [
+      "Possible reduced cooling effectiveness",
+      "Possible temperature measurement bias"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Check coolant level, fan and circulation; compare an independent temperature",
+      "Check coolant level, fan and circulation; compare an independent temperature"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  },
+  "S02": {
+    "detected_rule": "MS_AIR_FUEL",
+    "time_s": 66.0,
+    "hypotheses": [
+      "Possible unmetered intake air",
+      "Possible air measurement bias or fuel limitation"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads",
+      "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  },
+  "S03": {
+    "detected_rule": "MS_FUEL_RESPONSE",
+    "time_s": 66.0,
+    "hypotheses": [
+      "Possible fuel supply limitation",
+      "Possible intake leak or measurement bias"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Measure actual fuel pressure with suitable external equipment; inspect supply and compare loads",
+      "Measure actual fuel pressure with suitable external equipment; inspect supply and compare loads"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  },
+  "S04": {
+    "detected_rule": "MS_AIRFLOW",
+    "time_s": 66.2,
+    "hypotheses": [
+      "Possible MAF reporting or wiring bias",
+      "Possible actual airflow change or reference-model mismatch"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Inspect MAF and wiring; compare MAF/MAP, RPM and throttle across conditions",
+      "Inspect MAF and wiring; compare MAF/MAP, RPM and throttle across conditions"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  },
+  "S05": {
+    "detected_rule": "MS_SUPPLY",
+    "time_s": 61.0,
+    "hypotheses": [
+      "Possible supply or ground disturbance",
+      "Possible voltage-reporting or separate acquisition issue"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Measure supply voltage independently; inspect connections, ground and charging as warranted",
+      "Measure supply voltage independently; inspect connections, ground and charging as warranted"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_ANOMALOUS"
+  },
+  "S06": {
+    "detected_rule": "MS_COMBUSTION",
+    "time_s": 68.0,
+    "hypotheses": [
+      "Possible ignition or fuel instability",
+      "Possible operating transient or measurement inconsistency"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Read available misfire counters with a suitable tool; inspect ignition/fuel; no cylinder identification",
+      "Read available misfire counters with a suitable tool; inspect ignition/fuel; no cylinder identification"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  },
+  "S07": {
+    "detected_rule": "MS_SIGNAL",
+    "time_s": 60.0,
+    "hypotheses": [
+      "Possible signal, wiring or acquisition issue",
+      "Possible steady operation or unsuitable reference"
+    ],
+    "n_hyp": 2,
+    "missing_evidence_present": true,
+    "checks": [
+      "Compare references, inspect wiring and acquisition timing; independent pressure if needed",
+      "Compare references, inspect wiring and acquisition timing; independent pressure if needed"
+    ],
+    "leaks": [],
+    "definitive_claims": [],
+    "ai_state": "ANALYZED_NORMAL"
+  }
+}

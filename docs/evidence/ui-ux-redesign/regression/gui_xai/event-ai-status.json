@@ -1,0 +1,30 @@
+{
+ "target_event": "c98179bb-e9c6-57a2-b1a7-cf422f11ccca",
+ "target_row": 0,
+ "status": {
+  "age_ms": 0,
+  "detection_ms": 61000,
+  "max_age_ms": 2000,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.615417784287769,
+  "state": "ANALYZED_ANOMALOUS",
+  "threshold": 0.6029934378184284,
+  "window_end_ms": 61000,
+  "window_start_ms": 56000
+ },
+ "all": [
+  [
+   "e683c59e-5543-5e0b-90dc-01d3e9c1f12d",
+   "ANALYZED_ANOMALOUS"
+  ],
+  [
+   "c98179bb-e9c6-57a2-b1a7-cf422f11ccca",
+   "ANALYZED_ANOMALOUS"
+  ],
+  [
+   "fa99a444-9281-561d-94dc-3e1ec403c911",
+   "ANALYZED_NORMAL"
+  ]
+ ]
+}

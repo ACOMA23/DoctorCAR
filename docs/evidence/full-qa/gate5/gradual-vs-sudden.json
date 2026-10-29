@@ -1,0 +1,26 @@
+{
+  "S01 gradual thermal / cr004-iforest-v1": {
+    "peak_score": 0.623,
+    "peak_at_s": 5.0,
+    "threshold": 0.565,
+    "first_anomalous_window_after_start_s": 147.0
+  },
+  "S01 gradual thermal / cr005-iforest-v2": {
+    "peak_score": 0.62,
+    "peak_at_s": 62.0,
+    "threshold": 0.581,
+    "first_anomalous_window_after_start_s": 61.0
+  },
+  "S05 sudden voltage / cr004-iforest-v1": {
+    "peak_score": 0.661,
+    "peak_at_s": 97.0,
+    "threshold": 0.565,
+    "first_anomalous_window_after_start_s": 60.0
+  },
+  "S05 sudden voltage / cr005-iforest-v2": {
+    "peak_score": 0.651,
+    "peak_at_s": 62.0,
+    "threshold": 0.581,
+    "first_anomalous_window_after_start_s": 60.0
+  }
+}

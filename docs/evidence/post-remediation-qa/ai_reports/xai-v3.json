@@ -1,0 +1,94 @@
+{
+  "window": {
+    "start_ms": 42000,
+    "end_ms": 47000,
+    "score": 0.6286947405166087,
+    "threshold": 0.6029934378184284
+  },
+  "effects": [
+    {
+      "group": "air_fuel_operation",
+      "feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        44,
+        45,
+        46
+      ],
+      "replacement_score": 0.4816819258350166,
+      "effect": 0.14701281468159205,
+      "direction": "raises_score",
+      "used_by_model": true
+    },
+    {
+      "group": "temperature",
+      "feature_indices": [
+        8,
+        9,
+        10,
+        11,
+        28,
+        29,
+        30,
+        31
+      ],
+      "replacement_score": 0.5815222264542494,
+      "effect": 0.04717251406235923,
+      "direction": "raises_score",
+      "used_by_model": true
+    },
+    {
+      "group": "speed",
+      "feature_indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "replacement_score": 0.6259969632735517,
+      "effect": 0.0026977772430569757,
+      "direction": "raises_score",
+      "used_by_model": true
+    },
+    {
+      "group": "voltage",
+      "feature_indices": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "replacement_score": 0.6277463620858125,
+      "effect": 0.000948378430796204,
+      "direction": "raises_score",
+      "used_by_model": true
+    }
+  ],
+  "refused_all": true
+}

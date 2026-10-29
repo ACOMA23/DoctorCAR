@@ -1,0 +1,12 @@
+{
+  "second_start_message": "توجد جلسة قائمة؛ أوقفها قبل بدء مصدر آخر",
+  "start_button_disabled_while_running": true,
+  "source_locked": true,
+  "export_to_missing_dir": "تعذر إكمال العملية: الملف غير موجود: x.jsonl",
+  "export_to_directory": "تعذر إكمال العملية: لا تتوفر صلاحية الوصول إلى الملف أو المنفذ المحدد",
+  "samples_still_flowing": true,
+  "connection_events_created_by_export_errors": 0,
+  "status_after_export_errors": "قيد التشغيل — SIMULATION",
+  "data_continues_after_language_theme_change": true,
+  "missing_report_text": "الحدث غير موجود"
+}

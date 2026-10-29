@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "scope": "native Qt -> controlled multisensor -> event -> SQLite -> A-K report -> restart",
+  "database": "C:\\doccar\\data\\cr003-audit-1793187116776439000\\gui.sqlite3",
+  "event_id": "1afdb9b1-4ac3-5d93-bbbd-7813f35ec5a5",
+  "trigger_ms": 66000,
+  "first_ms": 36000,
+  "last_ms": 96000,
+  "samples": 301,
+  "report_restored_identically": true,
+  "sqlite_integrity": "ok",
+  "firmware_modified": false,
+  "physical_hardware_tested": false
+}

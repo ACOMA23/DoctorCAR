@@ -1,0 +1,110 @@
+{
+  "label": "wheel",
+  "python": "C:/Users/user/AppData/Local/Temp/doctorcar-qa/package/qa-venv/Scripts/python.exe",
+  "database_path": "C:\\Users\\user\\AppData\\Local\\Temp\\dc-ux-splash-p_a0z7fd\\مجلد تجربة\\قاعدة بيانات.sqlite3",
+  "splash_visible_after_s": 0.308,
+  "main_visible_after_s": 2.001,
+  "splash_frames": [
+    {
+      "t_s": 0.308,
+      "file": "wheel-splash-00.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.637,
+      "file": "wheel-splash-01.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.76,
+      "file": "wheel-splash-02.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 0.897,
+      "file": "wheel-splash-03.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.021,
+      "file": "wheel-splash-04.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.151,
+      "file": "wheel-splash-05.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.277,
+      "file": "wheel-splash-06.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.4,
+      "file": "wheel-splash-07.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.526,
+      "file": "wheel-splash-08.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.65,
+      "file": "wheel-splash-09.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.778,
+      "file": "wheel-splash-10.png",
+      "size": [
+        580,
+        380
+      ]
+    },
+    {
+      "t_s": 1.905,
+      "file": "wheel-splash-11.png",
+      "size": [
+        580,
+        380
+      ]
+    }
+  ],
+  "splash_still_visible_after_main": false,
+  "main_windows": 1,
+  "exit_code_after_close": 0,
+  "database_created": true,
+  "stderr_tail": ""
+}

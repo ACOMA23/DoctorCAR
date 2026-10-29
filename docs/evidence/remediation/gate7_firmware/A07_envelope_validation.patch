@@ -1,0 +1,45 @@
+--- a/firmware/main/device_protocol.c
++++ b/firmware/main/device_protocol.c
+@@ static void send_error(const char *code, int64_t ms)
++/* A07 (DEF-008): the host (Python receiver) requires all eight envelope fields; the firmware
++ * must reject an incomplete or mistyped HELLO/ACK before acting on it. NOT BUILT, NOT TESTED
++ * on a board: proposed patch only. */
++static bool is_nonneg_integer(const cJSON *item)
++{
++    return cJSON_IsNumber(item) && item->valuedouble >= 0 &&
++           item->valuedouble == (double)(int64_t)item->valuedouble;
++}
++
++static bool is_identifier(const cJSON *item)
++{
++    return cJSON_IsString(item) && item->valuestring &&
++           item->valuestring[0] != '\0' && strlen(item->valuestring) <= 128;
++}
++
++static bool envelope_is_valid(const cJSON *root)
++{
++    const cJSON *version = cJSON_GetObjectItemCaseSensitive(root, "protocol_version");
++    return cJSON_IsObject(root) &&
++           cJSON_IsNumber(version) && version->valuedouble == 1 &&
++           is_identifier(cJSON_GetObjectItemCaseSensitive(root, "type")) &&
++           is_identifier(cJSON_GetObjectItemCaseSensitive(root, "device_id")) &&
++           is_identifier(cJSON_GetObjectItemCaseSensitive(root, "session_id")) &&
++           is_nonneg_integer(cJSON_GetObjectItemCaseSensitive(root, "sequence_number")) &&
++           is_nonneg_integer(cJSON_GetObjectItemCaseSensitive(root, "timestamp_ms")) &&
++           is_identifier(cJSON_GetObjectItemCaseSensitive(root, "source")) &&
++           cJSON_IsObject(cJSON_GetObjectItemCaseSensitive(root, "payload"));
++}
++
+ static void handle_line(int64_t ms)
+ {
+     input[input_length] = 0;
+     const char *end = NULL;
+     cJSON *root = cJSON_ParseWithOpts(input, &end, true);
+-    cJSON *version = root ? cJSON_GetObjectItemCaseSensitive(root, "protocol_version") : NULL;
+-    cJSON *type = root ? cJSON_GetObjectItemCaseSensitive(root, "type") : NULL;
+-    if (!cJSON_IsObject(root) || !cJSON_IsNumber(version) || version->valuedouble != 1 ||
+-        !cJSON_IsString(type)) {
++    cJSON *type = root ? cJSON_GetObjectItemCaseSensitive(root, "type") : NULL;
++    if (!root || !envelope_is_valid(root)) {
+         send_error("INVALID_MESSAGE", ms);
+     } else if (strcmp(type->valuestring, "HELLO") == 0) {

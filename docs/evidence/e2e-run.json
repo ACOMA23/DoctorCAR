@@ -1,0 +1,78 @@
+{
+  "source": "LOCAL_SIMULATION_ONLY",
+  "results": [
+    {
+      "scenario": "normal",
+      "accepted": 156,
+      "events": [],
+      "reload_verified": true
+    },
+    {
+      "scenario": "thermal",
+      "accepted": 156,
+      "events": [
+        {
+          "event_id": "11a0432f-2453-5a3c-b4c1-ea41ce9f1116",
+          "kind": "THERMAL_DEMO",
+          "trigger_ms": 89000,
+          "first_ms": 59000,
+          "last_ms": 119000,
+          "sample_count": 61,
+          "status": "COMPLETE"
+        }
+      ],
+      "reload_verified": true
+    },
+    {
+      "scenario": "invalid",
+      "accepted": 156,
+      "events": [
+        {
+          "event_id": "17497764-c8cd-5668-b003-b4377fdcd398",
+          "kind": "DATA_QUALITY",
+          "trigger_ms": 72000,
+          "first_ms": 42000,
+          "last_ms": 102000,
+          "sample_count": 61,
+          "status": "COMPLETE"
+        }
+      ],
+      "reload_verified": true
+    },
+    {
+      "scenario": "dropout",
+      "accepted": 156,
+      "events": [
+        {
+          "event_id": "273c0525-0b28-5594-80df-5370929da4c7",
+          "kind": "DATA_QUALITY",
+          "trigger_ms": 72000,
+          "first_ms": 42000,
+          "last_ms": 102000,
+          "sample_count": 61,
+          "status": "COMPLETE"
+        }
+      ],
+      "reload_verified": true
+    },
+    {
+      "scenario": "device_protocol",
+      "accepted": 156,
+      "events": [
+        {
+          "event_id": "f9f958e4-9f39-530c-9ae4-8827c2d54004",
+          "kind": "THERMAL_DEMO",
+          "trigger_ms": 89000,
+          "first_ms": 59000,
+          "last_ms": 119000,
+          "sample_count": 61,
+          "status": "COMPLETE"
+        }
+      ],
+      "reload_verified": true
+    }
+  ],
+  "wall_duration_seconds": 0.829,
+  "database_directory": "C:\\doccar\\data\\verification-1793175359936708100",
+  "physical_device_tested": false
+}

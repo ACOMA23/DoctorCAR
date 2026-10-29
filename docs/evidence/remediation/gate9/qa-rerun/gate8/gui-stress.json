@@ -1,0 +1,12 @@
+{
+  "page_switches": 158,
+  "reports_requested": 22,
+  "event_rows": 3,
+  "max_gui_gap_s": 0.093,
+  "p99_gap_s": 0.054,
+  "errors_shown": [],
+  "memory_mb": [
+    376.9,
+    396.7
+  ]
+}

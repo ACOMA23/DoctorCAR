@@ -1,0 +1,5 @@
+{
+  "NaN": "rejected: ValueError: reading must be a finite number or null",
+  "Infinity": "rejected: ValueError: reading must be a finite number or null",
+  "-Infinity": "rejected: ValueError: reading must be a finite number or null"
+}

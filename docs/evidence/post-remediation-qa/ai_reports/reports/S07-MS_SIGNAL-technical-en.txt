@@ -1,0 +1,330 @@
+DoctorCAR — multisensor evidence report
+Event ID: ec83dd06-23e5-5c16-89c0-47379ba0349e
+Session: 4e7bd301-55e9-4f89-a66f-b8f2f1f15b79
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 60000 ms | correlated-evidence-1
+A. Observed Symptoms
+Signal loss or suspected flatline with changing references
+B. Measurements in the actual event window
+RPM [rpm] n=301 t=30000..90000 ms | min=798.390 max=2889.607 mean=1915.459 delta=1532.440
+SPEED [km/h] n=301 t=30000..90000 ms | min=0.000 max=61.500 mean=37.487 delta=59.269
+COOLANT_TEMP [°C] n=301 t=30000..90000 ms | min=61.143 max=84.803 mean=76.187 delta=23.660
+ENGINE_LOAD [%] n=301 t=30000..90000 ms | min=5.200 max=69.504 mean=36.774 delta=26.612
+THROTTLE_POS [%] n=301 t=30000..90000 ms | min=4.000 max=48.000 mean=24.827 delta=15.000
+INTAKE_PRESSURE [kPa] n=261 t=30000..90000 ms | min=33.380 max=75.178 mean=53.870 delta=17.298
+MAF [g/s] n=301 t=30000..90000 ms | min=1.929 max=21.846 mean=10.163 delta=9.474
+INTAKE_TEMP [°C] n=301 t=30000..90000 ms | min=24.416 max=29.560 mean=26.942 delta=2.129
+SHORT_FUEL_TRIM [%] n=301 t=30000..90000 ms | min=-2.000 max=2.000 mean=-0.321 delta=2.394
+LONG_FUEL_TRIM [%] n=301 t=30000..90000 ms | min=1.644 max=1.799 mean=1.742 delta=0.155
+CONTROL_MODULE_VOLTAGE [V] n=301 t=30000..90000 ms | min=13.800 max=14.000 mean=13.910 delta=0.161
+C. Cross-Sensor Evidence through detection only
+map_missing_invalid_samples=1.0000 [52000..60000 ms]
+rpm_range=997.4100 [52000..60000 ms]
+maf_range_g_s=9.5760 [52000..60000 ms]
+reference_samples=41.0000 [52000..60000 ms]
+map_range_kPa=2.4340 [52000..60000 ms]
+Experimental rule criteria: MAP missing/invalid OR >=3s range<0.03kPa with RPM range>150 and MAF range>1g/s
+Derived classification, separate from Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: SIGNAL_LOSS_OR_SUSPECTED_FLATLINE
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: UNRESOLVED
+MAF: UNRESOLVED
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: UNRESOLVED
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. Suspected System
+Sensor signal or acquisition
+E. Possible Causes — testable hypotheses
+Possible signal, wiring or acquisition issue
+F. Supporting Evidence:
+map_missing_invalid_samples=1.0000 [52000..60000 ms]
+rpm_range=997.4100 [52000..60000 ms]
+maf_range_g_s=9.5760 [52000..60000 ms]
+reference_samples=41.0000 [52000..60000 ms]
+map_range_kPa=2.4340 [52000..60000 ms]
+G. Contradicting Evidence:
+No independent contradiction available; this does not confirm the hypothesis.
+H. Missing Evidence:
+Independent pressure and wiring verification unavailable
+I. Recommended Checks:
+Compare references, inspect wiring and acquisition timing; independent pressure if needed
+Possible steady operation or unsuitable reference
+F. Supporting Evidence:
+map_missing_invalid_samples=1.0000 [52000..60000 ms]
+rpm_range=997.4100 [52000..60000 ms]
+maf_range_g_s=9.5760 [52000..60000 ms]
+reference_samples=41.0000 [52000..60000 ms]
+map_range_kPa=2.4340 [52000..60000 ms]
+G. Contradicting Evidence:
+No independent contradiction available; this does not confirm the hypothesis.
+H. Missing Evidence:
+Independent pressure and wiring verification unavailable
+I. Recommended Checks:
+Same check as listed under hypothesis 1.
+J. Limitations
+Evidence is insufficient to identify the probable cause.
+These rules are calibrated to a declared toy simulation, not universal limits or validated physics.
+A pattern proves no failed part, misfire or cylinder; no calibrated mechanical confidence .
+Module voltage is not battery current; no invented fuel pressure PID, DTC or Freeze Frame.
+DTC: No code observed
+Freeze Frame: Unavailable; this window is not ECU Freeze Frame
+K. Event Window
+T=60000 ms | requested=30000..90000 ms
+actual=30000..90000 ms | n=301 | COMPLETE
+=== AI details ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.554880165317968
+threshold: 0.6029934378184284
+window_start_ms: 55000
+window_end_ms: 60000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 60000
+recording_window_ms: 30000..90000
+samples: 301; missing_or_invalid: 40
+detection: rules=['MS_SIGNAL'] (first 60000); ml=False (at None); quality=False; combined=False
+
+Stored AI/XAI — original timing and features
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 0.9615384615384616,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 1.0,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 60000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2583.534576923077,
+    181.61904769285476,
+    107.8435333333334,
+    1.0,
+    50.037499999999994,
+    6.065076771979066,
+    4.041666666666675,
+    1.0,
+    76.83496153846154,
+    0.5642171895487134,
+    0.3760769230769355,
+    1.0,
+    67.1545,
+    6.025857304151834,
+    -0.9038888888888836,
+    1.0,
+    47.03846153846154,
+    4.8076923076923075,
+    -1.0683760683760657,
+    1.0,
+    74.4288,
+    0.4500006222217887,
+    0.31201923076922855,
+    0.9615384615384616,
+    19.067884615384614,
+    2.0136429354038357,
+    0.6309076923076938,
+    1.0,
+    29.372346153846152,
+    0.48214113336782105,
+    -0.07230598290598221,
+    1.0,
+    1.8289230769230769,
+    0.15377929316366737,
+    -0.09934358974358959,
+    1.0,
+    1.745346153846154,
+    0.004305115987826447,
+    0.0028632478632480574,
+    1.0,
+    13.884615384615385,
+    0.02428370286533915,
+    -0.016184615384614905,
+    1.0,
+    1.442997303052119e-06,
+    -5.684341886080802e-16,
+    -0.8186332812495758
+  ],
+  "inference_ms": 8.539399947039783,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.554880165317968,
+  "session_id": "4e7bd301-55e9-4f89-a66f-b8f2f1f15b79",
+  "start_ms": 55000,
+  "threshold": 0.6029934378184284
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "map_missing_invalid_samples=1.0000 [52000..60000 ms]",
+      "rpm_range=997.4100 [52000..60000 ms]",
+      "maf_range_g_s=9.5760 [52000..60000 ms]",
+      "reference_samples=41.0000 [52000..60000 ms]",
+      "map_range_kPa=2.4340 [52000..60000 ms]"
+    ],
+    "kind": "MS_SIGNAL",
+    "observation": "فقد إشارة أو ثبات مشتبه مع تغير المراجع",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 60000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 60000,
+  "hypotheses": [
+    {
+      "description": "احتمال خلل إشارة أو توصيل أو اكتساب",
+      "supporting_evidence": [
+        "map_missing_invalid_samples=1.0000 [52000..60000 ms]",
+        "rpm_range=997.4100 [52000..60000 ms]",
+        "maf_range_g_s=9.5760 [52000..60000 ms]",
+        "reference_samples=41.0000 [52000..60000 ms]",
+        "map_range_kPa=2.4340 [52000..60000 ms]"
+      ],
+      "missing_evidence": [
+        "التحقق المستقل من الضغط والتوصيلات غير متاح"
+      ],
+      "recommended_check": "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة",
+      "contradicting_evidence": [],
+      "description_en": "Possible signal, wiring or acquisition issue",
+      "missing_evidence_en": [
+        "Independent pressure and wiring verification unavailable"
+      ],
+      "recommended_check_en": "Compare references, inspect wiring and acquisition timing; independent pressure if needed"
+    },
+    {
+      "description": "احتمال ظروف تشغيل ثابتة أو مرجع غير ملائم",
+      "supporting_evidence": [
+        "map_missing_invalid_samples=1.0000 [52000..60000 ms]",
+        "rpm_range=997.4100 [52000..60000 ms]",
+        "maf_range_g_s=9.5760 [52000..60000 ms]",
+        "reference_samples=41.0000 [52000..60000 ms]",
+        "map_range_kPa=2.4340 [52000..60000 ms]"
+      ],
+      "missing_evidence": [
+        "التحقق المستقل من الضغط والتوصيلات غير متاح"
+      ],
+      "recommended_check": "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة",
+      "contradicting_evidence": [],
+      "description_en": "Possible steady operation or unsuitable reference",
+      "missing_evidence_en": [
+        "Independent pressure and wiring verification unavailable"
+      ],
+      "recommended_check_en": "Compare references, inspect wiring and acquisition timing; independent pressure if needed"
+    }
+  ]
+}

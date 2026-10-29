@@ -1,0 +1,14 @@
+{
+  "valid": "ACCEPTED",
+  "NaN value": "rejected: ValueError: reading must be a finite number or null",
+  "Infinity value": "rejected: ValueError: reading must be a finite number or null",
+  "boolean value": "rejected: ValueError: reading must be a finite number or null",
+  "string value": "rejected: ValueError: reading must be a finite number or null",
+  "missing field": "rejected: KeyError: 'timestamp_ms'",
+  "backward timestamp": "rejected: ValueError: Invalid replay sample ordering or units",
+  "duplicate sequence": "rejected: ValueError: Invalid replay sample ordering or units",
+  "bad version": "rejected: ValueError: Unsupported sample version",
+  "bool version": "rejected: ValueError: Unsupported sample version",
+  "corrupted line": "rejected: JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (ch",
+  "wrong unit": "rejected: ValueError: Invalid replay sample ordering or units"
+}

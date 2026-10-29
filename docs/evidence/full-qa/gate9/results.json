@@ -1,0 +1,91 @@
+{
+  "gate": "gate9",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-PKG-001",
+      "requirement": "NFR-002",
+      "title": "Wheel builds from the current sources",
+      "input": "pip wheel ./desktop --no-deps",
+      "expected": "a doctorcar-0.1.0 wheel is produced",
+      "actual": "exit=0 wheel=doctorcar-0.1.0-py3-none-any.whl size=1162139",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": 6.49,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-PKG-002",
+      "requirement": "NFR-002",
+      "title": "Wheel contains both models, metadata and the protocol schema; no tests, data or firmware leak in",
+      "input": "inspect wheel zip",
+      "expected": "required resources present; no tests/audits/data/firmware entries",
+      "actual": "files=59 missing=[] unexpected=[]",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-PKG-003",
+      "requirement": "NFR-002",
+      "title": "Fresh virtual environment: install with [ml] extra and the lock file; pip check clean",
+      "input": "python -m venv; pip install wheel[ml] -c requirements-lock.txt",
+      "expected": "install exit 0; no broken requirements",
+      "actual": "install_exit=0 (59s) pip_check='No broken requirements found.' [notice] To update, run: C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--doccar\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\scratchpad\\doctorcar-qa\\package\\qa-venv\\Scripts\\python.exe -m pip install --upgrade pip",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate9/qa-venv-pip-list.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-PKG-004",
+      "requirement": "NFR-002",
+      "title": "Installed package runs from site-packages, finds its models and schema, and does not depend on the development tree",
+      "input": "python -I from a neutral folder",
+      "expected": "package and models under site-packages; dev tree not on sys.path; no absolute dev paths in installed sources; schema resource present",
+      "actual": "{\"package_file\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--doccar\\\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\\\scratchpad\\\\doctorcar-qa\\\\package\\\\qa-venv\\\\Lib\\\\site-packages\\\\doctorcar\\\\__init__.py\", \"models_root\": \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--doccar\\\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\\\scratchpad\\\\doctorcar-qa\\\\package\\\\qa-venv\\\\Lib\\\\site-packages\\\\doctorcar\\\\analysis\\\\models\", \"available_models\": [\"cr004-iforest-v1\", \"cr005-iforest-v2\"], \"default_model\": \"cr005-iforest-v2\", \"dev_tree_on_sys_path\": [], \"schema_resource\": true, \"absolute_dev_paths_in_installed_sour",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate9/installed-e2e.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-PKG-005",
+      "requirement": "NFR-002",
+      "title": "Console entry point works and both models load in the installed environment",
+      "input": "doctorcar --help; AnomalyModel(v1/v2)",
+      "expected": "exit 0 and versions reported",
+      "actual": "help_exit=0 loaded=['iforest-cr004-v1', 'iforest-cr005-v2']",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate9/installed-e2e.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-012",
+      "requirement": "NFR-002/AI-005",
+      "title": "Fresh install: simulation with ML and XAI, new database, report with AI section",
+      "input": "installed package: S02 session with model v1 (exercises XAI), report render",
+      "expected": "776 accepted, XAI-bearing event, report includes the AI section",
+      "actual": "{\"accepted\": 776, \"events\": [[\"ML_ANOMALY\", \"COMPLETE\"], [\"ML_ANOMALY\", \"COMPLETE\"]], \"xai_event\": \"ML_ANOMALY\", \"report_chars\": 2441, \"report_has_ai_section\": true}",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate9/installed-e2e.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-012b",
+      "requirement": "NFR-002/FR-010",
+      "title": "Fresh install: native GUI starts, runs a faulty simulation with AI, shows an event, opens the report and closes cleanly",
+      "input": "MainWindow from site-packages on a new database; S02; double-click event",
+      "expected": "backend ready, event complete, report opened, worker finished",
+      "actual": "{\"gui_platform\": \"windows\", \"gui_backend_ready\": true, \"gui_event_complete\": true, \"gui_ai_label\": \"AI: نشط — نمط معتاد | 0.515 | iforest-cr005-v2\", \"gui_report_opened\": true, \"gui_report_chars\": 1608, \"gui_closed_cleanly\": true}",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate9/screenshots/installed-app-report.png",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

@@ -1,0 +1,449 @@
+trip,split,scale,warm,scenarios,stream,alarm_times_s
+qa-n00,qa,0.9712,False,,rules,
+qa-n00,qa,0.9712,False,,ml:cr004-iforest-v1,7.0 37.0 147.0
+qa-n00,qa,0.9712,False,,ml:cr005-iforest-v2,
+qa-n00,qa,0.9712,False,,ml:cr006-iforest-v3,
+qa-n00,qa,0.9712,False,,combined:cr004-iforest-v1,7.0 37.0 147.0
+qa-n00,qa,0.9712,False,,combined:cr005-iforest-v2,
+qa-n00,qa,0.9712,False,,combined:cr006-iforest-v3,
+qa-n01,qa,0.91,True,,rules,
+qa-n01,qa,0.91,True,,ml:cr004-iforest-v1,10.0 146.0
+qa-n01,qa,0.91,True,,ml:cr005-iforest-v2,
+qa-n01,qa,0.91,True,,ml:cr006-iforest-v3,
+qa-n01,qa,0.91,True,,combined:cr004-iforest-v1,10.0 146.0
+qa-n01,qa,0.91,True,,combined:cr005-iforest-v2,
+qa-n01,qa,0.91,True,,combined:cr006-iforest-v3,
+qa-n02,qa,0.9036,False,,rules,
+qa-n02,qa,0.9036,False,,ml:cr004-iforest-v1,7.0 147.0
+qa-n02,qa,0.9036,False,,ml:cr005-iforest-v2,
+qa-n02,qa,0.9036,False,,ml:cr006-iforest-v3,
+qa-n02,qa,0.9036,False,,combined:cr004-iforest-v1,7.0 147.0
+qa-n02,qa,0.9036,False,,combined:cr005-iforest-v2,
+qa-n02,qa,0.9036,False,,combined:cr006-iforest-v3,
+qa-n03,qa,0.9245,True,,rules,
+qa-n03,qa,0.9245,True,,ml:cr004-iforest-v1,10.0 147.0
+qa-n03,qa,0.9245,True,,ml:cr005-iforest-v2,
+qa-n03,qa,0.9245,True,,ml:cr006-iforest-v3,
+qa-n03,qa,0.9245,True,,combined:cr004-iforest-v1,10.0 147.0
+qa-n03,qa,0.9245,True,,combined:cr005-iforest-v2,
+qa-n03,qa,0.9245,True,,combined:cr006-iforest-v3,
+qa-n04,qa,1.078,False,,rules,
+qa-n04,qa,1.078,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n04,qa,1.078,False,,ml:cr005-iforest-v2,
+qa-n04,qa,1.078,False,,ml:cr006-iforest-v3,
+qa-n04,qa,1.078,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n04,qa,1.078,False,,combined:cr005-iforest-v2,
+qa-n04,qa,1.078,False,,combined:cr006-iforest-v3,
+qa-n05,qa,0.9253,True,,rules,
+qa-n05,qa,0.9253,True,,ml:cr004-iforest-v1,147.0
+qa-n05,qa,0.9253,True,,ml:cr005-iforest-v2,
+qa-n05,qa,0.9253,True,,ml:cr006-iforest-v3,
+qa-n05,qa,0.9253,True,,combined:cr004-iforest-v1,147.0
+qa-n05,qa,0.9253,True,,combined:cr005-iforest-v2,
+qa-n05,qa,0.9253,True,,combined:cr006-iforest-v3,
+qa-n06,qa,0.9649,False,,rules,
+qa-n06,qa,0.9649,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n06,qa,0.9649,False,,ml:cr005-iforest-v2,
+qa-n06,qa,0.9649,False,,ml:cr006-iforest-v3,
+qa-n06,qa,0.9649,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n06,qa,0.9649,False,,combined:cr005-iforest-v2,
+qa-n06,qa,0.9649,False,,combined:cr006-iforest-v3,
+qa-n07,qa,1.0553,True,,rules,
+qa-n07,qa,1.0553,True,,ml:cr004-iforest-v1,10.0 148.0
+qa-n07,qa,1.0553,True,,ml:cr005-iforest-v2,
+qa-n07,qa,1.0553,True,,ml:cr006-iforest-v3,
+qa-n07,qa,1.0553,True,,combined:cr004-iforest-v1,10.0 148.0
+qa-n07,qa,1.0553,True,,combined:cr005-iforest-v2,
+qa-n07,qa,1.0553,True,,combined:cr006-iforest-v3,
+qa-n08,qa,1.0116,False,,rules,
+qa-n08,qa,1.0116,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n08,qa,1.0116,False,,ml:cr005-iforest-v2,
+qa-n08,qa,1.0116,False,,ml:cr006-iforest-v3,
+qa-n08,qa,1.0116,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n08,qa,1.0116,False,,combined:cr005-iforest-v2,
+qa-n08,qa,1.0116,False,,combined:cr006-iforest-v3,
+qa-n09,qa,1.1315,True,,rules,
+qa-n09,qa,1.1315,True,,ml:cr004-iforest-v1,148.0
+qa-n09,qa,1.1315,True,,ml:cr005-iforest-v2,
+qa-n09,qa,1.1315,True,,ml:cr006-iforest-v3,
+qa-n09,qa,1.1315,True,,combined:cr004-iforest-v1,148.0
+qa-n09,qa,1.1315,True,,combined:cr005-iforest-v2,
+qa-n09,qa,1.1315,True,,combined:cr006-iforest-v3,
+qa-n10,qa,0.9968,False,,rules,
+qa-n10,qa,0.9968,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n10,qa,0.9968,False,,ml:cr005-iforest-v2,
+qa-n10,qa,0.9968,False,,ml:cr006-iforest-v3,
+qa-n10,qa,0.9968,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n10,qa,0.9968,False,,combined:cr005-iforest-v2,
+qa-n10,qa,0.9968,False,,combined:cr006-iforest-v3,
+qa-n11,qa,0.9765,True,,rules,
+qa-n11,qa,0.9765,True,,ml:cr004-iforest-v1,145.0
+qa-n11,qa,0.9765,True,,ml:cr005-iforest-v2,
+qa-n11,qa,0.9765,True,,ml:cr006-iforest-v3,
+qa-n11,qa,0.9765,True,,combined:cr004-iforest-v1,145.0
+qa-n11,qa,0.9765,True,,combined:cr005-iforest-v2,
+qa-n11,qa,0.9765,True,,combined:cr006-iforest-v3,
+qa-n12,qa,1.034,False,,rules,
+qa-n12,qa,1.034,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n12,qa,1.034,False,,ml:cr005-iforest-v2,
+qa-n12,qa,1.034,False,,ml:cr006-iforest-v3,
+qa-n12,qa,1.034,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n12,qa,1.034,False,,combined:cr005-iforest-v2,
+qa-n12,qa,1.034,False,,combined:cr006-iforest-v3,
+qa-n13,qa,0.915,True,,rules,
+qa-n13,qa,0.915,True,,ml:cr004-iforest-v1,147.0
+qa-n13,qa,0.915,True,,ml:cr005-iforest-v2,
+qa-n13,qa,0.915,True,,ml:cr006-iforest-v3,
+qa-n13,qa,0.915,True,,combined:cr004-iforest-v1,147.0
+qa-n13,qa,0.915,True,,combined:cr005-iforest-v2,
+qa-n13,qa,0.915,True,,combined:cr006-iforest-v3,
+qa-n14,qa,1.1206,False,,rules,
+qa-n14,qa,1.1206,False,,ml:cr004-iforest-v1,7.0 39.0 148.0
+qa-n14,qa,1.1206,False,,ml:cr005-iforest-v2,64.0
+qa-n14,qa,1.1206,False,,ml:cr006-iforest-v3,
+qa-n14,qa,1.1206,False,,combined:cr004-iforest-v1,7.0 39.0 148.0
+qa-n14,qa,1.1206,False,,combined:cr005-iforest-v2,64.0
+qa-n14,qa,1.1206,False,,combined:cr006-iforest-v3,
+qa-n15,qa,0.9622,True,,rules,
+qa-n15,qa,0.9622,True,,ml:cr004-iforest-v1,10.0 148.0
+qa-n15,qa,0.9622,True,,ml:cr005-iforest-v2,
+qa-n15,qa,0.9622,True,,ml:cr006-iforest-v3,
+qa-n15,qa,0.9622,True,,combined:cr004-iforest-v1,10.0 148.0
+qa-n15,qa,0.9622,True,,combined:cr005-iforest-v2,
+qa-n15,qa,0.9622,True,,combined:cr006-iforest-v3,
+qa-n16,qa,0.9664,False,,rules,
+qa-n16,qa,0.9664,False,,ml:cr004-iforest-v1,7.0 38.0 147.0
+qa-n16,qa,0.9664,False,,ml:cr005-iforest-v2,
+qa-n16,qa,0.9664,False,,ml:cr006-iforest-v3,
+qa-n16,qa,0.9664,False,,combined:cr004-iforest-v1,7.0 38.0 147.0
+qa-n16,qa,0.9664,False,,combined:cr005-iforest-v2,
+qa-n16,qa,0.9664,False,,combined:cr006-iforest-v3,
+qa-n17,qa,1.0547,True,,rules,
+qa-n17,qa,1.0547,True,,ml:cr004-iforest-v1,7.0 147.0
+qa-n17,qa,1.0547,True,,ml:cr005-iforest-v2,
+qa-n17,qa,1.0547,True,,ml:cr006-iforest-v3,
+qa-n17,qa,1.0547,True,,combined:cr004-iforest-v1,7.0 147.0
+qa-n17,qa,1.0547,True,,combined:cr005-iforest-v2,
+qa-n17,qa,1.0547,True,,combined:cr006-iforest-v3,
+qa-n18,qa,0.8957,False,,rules,
+qa-n18,qa,0.8957,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n18,qa,0.8957,False,,ml:cr005-iforest-v2,
+qa-n18,qa,0.8957,False,,ml:cr006-iforest-v3,
+qa-n18,qa,0.8957,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n18,qa,0.8957,False,,combined:cr005-iforest-v2,
+qa-n18,qa,0.8957,False,,combined:cr006-iforest-v3,
+qa-n19,qa,1.0482,True,,rules,
+qa-n19,qa,1.0482,True,,ml:cr004-iforest-v1,13.0 148.0
+qa-n19,qa,1.0482,True,,ml:cr005-iforest-v2,
+qa-n19,qa,1.0482,True,,ml:cr006-iforest-v3,
+qa-n19,qa,1.0482,True,,combined:cr004-iforest-v1,13.0 148.0
+qa-n19,qa,1.0482,True,,combined:cr005-iforest-v2,
+qa-n19,qa,1.0482,True,,combined:cr006-iforest-v3,
+qa-n20,qa,1.105,False,,rules,
+qa-n20,qa,1.105,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-n20,qa,1.105,False,,ml:cr005-iforest-v2,
+qa-n20,qa,1.105,False,,ml:cr006-iforest-v3,
+qa-n20,qa,1.105,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-n20,qa,1.105,False,,combined:cr005-iforest-v2,
+qa-n20,qa,1.105,False,,combined:cr006-iforest-v3,
+qa-n21,qa,0.9516,True,,rules,
+qa-n21,qa,0.9516,True,,ml:cr004-iforest-v1,147.0
+qa-n21,qa,0.9516,True,,ml:cr005-iforest-v2,
+qa-n21,qa,0.9516,True,,ml:cr006-iforest-v3,
+qa-n21,qa,0.9516,True,,combined:cr004-iforest-v1,147.0
+qa-n21,qa,0.9516,True,,combined:cr005-iforest-v2,
+qa-n21,qa,0.9516,True,,combined:cr006-iforest-v3,
+qa-n22,qa,1.1341,False,,rules,
+qa-n22,qa,1.1341,False,,ml:cr004-iforest-v1,7.0 147.0
+qa-n22,qa,1.1341,False,,ml:cr005-iforest-v2,63.0
+qa-n22,qa,1.1341,False,,ml:cr006-iforest-v3,
+qa-n22,qa,1.1341,False,,combined:cr004-iforest-v1,7.0 147.0
+qa-n22,qa,1.1341,False,,combined:cr005-iforest-v2,63.0
+qa-n22,qa,1.1341,False,,combined:cr006-iforest-v3,
+qa-n23,qa,1.0086,True,,rules,
+qa-n23,qa,1.0086,True,,ml:cr004-iforest-v1,10.0 147.0
+qa-n23,qa,1.0086,True,,ml:cr005-iforest-v2,
+qa-n23,qa,1.0086,True,,ml:cr006-iforest-v3,
+qa-n23,qa,1.0086,True,,combined:cr004-iforest-v1,10.0 147.0
+qa-n23,qa,1.0086,True,,combined:cr005-iforest-v2,
+qa-n23,qa,1.0086,True,,combined:cr006-iforest-v3,
+qa-S01-0,qa,1.0823,True,S01@50+15,rules,54.2
+qa-S01-0,qa,1.0823,True,S01@50+15,ml:cr004-iforest-v1,147.0
+qa-S01-0,qa,1.0823,True,S01@50+15,ml:cr005-iforest-v2,63.0
+qa-S01-0,qa,1.0823,True,S01@50+15,ml:cr006-iforest-v3,
+qa-S01-0,qa,1.0823,True,S01@50+15,combined:cr004-iforest-v1,54.2 147.0
+qa-S01-0,qa,1.0823,True,S01@50+15,combined:cr005-iforest-v2,54.2
+qa-S01-0,qa,1.0823,True,S01@50+15,combined:cr006-iforest-v3,54.2
+qa-S01-1,qa,0.9907,False,S01@60+25,rules,68.4
+qa-S01-1,qa,0.9907,False,S01@60+25,ml:cr004-iforest-v1,7.0 38.0 147.0
+qa-S01-1,qa,0.9907,False,S01@60+25,ml:cr005-iforest-v2,
+qa-S01-1,qa,0.9907,False,S01@60+25,ml:cr006-iforest-v3,
+qa-S01-1,qa,0.9907,False,S01@60+25,combined:cr004-iforest-v1,7.0 38.0 68.4 147.0
+qa-S01-1,qa,0.9907,False,S01@60+25,combined:cr005-iforest-v2,68.4
+qa-S01-1,qa,0.9907,False,S01@60+25,combined:cr006-iforest-v3,68.4
+qa-S01-2,qa,0.9708,True,S01@70+35,rules,75.4
+qa-S01-2,qa,0.9708,True,S01@70+35,ml:cr004-iforest-v1,10.0 147.0
+qa-S01-2,qa,0.9708,True,S01@70+35,ml:cr005-iforest-v2,
+qa-S01-2,qa,0.9708,True,S01@70+35,ml:cr006-iforest-v3,
+qa-S01-2,qa,0.9708,True,S01@70+35,combined:cr004-iforest-v1,10.0 75.4 147.0
+qa-S01-2,qa,0.9708,True,S01@70+35,combined:cr005-iforest-v2,75.4
+qa-S01-2,qa,0.9708,True,S01@70+35,combined:cr006-iforest-v3,75.4
+qa-S01-3,qa,0.9308,False,S01@80+25,rules,86.6
+qa-S01-3,qa,0.9308,False,S01@80+25,ml:cr004-iforest-v1,7.0 87.0
+qa-S01-3,qa,0.9308,False,S01@80+25,ml:cr005-iforest-v2,
+qa-S01-3,qa,0.9308,False,S01@80+25,ml:cr006-iforest-v3,
+qa-S01-3,qa,0.9308,False,S01@80+25,combined:cr004-iforest-v1,7.0 86.6
+qa-S01-3,qa,0.9308,False,S01@80+25,combined:cr005-iforest-v2,86.6
+qa-S01-3,qa,0.9308,False,S01@80+25,combined:cr006-iforest-v3,86.6
+qa-S02-0,qa,0.8523,True,S02@50+15,rules,58.0
+qa-S02-0,qa,0.8523,True,S02@50+15,ml:cr004-iforest-v1,12.0 61.0 147.0
+qa-S02-0,qa,0.8523,True,S02@50+15,ml:cr005-iforest-v2,
+qa-S02-0,qa,0.8523,True,S02@50+15,ml:cr006-iforest-v3,
+qa-S02-0,qa,0.8523,True,S02@50+15,combined:cr004-iforest-v1,12.0 58.0 147.0
+qa-S02-0,qa,0.8523,True,S02@50+15,combined:cr005-iforest-v2,58.0
+qa-S02-0,qa,0.8523,True,S02@50+15,combined:cr006-iforest-v3,58.0
+qa-S02-1,qa,0.9111,False,S02@60+25,rules,65.8
+qa-S02-1,qa,0.9111,False,S02@60+25,ml:cr004-iforest-v1,7.0 63.0 147.0
+qa-S02-1,qa,0.9111,False,S02@60+25,ml:cr005-iforest-v2,
+qa-S02-1,qa,0.9111,False,S02@60+25,ml:cr006-iforest-v3,
+qa-S02-1,qa,0.9111,False,S02@60+25,combined:cr004-iforest-v1,7.0 63.0 147.0
+qa-S02-1,qa,0.9111,False,S02@60+25,combined:cr005-iforest-v2,65.8
+qa-S02-1,qa,0.9111,False,S02@60+25,combined:cr006-iforest-v3,65.8
+qa-S02-2,qa,1.1469,True,S02@70+35,rules,77.6
+qa-S02-2,qa,1.1469,True,S02@70+35,ml:cr004-iforest-v1,81.0 147.0
+qa-S02-2,qa,1.1469,True,S02@70+35,ml:cr005-iforest-v2,
+qa-S02-2,qa,1.1469,True,S02@70+35,ml:cr006-iforest-v3,109.0
+qa-S02-2,qa,1.1469,True,S02@70+35,combined:cr004-iforest-v1,77.6 147.0
+qa-S02-2,qa,1.1469,True,S02@70+35,combined:cr005-iforest-v2,77.6
+qa-S02-2,qa,1.1469,True,S02@70+35,combined:cr006-iforest-v3,77.6 109.0
+qa-S02-3,qa,1.0103,False,S02@80+25,rules,86.2
+qa-S02-3,qa,1.0103,False,S02@80+25,ml:cr004-iforest-v1,7.0 83.0 148.0
+qa-S02-3,qa,1.0103,False,S02@80+25,ml:cr005-iforest-v2,
+qa-S02-3,qa,1.0103,False,S02@80+25,ml:cr006-iforest-v3,
+qa-S02-3,qa,1.0103,False,S02@80+25,combined:cr004-iforest-v1,7.0 83.0 148.0
+qa-S02-3,qa,1.0103,False,S02@80+25,combined:cr005-iforest-v2,86.2
+qa-S02-3,qa,1.0103,False,S02@80+25,combined:cr006-iforest-v3,86.2
+qa-S03-0,qa,0.9886,True,S03@50+15,rules,55.6
+qa-S03-0,qa,0.9886,True,S03@50+15,ml:cr004-iforest-v1,10.0 68.0 148.0
+qa-S03-0,qa,0.9886,True,S03@50+15,ml:cr005-iforest-v2,64.0
+qa-S03-0,qa,0.9886,True,S03@50+15,ml:cr006-iforest-v3,
+qa-S03-0,qa,0.9886,True,S03@50+15,combined:cr004-iforest-v1,10.0 55.6 68.0 148.0
+qa-S03-0,qa,0.9886,True,S03@50+15,combined:cr005-iforest-v2,55.6
+qa-S03-0,qa,0.9886,True,S03@50+15,combined:cr006-iforest-v3,55.6
+qa-S03-1,qa,1.1201,False,S03@60+25,rules,65.6
+qa-S03-1,qa,1.1201,False,S03@60+25,ml:cr004-iforest-v1,7.0 63.0 147.0
+qa-S03-1,qa,1.1201,False,S03@60+25,ml:cr005-iforest-v2,64.0
+qa-S03-1,qa,1.1201,False,S03@60+25,ml:cr006-iforest-v3,64.0
+qa-S03-1,qa,1.1201,False,S03@60+25,combined:cr004-iforest-v1,7.0 63.0 147.0
+qa-S03-1,qa,1.1201,False,S03@60+25,combined:cr005-iforest-v2,64.0
+qa-S03-1,qa,1.1201,False,S03@60+25,combined:cr006-iforest-v3,64.0
+qa-S03-2,qa,1.0317,True,S03@70+35,rules,78.4
+qa-S03-2,qa,1.0317,True,S03@70+35,ml:cr004-iforest-v1,73.0 147.0
+qa-S03-2,qa,1.0317,True,S03@70+35,ml:cr005-iforest-v2,
+qa-S03-2,qa,1.0317,True,S03@70+35,ml:cr006-iforest-v3,
+qa-S03-2,qa,1.0317,True,S03@70+35,combined:cr004-iforest-v1,73.0 147.0
+qa-S03-2,qa,1.0317,True,S03@70+35,combined:cr005-iforest-v2,78.4
+qa-S03-2,qa,1.0317,True,S03@70+35,combined:cr006-iforest-v3,78.4
+qa-S03-3,qa,1.143,False,S03@80+25,rules,86.8
+qa-S03-3,qa,1.143,False,S03@80+25,ml:cr004-iforest-v1,7.0 83.0 147.0
+qa-S03-3,qa,1.143,False,S03@80+25,ml:cr005-iforest-v2,63.0
+qa-S03-3,qa,1.143,False,S03@80+25,ml:cr006-iforest-v3,
+qa-S03-3,qa,1.143,False,S03@80+25,combined:cr004-iforest-v1,7.0 83.0 147.0
+qa-S03-3,qa,1.143,False,S03@80+25,combined:cr005-iforest-v2,63.0 86.8
+qa-S03-3,qa,1.143,False,S03@80+25,combined:cr006-iforest-v3,86.8
+qa-S04-0,qa,0.9573,True,S04@50+15,rules,57.6
+qa-S04-0,qa,0.9573,True,S04@50+15,ml:cr004-iforest-v1,147.0
+qa-S04-0,qa,0.9573,True,S04@50+15,ml:cr005-iforest-v2,
+qa-S04-0,qa,0.9573,True,S04@50+15,ml:cr006-iforest-v3,
+qa-S04-0,qa,0.9573,True,S04@50+15,combined:cr004-iforest-v1,57.6 147.0
+qa-S04-0,qa,0.9573,True,S04@50+15,combined:cr005-iforest-v2,57.6
+qa-S04-0,qa,0.9573,True,S04@50+15,combined:cr006-iforest-v3,57.6
+qa-S04-1,qa,0.9147,False,S04@60+25,rules,66.2
+qa-S04-1,qa,0.9147,False,S04@60+25,ml:cr004-iforest-v1,7.0 147.0
+qa-S04-1,qa,0.9147,False,S04@60+25,ml:cr005-iforest-v2,
+qa-S04-1,qa,0.9147,False,S04@60+25,ml:cr006-iforest-v3,
+qa-S04-1,qa,0.9147,False,S04@60+25,combined:cr004-iforest-v1,7.0 66.2 147.0
+qa-S04-1,qa,0.9147,False,S04@60+25,combined:cr005-iforest-v2,66.2
+qa-S04-1,qa,0.9147,False,S04@60+25,combined:cr006-iforest-v3,66.2
+qa-S04-2,qa,1.1262,True,S04@70+35,rules,76.8
+qa-S04-2,qa,1.1262,True,S04@70+35,ml:cr004-iforest-v1,10.0 147.0
+qa-S04-2,qa,1.1262,True,S04@70+35,ml:cr005-iforest-v2,
+qa-S04-2,qa,1.1262,True,S04@70+35,ml:cr006-iforest-v3,
+qa-S04-2,qa,1.1262,True,S04@70+35,combined:cr004-iforest-v1,10.0 76.8 147.0
+qa-S04-2,qa,1.1262,True,S04@70+35,combined:cr005-iforest-v2,76.8
+qa-S04-2,qa,1.1262,True,S04@70+35,combined:cr006-iforest-v3,76.8
+qa-S04-3,qa,0.8982,False,S04@80+25,rules,86.2
+qa-S04-3,qa,0.8982,False,S04@80+25,ml:cr004-iforest-v1,7.0 147.0
+qa-S04-3,qa,0.8982,False,S04@80+25,ml:cr005-iforest-v2,
+qa-S04-3,qa,0.8982,False,S04@80+25,ml:cr006-iforest-v3,
+qa-S04-3,qa,0.8982,False,S04@80+25,combined:cr004-iforest-v1,7.0 86.2 147.0
+qa-S04-3,qa,0.8982,False,S04@80+25,combined:cr005-iforest-v2,86.2
+qa-S04-3,qa,0.8982,False,S04@80+25,combined:cr006-iforest-v3,86.2
+qa-S05-0,qa,1.0876,True,S05@50+15,rules,51.0 51.0
+qa-S05-0,qa,1.0876,True,S05@50+15,ml:cr004-iforest-v1,53.0 148.0
+qa-S05-0,qa,1.0876,True,S05@50+15,ml:cr005-iforest-v2,55.0
+qa-S05-0,qa,1.0876,True,S05@50+15,ml:cr006-iforest-v3,62.0
+qa-S05-0,qa,1.0876,True,S05@50+15,combined:cr004-iforest-v1,51.0 51.0 148.0
+qa-S05-0,qa,1.0876,True,S05@50+15,combined:cr005-iforest-v2,51.0 51.0
+qa-S05-0,qa,1.0876,True,S05@50+15,combined:cr006-iforest-v3,51.0 51.0 62.0
+qa-S05-1,qa,1.0286,False,S05@60+25,rules,61.0 61.0
+qa-S05-1,qa,1.0286,False,S05@60+25,ml:cr004-iforest-v1,7.0 62.0 147.0
+qa-S05-1,qa,1.0286,False,S05@60+25,ml:cr005-iforest-v2,64.0
+qa-S05-1,qa,1.0286,False,S05@60+25,ml:cr006-iforest-v3,64.0
+qa-S05-1,qa,1.0286,False,S05@60+25,combined:cr004-iforest-v1,7.0 61.0 61.0 147.0
+qa-S05-1,qa,1.0286,False,S05@60+25,combined:cr005-iforest-v2,61.0 61.0
+qa-S05-1,qa,1.0286,False,S05@60+25,combined:cr006-iforest-v3,61.0 61.0
+qa-S05-2,qa,1.1449,True,S05@70+35,rules,71.0 71.0
+qa-S05-2,qa,1.1449,True,S05@70+35,ml:cr004-iforest-v1,10.0 73.0 147.0
+qa-S05-2,qa,1.1449,True,S05@70+35,ml:cr005-iforest-v2,
+qa-S05-2,qa,1.1449,True,S05@70+35,ml:cr006-iforest-v3,
+qa-S05-2,qa,1.1449,True,S05@70+35,combined:cr004-iforest-v1,10.0 71.0 71.0 147.0
+qa-S05-2,qa,1.1449,True,S05@70+35,combined:cr005-iforest-v2,71.0 71.0
+qa-S05-2,qa,1.1449,True,S05@70+35,combined:cr006-iforest-v3,71.0 71.0
+qa-S05-3,qa,1.1332,False,S05@80+25,rules,81.0 81.0
+qa-S05-3,qa,1.1332,False,S05@80+25,ml:cr004-iforest-v1,7.0 37.0 82.0 148.0
+qa-S05-3,qa,1.1332,False,S05@80+25,ml:cr005-iforest-v2,64.0
+qa-S05-3,qa,1.1332,False,S05@80+25,ml:cr006-iforest-v3,
+qa-S05-3,qa,1.1332,False,S05@80+25,combined:cr004-iforest-v1,7.0 37.0 81.0 81.0 148.0
+qa-S05-3,qa,1.1332,False,S05@80+25,combined:cr005-iforest-v2,64.0 81.0 81.0
+qa-S05-3,qa,1.1332,False,S05@80+25,combined:cr006-iforest-v3,81.0 81.0
+qa-S06-0,qa,1.0481,True,S06@50+15,rules,68.0
+qa-S06-0,qa,1.0481,True,S06@50+15,ml:cr004-iforest-v1,147.0
+qa-S06-0,qa,1.0481,True,S06@50+15,ml:cr005-iforest-v2,
+qa-S06-0,qa,1.0481,True,S06@50+15,ml:cr006-iforest-v3,
+qa-S06-0,qa,1.0481,True,S06@50+15,combined:cr004-iforest-v1,68.0 147.0
+qa-S06-0,qa,1.0481,True,S06@50+15,combined:cr005-iforest-v2,68.0
+qa-S06-0,qa,1.0481,True,S06@50+15,combined:cr006-iforest-v3,68.0
+qa-S06-1,qa,0.8611,False,S06@60+25,rules,68.0
+qa-S06-1,qa,0.8611,False,S06@60+25,ml:cr004-iforest-v1,7.0 147.0
+qa-S06-1,qa,0.8611,False,S06@60+25,ml:cr005-iforest-v2,
+qa-S06-1,qa,0.8611,False,S06@60+25,ml:cr006-iforest-v3,
+qa-S06-1,qa,0.8611,False,S06@60+25,combined:cr004-iforest-v1,7.0 68.0 147.0
+qa-S06-1,qa,0.8611,False,S06@60+25,combined:cr005-iforest-v2,68.0
+qa-S06-1,qa,0.8611,False,S06@60+25,combined:cr006-iforest-v3,68.0
+qa-S06-2,qa,0.857,True,S06@70+35,rules,70.0
+qa-S06-2,qa,0.857,True,S06@70+35,ml:cr004-iforest-v1,12.0 147.0
+qa-S06-2,qa,0.857,True,S06@70+35,ml:cr005-iforest-v2,
+qa-S06-2,qa,0.857,True,S06@70+35,ml:cr006-iforest-v3,
+qa-S06-2,qa,0.857,True,S06@70+35,combined:cr004-iforest-v1,12.0 70.0 147.0
+qa-S06-2,qa,0.857,True,S06@70+35,combined:cr005-iforest-v2,70.0
+qa-S06-2,qa,0.857,True,S06@70+35,combined:cr006-iforest-v3,70.0
+qa-S06-3,qa,0.9921,False,S06@80+25,rules,80.0
+qa-S06-3,qa,0.9921,False,S06@80+25,ml:cr004-iforest-v1,7.0 148.0
+qa-S06-3,qa,0.9921,False,S06@80+25,ml:cr005-iforest-v2,
+qa-S06-3,qa,0.9921,False,S06@80+25,ml:cr006-iforest-v3,
+qa-S06-3,qa,0.9921,False,S06@80+25,combined:cr004-iforest-v1,7.0 80.0 148.0
+qa-S06-3,qa,0.9921,False,S06@80+25,combined:cr005-iforest-v2,80.0
+qa-S06-3,qa,0.9921,False,S06@80+25,combined:cr006-iforest-v3,80.0
+qa-S07-0,qa,1.0959,True,S07@50+15,rules,50.0 50.0
+qa-S07-0,qa,1.0959,True,S07@50+15,ml:cr004-iforest-v1,147.0
+qa-S07-0,qa,1.0959,True,S07@50+15,ml:cr005-iforest-v2,
+qa-S07-0,qa,1.0959,True,S07@50+15,ml:cr006-iforest-v3,
+qa-S07-0,qa,1.0959,True,S07@50+15,combined:cr004-iforest-v1,50.0 50.0 147.0
+qa-S07-0,qa,1.0959,True,S07@50+15,combined:cr005-iforest-v2,50.0 50.0
+qa-S07-0,qa,1.0959,True,S07@50+15,combined:cr006-iforest-v3,50.0 50.0
+qa-S07-1,qa,0.8743,False,S07@60+25,rules,73.6
+qa-S07-1,qa,0.8743,False,S07@60+25,ml:cr004-iforest-v1,7.0 147.0
+qa-S07-1,qa,0.8743,False,S07@60+25,ml:cr005-iforest-v2,
+qa-S07-1,qa,0.8743,False,S07@60+25,ml:cr006-iforest-v3,
+qa-S07-1,qa,0.8743,False,S07@60+25,combined:cr004-iforest-v1,7.0 73.6 147.0
+qa-S07-1,qa,0.8743,False,S07@60+25,combined:cr005-iforest-v2,73.6
+qa-S07-1,qa,0.8743,False,S07@60+25,combined:cr006-iforest-v3,73.6
+qa-S07-2,qa,0.9776,True,S07@70+35,rules,70.0 70.0 102.0
+qa-S07-2,qa,0.9776,True,S07@70+35,ml:cr004-iforest-v1,12.0 147.0
+qa-S07-2,qa,0.9776,True,S07@70+35,ml:cr005-iforest-v2,
+qa-S07-2,qa,0.9776,True,S07@70+35,ml:cr006-iforest-v3,
+qa-S07-2,qa,0.9776,True,S07@70+35,combined:cr004-iforest-v1,12.0 70.0 70.0 102.0 147.0
+qa-S07-2,qa,0.9776,True,S07@70+35,combined:cr005-iforest-v2,70.0 70.0 102.0
+qa-S07-2,qa,0.9776,True,S07@70+35,combined:cr006-iforest-v3,70.0 70.0 102.0
+qa-S07-3,qa,0.8758,False,S07@80+25,rules,80.0 80.0
+qa-S07-3,qa,0.8758,False,S07@80+25,ml:cr004-iforest-v1,7.0 37.0 147.0
+qa-S07-3,qa,0.8758,False,S07@80+25,ml:cr005-iforest-v2,
+qa-S07-3,qa,0.8758,False,S07@80+25,ml:cr006-iforest-v3,
+qa-S07-3,qa,0.8758,False,S07@80+25,combined:cr004-iforest-v1,7.0 37.0 80.0 80.0 147.0
+qa-S07-3,qa,0.8758,False,S07@80+25,combined:cr005-iforest-v2,80.0 80.0
+qa-S07-3,qa,0.8758,False,S07@80+25,combined:cr006-iforest-v3,80.0 80.0
+qa-stress00,stress,1.1017,False,,rules,
+qa-stress00,stress,1.1017,False,,ml:cr004-iforest-v1,7.0 146.0
+qa-stress00,stress,1.1017,False,,ml:cr005-iforest-v2,64.0
+qa-stress00,stress,1.1017,False,,ml:cr006-iforest-v3,
+qa-stress00,stress,1.1017,False,,combined:cr004-iforest-v1,7.0 146.0
+qa-stress00,stress,1.1017,False,,combined:cr005-iforest-v2,64.0
+qa-stress00,stress,1.1017,False,,combined:cr006-iforest-v3,
+qa-stress01,stress,1.0804,False,,rules,
+qa-stress01,stress,1.0804,False,,ml:cr004-iforest-v1,7.0 147.0
+qa-stress01,stress,1.0804,False,,ml:cr005-iforest-v2,
+qa-stress01,stress,1.0804,False,,ml:cr006-iforest-v3,
+qa-stress01,stress,1.0804,False,,combined:cr004-iforest-v1,7.0 147.0
+qa-stress01,stress,1.0804,False,,combined:cr005-iforest-v2,
+qa-stress01,stress,1.0804,False,,combined:cr006-iforest-v3,
+qa-stress02,stress,1.1031,False,,rules,
+qa-stress02,stress,1.1031,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-stress02,stress,1.1031,False,,ml:cr005-iforest-v2,64.0
+qa-stress02,stress,1.1031,False,,ml:cr006-iforest-v3,
+qa-stress02,stress,1.1031,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-stress02,stress,1.1031,False,,combined:cr005-iforest-v2,64.0
+qa-stress02,stress,1.1031,False,,combined:cr006-iforest-v3,
+qa-stress03,stress,1.1166,False,,rules,
+qa-stress03,stress,1.1166,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-stress03,stress,1.1166,False,,ml:cr005-iforest-v2,
+qa-stress03,stress,1.1166,False,,ml:cr006-iforest-v3,
+qa-stress03,stress,1.1166,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-stress03,stress,1.1166,False,,combined:cr005-iforest-v2,
+qa-stress03,stress,1.1166,False,,combined:cr006-iforest-v3,
+qa-stress04,stress,1.0941,False,,rules,
+qa-stress04,stress,1.0941,False,,ml:cr004-iforest-v1,7.0 35.0 45.0 147.0
+qa-stress04,stress,1.0941,False,,ml:cr005-iforest-v2,
+qa-stress04,stress,1.0941,False,,ml:cr006-iforest-v3,
+qa-stress04,stress,1.0941,False,,combined:cr004-iforest-v1,7.0 35.0 45.0 147.0
+qa-stress04,stress,1.0941,False,,combined:cr005-iforest-v2,
+qa-stress04,stress,1.0941,False,,combined:cr006-iforest-v3,
+qa-stress05,stress,1.1351,False,,rules,
+qa-stress05,stress,1.1351,False,,ml:cr004-iforest-v1,7.0 148.0
+qa-stress05,stress,1.1351,False,,ml:cr005-iforest-v2,64.0
+qa-stress05,stress,1.1351,False,,ml:cr006-iforest-v3,
+qa-stress05,stress,1.1351,False,,combined:cr004-iforest-v1,7.0 148.0
+qa-stress05,stress,1.1351,False,,combined:cr005-iforest-v2,64.0
+qa-stress05,stress,1.1351,False,,combined:cr006-iforest-v3,
+qa-stress06,stress,1.0839,False,,rules,
+qa-stress06,stress,1.0839,False,,ml:cr004-iforest-v1,7.0 36.0 147.0
+qa-stress06,stress,1.0839,False,,ml:cr005-iforest-v2,
+qa-stress06,stress,1.0839,False,,ml:cr006-iforest-v3,
+qa-stress06,stress,1.0839,False,,combined:cr004-iforest-v1,7.0 36.0 147.0
+qa-stress06,stress,1.0839,False,,combined:cr005-iforest-v2,
+qa-stress06,stress,1.0839,False,,combined:cr006-iforest-v3,
+qa-stress07,stress,1.0948,False,,rules,
+qa-stress07,stress,1.0948,False,,ml:cr004-iforest-v1,7.0 37.0 148.0
+qa-stress07,stress,1.0948,False,,ml:cr005-iforest-v2,
+qa-stress07,stress,1.0948,False,,ml:cr006-iforest-v3,
+qa-stress07,stress,1.0948,False,,combined:cr004-iforest-v1,7.0 37.0 148.0
+qa-stress07,stress,1.0948,False,,combined:cr005-iforest-v2,
+qa-stress07,stress,1.0948,False,,combined:cr006-iforest-v3,
+qa-stress08,stress,1.098,False,,rules,
+qa-stress08,stress,1.098,False,,ml:cr004-iforest-v1,7.0 37.0 148.0
+qa-stress08,stress,1.098,False,,ml:cr005-iforest-v2,
+qa-stress08,stress,1.098,False,,ml:cr006-iforest-v3,
+qa-stress08,stress,1.098,False,,combined:cr004-iforest-v1,7.0 37.0 148.0
+qa-stress08,stress,1.098,False,,combined:cr005-iforest-v2,
+qa-stress08,stress,1.098,False,,combined:cr006-iforest-v3,
+qa-stress09,stress,1.1083,False,,rules,
+qa-stress09,stress,1.1083,False,,ml:cr004-iforest-v1,7.0 32.0 148.0
+qa-stress09,stress,1.1083,False,,ml:cr005-iforest-v2,
+qa-stress09,stress,1.1083,False,,ml:cr006-iforest-v3,
+qa-stress09,stress,1.1083,False,,combined:cr004-iforest-v1,7.0 32.0 148.0
+qa-stress09,stress,1.1083,False,,combined:cr005-iforest-v2,
+qa-stress09,stress,1.1083,False,,combined:cr006-iforest-v3,
+qa-stress10,stress,1.1335,False,,rules,
+qa-stress10,stress,1.1335,False,,ml:cr004-iforest-v1,7.0 30.0 148.0
+qa-stress10,stress,1.1335,False,,ml:cr005-iforest-v2,64.0
+qa-stress10,stress,1.1335,False,,ml:cr006-iforest-v3,
+qa-stress10,stress,1.1335,False,,combined:cr004-iforest-v1,7.0 30.0 148.0
+qa-stress10,stress,1.1335,False,,combined:cr005-iforest-v2,64.0
+qa-stress10,stress,1.1335,False,,combined:cr006-iforest-v3,
+qa-stress11,stress,1.1048,False,,rules,
+qa-stress11,stress,1.1048,False,,ml:cr004-iforest-v1,7.0 31.0 147.0
+qa-stress11,stress,1.1048,False,,ml:cr005-iforest-v2,64.0
+qa-stress11,stress,1.1048,False,,ml:cr006-iforest-v3,
+qa-stress11,stress,1.1048,False,,combined:cr004-iforest-v1,7.0 31.0 147.0
+qa-stress11,stress,1.1048,False,,combined:cr005-iforest-v2,64.0
+qa-stress11,stress,1.1048,False,,combined:cr006-iforest-v3,

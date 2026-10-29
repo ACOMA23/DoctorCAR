@@ -1,0 +1,19 @@
+{
+  "gate": "gui_xai",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-XAI-GUI-001",
+      "requirement": "XAI-001/003",
+      "title": "Window report for an event with an ANOMALOUS linked analysis shows the XAI factors and the 'not mechanical causes' caveat in Arabic and English; wording matches the stored decision",
+      "input": "S05 at 60 s, seed 4100, AI on (default model v3), open the event report, switch to EN",
+      "expected": "stored status ANALYZED_ANOMALOUS <=> XAI section present in both languages",
+      "actual": "stored_state=None; ar_xai=False; en_xai=False; en_arabic_chars=0; events=[['جودة بيانات', '91.0'], ['جودة بيانات', '61.0'], ['جهد منخفض متزامن مع اضطراب قياس', '61.0']]",
+      "status": "FAIL",
+      "evidence": "docs/evidence/post-remediation-qa/gui_xai/event-ai-status.json",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

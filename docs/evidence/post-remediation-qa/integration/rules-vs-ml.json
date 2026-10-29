@@ -1,0 +1,68 @@
+{
+  "fault S01": {
+    "rules_only": [
+      [
+        "MS_THERMAL",
+        68.2
+      ]
+    ],
+    "app_policy_ml_advisory": [
+      [
+        "MS_THERMAL",
+        68.2
+      ]
+    ],
+    "ml_alerts_on": [
+      [
+        "MS_THERMAL",
+        68.2
+      ]
+    ],
+    "advisory_count": 0
+  },
+  "fault S05": {
+    "rules_only": [
+      [
+        "MS_SUPPLY",
+        61.0
+      ]
+    ],
+    "app_policy_ml_advisory": [
+      [
+        "MS_SUPPLY",
+        61.0
+      ]
+    ],
+    "ml_alerts_on": [
+      [
+        "MS_SUPPLY",
+        61.0
+      ]
+    ],
+    "advisory_count": 0
+  },
+  "cold stress 15000": {
+    "rules_only": [],
+    "app_policy_ml_advisory": [],
+    "ml_alerts_on": [],
+    "advisory_count": 0
+  },
+  "cold stress 15001": {
+    "rules_only": [],
+    "app_policy_ml_advisory": [],
+    "ml_alerts_on": [],
+    "advisory_count": 0
+  },
+  "cold stress 15002": {
+    "rules_only": [],
+    "app_policy_ml_advisory": [],
+    "ml_alerts_on": [],
+    "advisory_count": 0
+  },
+  "cold stress 15003": {
+    "rules_only": [],
+    "app_policy_ml_advisory": [],
+    "ml_alerts_on": [],
+    "advisory_count": 0
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "../desktop/src/doctorcar/protocol/device_protocol_v1.schema.json",
+  "$comment": "Single canonical schema is packaged with the Python codec; this local entrypoint avoids a duplicated contract."
+}

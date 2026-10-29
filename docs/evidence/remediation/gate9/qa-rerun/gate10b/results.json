@@ -1,0 +1,43 @@
+{
+  "gate": "gate10b",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-SIM-038",
+      "requirement": "MS-RULE/INT-002",
+      "title": "A detectable fault stays detectable when a second, simultaneous fault is present",
+      "input": "S04 alone vs S04 + S07 (flatline) at 60 s",
+      "expected": "S04 is still detected in the combination",
+      "actual": "{\"S04 alone\": [[\"MS_AIRFLOW\", 66.2]], \"S07 flatline alone\": [[\"MS_SIGNAL\", 68.0]], \"S04 + S07 flatline together\": [[\"MS_SIGNAL\", 68.0], [\"MS_AIRFLOW\", 66.2]], \"S04 + S07 dropout (5 s at 120 s) together\": [[\"MS_SIGNAL\", 120.0], [\"MS_AIRFLOW\", 96.2]], \"S07 dropout alone\": [[\"MS_SIGNAL\", 120.0]]}",
+      "status": "PASS",
+      "evidence": "docs/evidence/remediation/gate9/qa-rerun/gate10b/masking.json",
+      "duration_s": null,
+      "notes": "Rules require a valid reference (MAP); S07 flatline on INTAKE_PRESSURE invalidates it, so the S04 pattern is not reported and nothing explains why."
+    },
+    {
+      "test_id": "QA-EVENT-016",
+      "requirement": "FR-005",
+      "title": "A second fault of the same kind starting right after the first event's T+30 boundary gets its own event",
+      "input": "S07 dropout at 90 s then again at 120.0/120.2/121/125 s",
+      "expected": "each of the two faults produces its own MS_SIGNAL event",
+      "actual": "{\"S07 dropout at 90 s and again at 120.0 s\": 2, \"S07 dropout at 90 s and again at 120.2 s\": 2, \"S07 dropout at 90 s and again at 121.0 s\": 2, \"S07 dropout at 90 s and again at 125.0 s\": 2}",
+      "status": "PASS",
+      "evidence": "docs/evidence/remediation/gate9/qa-rerun/gate10b/same-kind-boundary.json",
+      "duration_s": null,
+      "notes": "The recorder keeps the first trigger of a kind while an event of that kind is active (window inclusive of T+30), so a new same-kind trigger inside it is dropped; this affects back-to-back 30 s cycles."
+    },
+    {
+      "test_id": "QA-E2E-005b",
+      "requirement": "MS-RULE",
+      "title": "Every missed injection in the app's RANDOM_FAULTS run has an identified cause",
+      "input": "classify the 5 misses of QA-E2E-005",
+      "expected": "no 'unexplained' miss",
+      "actual": "S01@30s/5s: 5 s thermal fault too short for the rule (needs sustained rise); S04@60s/18s: masked by the simultaneous S07 flatline (QA-SIM-038); S07@60s/18s: flatline variant is a known undetected pattern; S07@120s/5s: swallowed: an MS_SIGNAL event from the S07 at 90 s was still active at 120.0 s (QA-EVENT-016); S04@150s/45s: engine already stopped (driving profile ends at ~145 s) - simulator limitation",
+      "status": "PASS",
+      "evidence": "docs/evidence/remediation/gate9/qa-rerun/gate10b/random-run-misses.json",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

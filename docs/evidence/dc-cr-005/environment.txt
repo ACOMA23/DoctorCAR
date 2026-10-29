@@ -1,0 +1,15 @@
+python 3.14.6 Windows-11-10.0.26200-SP0
+numpy 2.5.4
+pandas 3.1.0
+scikit-learn 1.9.1
+joblib 1.6.0
+scipy 1.18.1
+PySide6 6.12.0
+pyserial 3.5
+jsonschema 4.26.0
+pytest 9.2.0
+ruff 0.17.3
+mypy 1.20.2
+build MISSING
+wheel MISSING
+setuptools MISSING

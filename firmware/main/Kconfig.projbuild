@@ -1,0 +1,7 @@
+menu "DoctorCAR M1 test data"
+    config DOCTORCAR_TEST_THERMAL
+        bool "Generate a thermal demonstration during the test cycle"
+        default y
+        help
+            Generated DEVICE_TEST data only. No CAN or vehicle access is implemented.
+endmenu

@@ -1,0 +1,278 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: 68a77784-d672-5e68-93be-7b51d4431e3a
+Session: f6ef70cc-d6d1-4db0-93ca-e20da096ff00
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 91000 ms | demo-rules-1.0
+A. الأعراض المرصودة
+قراءة ناقصة أو غير صالحة أو فجوة في البيانات
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=61000..121000 ms | min=1053.699 max=2477.861 mean=2141.456 delta=-1286.417
+SPEED [km/h] n=301 t=61000..121000 ms | min=12.000 max=61.500 mean=53.407 delta=-48.663
+COOLANT_TEMP [°C] n=301 t=61000..121000 ms | min=78.099 max=87.857 mean=84.303 delta=9.758
+ENGINE_LOAD [%] n=301 t=61000..121000 ms | min=5.340 max=37.280 mean=29.312 delta=-31.840
+THROTTLE_POS [%] n=301 t=61000..121000 ms | min=3.000 max=23.000 mean=17.618 delta=-20.000
+INTAKE_PRESSURE [kPa] n=301 t=61000..121000 ms | min=33.471 max=54.232 mean=49.053 delta=-20.696
+MAF [g/s] n=271 t=62000..121000 ms | min=2.558 max=12.387 mean=9.704 delta=-9.557
+INTAKE_TEMP [°C] n=301 t=61000..121000 ms | min=24.427 max=26.982 mean=26.345 delta=-2.547
+SHORT_FUEL_TRIM [%] n=301 t=61000..121000 ms | min=-2.000 max=2.000 mean=-0.179 delta=-3.304
+LONG_FUEL_TRIM [%] n=301 t=61000..121000 ms | min=1.755 max=1.800 mean=1.787 delta=0.016
+CONTROL_MODULE_VOLTAGE [V] n=301 t=61000..121000 ms | min=10.556 max=13.997 mean=12.561 delta=3.411
+C. أدلة العلاقات حتى لحظة الكشف فقط
+لا توجد أدلة علاقات مؤهلة لهذا الحدث؛ ملاحظة الجودة ليست تشخيص سبب.
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: ABNORMAL_OPERATION
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: UNRESOLVED
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: UNRESOLVED
+MAF: SIGNAL_LOSS_OR_SUSPECTED_FLATLINE
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: UNRESOLVED
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. النظام المحتمل المتأثر
+غير محسوم
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+الأدلة غير كافية لتحديد سبب ميكانيكي
+F. الأدلة الداعمة:
+missing:MAF
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+قياسات موثوقة وسياق تشغيل كافٍ
+I. الفحوص المقترحة:
+تحقق من جودة القراءة ومصدرها قبل أي فحص ميكانيكي
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة .
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=91000 ms | requested=61000..121000 ms
+actual=61000..121000 ms | n=301 | COMPLETE
+=== تفاصيل الذكاء الاصطناعي ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.4901457609500537
+threshold: 0.6029934378184284
+window_start_ms: 86000
+window_end_ms: 91000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 91000
+recording_window_ms: 61000..121000
+samples: 301; missing_or_invalid: 30
+detection: rules=[] (first None); ml=False (at None); quality=True; combined=False
+
+تحليل AI وXAI المحفوظ — التوقيت والميزات الأصلية
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 0.9615384615384616,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 91000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2353.3968846153844,
+    49.45232199831618,
+    -1.5292529914529915,
+    1.0,
+    59.8136923076923,
+    0.5344992458245211,
+    -0.35617777777777865,
+    1.0,
+    84.57038461538461,
+    0.2325869691639066,
+    0.15502905982905466,
+    1.0,
+    37.07757692307692,
+    0.06415016822144894,
+    -0.04274700854700824,
+    1.0,
+    23.0,
+    0.0,
+    7.370798920062649e-16,
+    1.0,
+    54.10038461538461,
+    0.0417833946802545,
+    -0.027842735042732672,
+    1.0,
+    12.098199999999999,
+    0.08794270862328508,
+    -0.055784615384615925,
+    0.9615384615384616,
+    26.966192307692303,
+    0.00509916456784277,
+    -0.0033931623931636955,
+    1.0,
+    0.14926923076923077,
+    0.4213906060882329,
+    0.2809145299145301,
+    1.0,
+    1.7984999999999998,
+    0.0007966275068156842,
+    0.0004871794871795337,
+    1.0,
+    11.795,
+    1.3405579492825423,
+    0.1796376068376073,
+    1.0,
+    0.03460443295756083,
+    -4.038461538677587e-05,
+    -0.03948885981616954
+  ],
+  "inference_ms": 10.54759998805821,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.4901457609500537,
+  "session_id": "f6ef70cc-d6d1-4db0-93ca-e20da096ff00",
+  "start_ms": 86000,
+  "threshold": 0.6029934378184284
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "missing:MAF"
+    ],
+    "kind": "DATA_QUALITY",
+    "observation": "قراءة ناقصة أو غير صالحة أو فجوة في البيانات",
+    "reason": "إخفاق تحقق جودة البيانات؛ لا يثبت تلف حساس أو عطل كهربائي",
+    "rule_version": "demo-rules-1.0",
+    "timestamp_ms": 91000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 91000,
+  "hypotheses": [
+    {
+      "description": "الأدلة غير كافية لتحديد سبب ميكانيكي",
+      "supporting_evidence": [
+        "missing:MAF"
+      ],
+      "missing_evidence": [
+        "قياسات موثوقة وسياق تشغيل كافٍ"
+      ],
+      "recommended_check": "تحقق من جودة القراءة ومصدرها قبل أي فحص ميكانيكي",
+      "contradicting_evidence": [],
+      "description_en": "",
+      "missing_evidence_en": [],
+      "recommended_check_en": ""
+    }
+  ]
+}

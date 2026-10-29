@@ -1,0 +1,17 @@
+{
+  "python": "3.14.6",
+  "packages": {
+    "PySide6": "6.12.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pytest": "9.2.0"
+  },
+  "idf": null,
+  "cmake": null,
+  "ninja": null,
+  "firmware_build": "NOT_RUN",
+  "physical_device": "NOT_RUN",
+  "vehicle": "NOT_RUN"
+}

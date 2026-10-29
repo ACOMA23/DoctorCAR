@@ -1,0 +1,31 @@
+{
+  "gate": "gate5",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-AI-010",
+      "requirement": "AI-008",
+      "title": "Independent event-level evaluation (never used for training/calibration/selection)",
+      "input": "52 trips (24 normal, 28 fault) seeds 9000+; app persistence policy; Rules vs ML v1 vs ML v2 vs combined",
+      "expected": "metrics reported honestly; v2 false alarms per hour <= v1; combined not worse than rules on recall",
+      "actual": "rules 27/28 FA=0; ML v1 13/28 FA=97 (43.3/h); ML v2 5/28 FA=4 (1.79/h); combined v2 27/28 FA=4",
+      "status": "PASS",
+      "evidence": "docs/evidence/full-qa/gate5/ml-eval.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-AI-011",
+      "requirement": "AI-009",
+      "title": "Stress: cold-start normal trips with driving scale 1.08-1.15 (known weak region)",
+      "input": "12 normal cold trips",
+      "expected": "no ML false alarm on normal driving",
+      "actual": "v2 false alarm events=5 in 5/12 trips; v1=32",
+      "status": "FAIL",
+      "evidence": "docs/evidence/full-qa/gate5/ml-eval.json",
+      "duration_s": null,
+      "notes": "Expected weakness documented in DC-CR-005 residual risks (63-64 s accelerate->cruise transition)."
+    }
+  ],
+  "defects": []
+}

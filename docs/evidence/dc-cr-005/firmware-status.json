@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-28",
+  "firmware_modified_by_this_cr": false,
+  "firmware_hashes_unchanged": "see protected-after.sha",
+  "tools_in_path": {
+    "idf.py": null,
+    "cmake": null,
+    "ninja": null,
+    "gcc": null,
+    "clang": null,
+    "xtensa-esp32s3-elf-gcc": null
+  },
+  "IDF_PATH_set": false,
+  "build_possible_without_flash": false,
+  "build_status": "NOT TESTED (no ESP-IDF toolchain on this machine)",
+  "A07_still_present": true,
+  "A07_detail": "handle_line validates object, protocol_version and type only; other mandatory envelope fields are not checked",
+  "event_upload_advertised": true,
+  "wifi_implemented": false,
+  "can_twai_implemented": false,
+  "microsd_implemented": false,
+  "run_on_physical_esp32_evidence": "none",
+  "network_simulator_is_not_a_vehicle": "TCP loopback software device (SIMULATION source); not firmware, not a vehicle"
+}

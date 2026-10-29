@@ -1,0 +1,81 @@
+{
+  "final": {
+    "gate2": {
+      "PASS": 20
+    },
+    "gate2_controls": {
+      "PASS": 12
+    },
+    "gui_ext": {
+      "PASS": 11
+    },
+    "gui_xai": {
+      "PASS": 1
+    },
+    "integration": {
+      "PASS": 14
+    },
+    "ai_reports": {
+      "PASS": 13
+    },
+    "gate3": {
+      "PASS": 22
+    },
+    "gate4": {
+      "PASS": 24,
+      "PARTIAL": 1
+    },
+    "gate7": {
+      "PASS": 23
+    },
+    "gate8": {
+      "PASS": 12,
+      "PARTIAL": 1,
+      "FAIL": 1
+    },
+    "gate9": {
+      "PASS": 7
+    },
+    "gate10": {
+      "PASS": 8
+    },
+    "gate10b": {
+      "PASS": 2,
+      "FAIL": 1
+    }
+  },
+  "total": {
+    "PASS": 169,
+    "PARTIAL": 2,
+    "FAIL": 2
+  },
+  "cases": 173,
+  "superseded_runs": {
+    "ai_reports/results-run1.json": {
+      "PASS": 11,
+      "FAIL": 1
+    },
+    "gui_ext/results-run1.json": {
+      "PASS": 9,
+      "FAIL": 2
+    },
+    "gui_ext/results-run2.json": {
+      "PASS": 11
+    },
+    "gui_xai/results-run1.json": {
+      "FAIL": 1
+    },
+    "integration/results-run1.json": {
+      "PASS": 10,
+      "FAIL": 1,
+      "BLOCKED": 1
+    },
+    "integration/results-run2.json": {
+      "PASS": 13
+    },
+    "gate2_run1/results.json": {
+      "PASS": 17,
+      "FAIL": 3
+    }
+  }
+}

@@ -1,0 +1,322 @@
+[
+ {
+  "element": "goto_sources_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "page=1",
+  "evidence": ""
+ },
+ {
+  "element": "navigation",
+  "type": "QListWidget",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "6 rows each opens its page",
+  "evidence": ""
+ },
+ {
+  "element": "language_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "2 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "theme_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "2 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "source_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "6 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "family_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "2 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "mode_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "4 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "scenario_combo",
+  "type": "QComboBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "4 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "variant_combo",
+  "type": "QComboBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "3 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "speed_combo",
+  "type": "QComboBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "3 items selectable",
+  "evidence": ""
+ },
+ {
+  "element": "port_combo",
+  "type": "QComboBox",
+  "state": "conditional (serial source)",
+  "result": "NOT TESTED",
+  "actual": "0 items (system COM ports)",
+  "evidence": ""
+ },
+ {
+  "element": "ai_enabled",
+  "type": "QCheckBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "mouse toggled at x=919; final checked=True",
+  "evidence": ""
+ },
+ {
+  "element": "multisensor_list",
+  "type": "QListWidget",
+  "state": "conditional (multisensor + fault injection)",
+  "result": "PASS",
+  "actual": "7 faults; first checked",
+  "evidence": ""
+ },
+ {
+  "element": "sensor_table",
+  "type": "QTableWidget",
+  "state": "visible",
+  "result": "FAIL",
+  "actual": "12 rows compared to the last 80 stored samples; mismatches={'DTC': ('unparsed', '\\u2066لا رمز مرصود\\u2069')}",
+  "evidence": "docs/evidence/post-remediation-qa/gui_ext/sensor-table-vs-db.json"
+ },
+ {
+  "element": "events_table",
+  "type": "QTableWidget",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "1 rows x 9 columns",
+  "evidence": "docs/evidence/post-remediation-qa/gui_ext/events-table-run1.json"
+ },
+ {
+  "element": "simulation_summary",
+  "type": "QTextEdit",
+  "state": "conditional (simulation, after a run)",
+  "result": "PASS",
+  "actual": "267 chars: 'جدول الحقن ونتائج الكشف — تقييم اختباري فقط\\nSeed=4100 | correlated-schedule-1\\n60s / 35s | S01 | كُشف نمط متوافق، والسبب غير مثبت | M1=RULE\\nأ'",
+  "evidence": ""
+ },
+ {
+  "element": "simple_report_text",
+  "type": "QTextEdit",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "1597 chars (AR)",
+  "evidence": ""
+ },
+ {
+  "element": "technical_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "report_visible=True plot_visible=True",
+  "evidence": ""
+ },
+ {
+  "element": "report_text",
+  "type": "QTextEdit",
+  "state": "conditional (technical details on)",
+  "result": "PASS",
+  "actual": "10119 chars; model version v3 in text=True",
+  "evidence": ""
+ },
+ {
+  "element": "time_plot",
+  "type": "TimeSeriesPlot (custom)",
+  "state": "conditional (technical details on)",
+  "result": "PASS",
+  "actual": "visible with technical details",
+  "evidence": ""
+ },
+ {
+  "element": "network_port",
+  "type": "QSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 1..65535: below->1, above->65535, Up->2",
+  "evidence": ""
+ },
+ {
+  "element": "fault_start",
+  "type": "QSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 0..150: below->0, above->150, Up->1",
+  "evidence": ""
+ },
+ {
+  "element": "fault_duration",
+  "type": "QSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 1..90: below->1, above->90, Up->2",
+  "evidence": ""
+ },
+ {
+  "element": "seed_input",
+  "type": "QSpinBox",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "range 0..2000000000: below->0, above->2000000000, Up->1",
+  "evidence": ""
+ },
+ {
+  "element": "max_faults_input",
+  "type": "QSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 1..2: below->1, above->2, Up->2",
+  "evidence": ""
+ },
+ {
+  "element": "severity_input",
+  "type": "QDoubleSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 0.1..1.0: below->0.1, above->1.0, Up->0.2",
+  "evidence": ""
+ },
+ {
+  "element": "normal_probability",
+  "type": "QDoubleSpinBox",
+  "state": "conditional",
+  "result": "PASS",
+  "actual": "range 0.0..1.0: below->0.0, above->1.0, Up->0.05",
+  "evidence": ""
+ },
+ {
+  "element": "host_input",
+  "type": "QLineEdit",
+  "state": "conditional (network source)",
+  "result": "PASS",
+  "actual": "text='127.0.0.1'",
+  "evidence": ""
+ },
+ {
+  "element": "path_input",
+  "type": "QLineEdit",
+  "state": "conditional (replay / protocol file)",
+  "result": "PASS",
+  "actual": "text='abc.jsonl'",
+  "evidence": ""
+ },
+ {
+  "element": "refresh_ports",
+  "type": "QPushButton",
+  "state": "conditional (serial source)",
+  "result": "PASS",
+  "actual": "4 ports listed; no port opened",
+  "evidence": ""
+ },
+ {
+  "element": "port_input",
+  "type": "QLineEdit",
+  "state": "retired / internal (editable line of port_combo)",
+  "result": "PASS",
+  "actual": "is port_combo's editor=True; visible=True (only reachable through port_combo)",
+  "evidence": ""
+ },
+ {
+  "element": "settings_database_path",
+  "type": "QLineEdit",
+  "state": "visible (settings page)",
+  "result": "PASS",
+  "actual": "readOnly=True; shows the temp DB 'al\\\\Temp\\\\doctorcar-qa\\\\gui-ext\\\\ext.sqlite3'; not the user DB",
+  "evidence": ""
+ },
+ {
+  "element": "fault_list",
+  "type": "QListWidget",
+  "state": "conditional (legacy family + fault injection)",
+  "result": "PASS",
+  "actual": "visible_in_mode=True; 10 faults; legacy session ran; app alive=True",
+  "evidence": ""
+ },
+ {
+  "element": "stop_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "clicked in every session above; controls unlocked each time",
+  "evidence": ""
+ },
+ {
+  "element": "start_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "started 5 sessions in this window",
+  "evidence": ""
+ },
+ {
+  "element": "verify_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "PASS",
+  "actual": "فحص ناجح | HELLO → CAPABILITIES → تصل البيانات |  | Firmware: software-tcp-1 | JSONL: 1",
+  "evidence": ""
+ },
+ {
+  "element": "browse_button",
+  "type": "QPushButton",
+  "state": "conditional (replay / protocol file)",
+  "result": "NOT TESTED",
+  "actual": "real file dialog driven in pr_gui_controls QA-UI-037 (see gate2_controls)",
+  "evidence": ""
+ },
+ {
+  "element": "export_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "NOT TESTED",
+  "actual": "real save dialog driven in pr_gui_controls QA-UI-036 (see gate2_controls)",
+  "evidence": ""
+ },
+ {
+  "element": "refresh_log_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "NOT TESTED",
+  "actual": "pr_gui_controls QA-UI-034",
+  "evidence": ""
+ },
+ {
+  "element": "show_report_button",
+  "type": "QPushButton",
+  "state": "visible",
+  "result": "NOT TESTED",
+  "actual": "pr_gui_controls QA-UI-035",
+  "evidence": ""
+ }
+]

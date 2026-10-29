@@ -1,0 +1,16 @@
+{
+  "label": "before-2",
+  "import_qt_s": 0.146,
+  "import_ui_s": 0.184,
+  "construct_window_s": 0.207,
+  "backend_ready_s": 0.377,
+  "process_to_ready_s": 0.707,
+  "nav_ms_mean": 4.73,
+  "nav_ms_p95": 7.16,
+  "sample_update_sensors_page_ms_mean": 0.35,
+  "sample_update_sensors_page_ms_p95": 0.58,
+  "sample_update_dashboard_ms_mean": 3.45,
+  "sample_update_dashboard_ms_p95": 3.93,
+  "working_set_idle_mb": 124.4,
+  "working_set_after_mb": 128.4
+}

@@ -1,0 +1,310 @@
+{
+  "QPushButton": [
+    {
+      "name": "technical_button",
+      "text": "عرض التفاصيل الفنية",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "",
+      "text": "تحديث السجل",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "",
+      "text": "عرض تقرير الحدث المحدد",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "refresh_ports",
+      "text": "تحديث المنافذ",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "browse_button",
+      "text": "اختيار ملف البيانات",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "verify_button",
+      "text": "فحص المصدر / الاتصال",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "start_button",
+      "text": "بدء الجلسة",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "stop_button",
+      "text": "إيقاف وحفظ المتاح",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "",
+      "text": "تصدير الجلسة لـ Replay",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "",
+      "text": "اختيار مصدر البيانات",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QComboBox": [
+    {
+      "name": "language_combo",
+      "text": "",
+      "enabled": true,
+      "items": 2
+    },
+    {
+      "name": "theme_combo",
+      "text": "",
+      "enabled": true,
+      "items": 2
+    },
+    {
+      "name": "",
+      "text": "",
+      "enabled": true,
+      "items": 0
+    },
+    {
+      "name": "source_combo",
+      "text": "",
+      "enabled": true,
+      "items": 6
+    },
+    {
+      "name": "family_combo",
+      "text": "",
+      "enabled": true,
+      "items": 2
+    },
+    {
+      "name": "mode_combo",
+      "text": "",
+      "enabled": true,
+      "items": 4
+    },
+    {
+      "name": "scenario_combo",
+      "text": "",
+      "enabled": true,
+      "items": 4
+    },
+    {
+      "name": "variant_combo",
+      "text": "",
+      "enabled": true,
+      "items": 3
+    },
+    {
+      "name": "speed_combo",
+      "text": "",
+      "enabled": true,
+      "items": 3
+    },
+    {
+      "name": "port_combo",
+      "text": "",
+      "enabled": true,
+      "items": 0
+    }
+  ],
+  "QCheckBox": [
+    {
+      "name": "ai_enabled",
+      "text": "تفعيل مراقبة AI التجريبية",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QLineEdit": [
+    {
+      "name": "",
+      "text": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--doccar\\d8a9af6d-01f7-4fb1-be56-5ec89ed33b45\\scratchpad\\doctorcar-qa\\gui\\gui-qa.sqlite3",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "host_input",
+      "text": "127.0.0.1",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٨٧٦٥",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٦٠",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٥",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "١.٠٠",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٤٢",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٣",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "qt_spinbox_lineedit",
+      "text": "٠.٢٥",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "path_input",
+      "text": "",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "port_input",
+      "text": "",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QSpinBox": [
+    {
+      "name": "network_port",
+      "text": "٨٧٦٥",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "fault_start",
+      "text": "٦٠",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "fault_duration",
+      "text": "٥",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "seed_input",
+      "text": "٤٢",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "max_faults_input",
+      "text": "٣",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QDoubleSpinBox": [
+    {
+      "name": "severity_input",
+      "text": "١.٠٠",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "normal_probability",
+      "text": "٠.٢٥",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QSlider": [],
+  "QListWidget": [
+    {
+      "name": "navigation",
+      "text": "",
+      "enabled": true,
+      "items": 6
+    },
+    {
+      "name": "faultList",
+      "text": "",
+      "enabled": true,
+      "items": 10
+    },
+    {
+      "name": "faultList",
+      "text": "",
+      "enabled": true,
+      "items": 7
+    }
+  ],
+  "QTableWidget": [
+    {
+      "name": "events_table",
+      "text": "",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "sensor_table",
+      "text": "",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QTextEdit": [
+    {
+      "name": "simple_report_text",
+      "text": "",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "report_text",
+      "text": "",
+      "enabled": true,
+      "items": null
+    },
+    {
+      "name": "simulation_summary",
+      "text": "",
+      "enabled": true,
+      "items": null
+    }
+  ],
+  "QTabWidget": [],
+  "menus": [],
+  "shortcuts": [],
+  "dialogs_in_code": [
+    "QFileDialog.getOpenFileName (replay/protocol file)",
+    "QFileDialog save (export session)"
+  ]
+}

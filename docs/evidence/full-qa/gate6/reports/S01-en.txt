@@ -1,0 +1,37 @@
+DoctorCAR — Rising thermal pattern under load
+
+What happened?
+A change was observed 68.2 seconds into the session. Values below distinguish detection from later recording; they do not prove a cause.
+Detected by the rules; the AI analyzed the data and found no anomaly.
+
+Key measurements
+• Coolant temperature: at detection 105.0 °C; recording peak 123.5; last 85.9 at 98.2 seconds.
+• Vehicle speed: at detection 58.5 km/h; recording peak 61.5; last 59.2 at 98.2 seconds.
+• Engine load: at detection 36.9 %; recording peak 69.5; last 37.0 at 98.2 seconds.
+
+What did AI observe?
+The AI analyzed the available data and found no anomaly under its current model.
+Analyzed 63.0 to 68.0 seconds. It ended about 0.2 seconds before detection. Its score is not a component failure probability and may disagree with rules.
+There are no anomaly factors to explain because the model did not rate this period unusual.
+
+Possible explanations
+• Possible reduced cooling effectiveness — a measurement-based possibility requiring an independent check.
+• Possible temperature measurement bias — a measurement-based possibility requiring an independent check.
+
+What should be checked?
+1. Check coolant level, fan and circulation; compare an independent temperature
+Purpose: distinguish an operating change from measurement error. Mechanical or electrical work needs a technician and suitable equipment; do not replace a part based on this report.
+
+How certain is this?
+Suspicion requiring confirmation. Evidence cannot establish the mechanical cause.
+
+Data status
+Simulation or test device; no verified real vehicle source.
+Missing/invalid readings: 0; samples: 301.
+Recording: COMPLETE
+Origin: LIVE
+DTC: No code observed
+Freeze Frame: Unavailable
+
+Safety note
+This is a software experiment, not a real vehicle danger alert.

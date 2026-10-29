@@ -1,0 +1,139 @@
+{
+ "combinations": 144,
+ "clipped": [
+  {
+   "where": "ar/125%/980x640/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 175
+  },
+  {
+   "where": "ar/125%/1280x720/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 191
+  },
+  {
+   "where": "ar/125%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 162
+  },
+  {
+   "where": "ar/150%/980x640/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 178
+  },
+  {
+   "where": "ar/150%/1280x720/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 191
+  },
+  {
+   "where": "ar/150%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 162
+  },
+  {
+   "where": "en/125%/980x640/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 182
+  },
+  {
+   "where": "en/125%/1280x720/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 191
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "Control module voltage",
+   "need": 178,
+   "have": 162
+  },
+  {
+   "where": "en/125%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 199,
+   "have": 162
+  },
+  {
+   "where": "en/150%/980x640/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 210
+  },
+  {
+   "where": "en/150%/1280x720/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 210
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "Coolant temperature",
+   "need": 184,
+   "have": 162
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "Control module voltage",
+   "need": 209,
+   "have": 162
+  },
+  {
+   "where": "en/150%/1366x768/page0",
+   "type": "ElidedLabel",
+   "text": "CONTROL_MODULE_VOLTAGE",
+   "need": 239,
+   "have": 162
+  }
+ ],
+ "horizontal_overflow": [
+  "ar/125%/980x640/page0",
+  "ar/125%/980x640/page1",
+  "ar/150%/980x640/page0",
+  "ar/150%/980x640/page1",
+  "ar/150%/980x640/page3",
+  "en/125%/980x640/page0",
+  "en/125%/980x640/page1",
+  "en/125%/980x640/page3",
+  "en/150%/980x640/page0",
+  "en/150%/980x640/page1",
+  "en/150%/980x640/page3",
+  "en/150%/1280x720/page0"
+ ],
+ "screen": [],
+ "unique_clipped": [
+  [
+   "ElidedLabel",
+   "CONTROL_MODULE_VOLTAGE"
+  ],
+  [
+   "ElidedLabel",
+   "Control module voltage"
+  ],
+  [
+   "ElidedLabel",
+   "Coolant temperature"
+  ]
+ ]
+}

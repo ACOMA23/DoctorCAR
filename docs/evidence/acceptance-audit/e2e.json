@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "scope": "new thermal simulation through native GUI, SQLite, reload, report",
+  "database": "C:\\doccar\\data\\acceptance-audit\\e2e-1793176291524905200.sqlite3",
+  "event_id": "7af8c73d-3b32-5dad-a97a-2b7ae92fb9e5",
+  "trigger_ms": 89000,
+  "first_ms": 59000,
+  "last_ms": 119000,
+  "sample_count": 301,
+  "report_restored_identically": true,
+  "sqlite_integrity": "ok",
+  "wall_seconds": 10.019,
+  "physical_hardware_tested": false
+}

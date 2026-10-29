@@ -1,0 +1,61 @@
+{
+  "distinct_values": {
+    "RPM": 723,
+    "SPEED": 374,
+    "COOLANT_TEMP": 776,
+    "ENGINE_LOAD": 372,
+    "THROTTLE_POS": 7,
+    "INTAKE_PRESSURE": 354,
+    "MAF": 560,
+    "INTAKE_TEMP": 207,
+    "SHORT_FUEL_TRIM": 730,
+    "LONG_FUEL_TRIM": 301,
+    "CONTROL_MODULE_VOLTAGE": 202
+  },
+  "min_max": {
+    "RPM": [
+      0.0,
+      2889.607
+    ],
+    "SPEED": [
+      0.0,
+      61.5
+    ],
+    "COOLANT_TEMP": [
+      22.0,
+      89.189
+    ],
+    "ENGINE_LOAD": [
+      0.0,
+      69.504
+    ],
+    "THROTTLE_POS": [
+      0.0,
+      48.0
+    ],
+    "INTAKE_PRESSURE": [
+      32.582,
+      100.0
+    ],
+    "MAF": [
+      0.0,
+      21.846
+    ],
+    "INTAKE_TEMP": [
+      24.0,
+      29.56
+    ],
+    "SHORT_FUEL_TRIM": [
+      -2.0,
+      2.0
+    ],
+    "LONG_FUEL_TRIM": [
+      1.5,
+      1.8
+    ],
+    "CONTROL_MODULE_VOLTAGE": [
+      12.4,
+      14.0
+    ]
+  }
+}

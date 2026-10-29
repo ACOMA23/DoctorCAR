@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DoctorCAR device protocol v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol_version", "type", "device_id", "session_id", "sequence_number", "timestamp_ms", "source", "payload"],
+  "properties": {
+    "protocol_version": {"type": "integer", "const": 1},
+    "type": {"enum": ["HELLO", "CAPABILITIES", "SAMPLE", "HEARTBEAT", "EVENT_START", "EVENT_CHUNK", "EVENT_END", "ACK", "ERROR"]},
+    "device_id": {"$ref": "#/$defs/id"},
+    "session_id": {"$ref": "#/$defs/id"},
+    "sequence_number": {"type": "integer", "minimum": 0},
+    "timestamp_ms": {"type": "integer", "minimum": 0},
+    "source": {"enum": ["SIMULATION", "DEVICE_TEST", "REPLAY"]},
+    "event_id": {"$ref": "#/$defs/id"},
+    "payload": {"type": "object"}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "\\S"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reading": {
+      "type": "object", "additionalProperties": false, "required": ["value", "unit", "quality"],
+      "properties": {
+        "value": {"type": ["number", "null"]}, "unit": {"type": "string", "maxLength": 24},
+        "quality": {"enum": ["AVAILABLE", "MISSING", "UNSUPPORTED", "INVALID", "STALE"]}
+      }
+    },
+    "sample": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sample_version", "session_id", "source", "sequence_number", "timestamp_ms", "readings"],
+      "properties": {
+        "sample_version": {"const": 1}, "session_id": {"$ref": "#/$defs/id"},
+        "source": {"enum": ["SIMULATION", "DEVICE_TEST", "REPLAY"]},
+        "sequence_number": {"type": "integer", "minimum": 0},
+        "timestamp_ms": {"type": "integer", "minimum": 0},
+        "readings": {"type": "object", "maxProperties": 32, "additionalProperties": {"$ref": "#/$defs/reading"}},
+        "dtcs": {"type": "array", "maxItems": 256, "items": {"type": "string", "maxLength": 32}},
+        "dtc_quality": {"enum": ["AVAILABLE", "MISSING", "UNSUPPORTED", "INVALID", "STALE"]},
+        "phase": {"type": "string", "maxLength": 128},
+        "received_at_ms": {"type": ["integer", "null"], "minimum": 0},
+        "device_id": {"type": ["string", "null"], "maxLength": 128},
+        "provenance": {"type": ["string", "null"], "maxLength": 128},
+        "freeze_frame": {"type": ["object", "null"]}, "raw": {"type": ["object", "null"]}
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"type": {"const": "HELLO"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["firmware_version", "test_mode"],
+      "properties": {"firmware_version": {"type": "string", "maxLength": 64}, "test_mode": {"const": true}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "CAPABILITIES"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["sensors", "can", "microsd", "event_upload"],
+      "properties": {"sensors": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "can": {"const": false}, "microsd": {"const": false}, "event_upload": {"type": "boolean"}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "SAMPLE"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["sample"],
+      "properties": {"sample": {"$ref": "#/$defs/sample"}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "HEARTBEAT"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["uptime_ms"],
+      "properties": {"uptime_ms": {"type": "integer", "minimum": 0}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "EVENT_START"}}}, "then": {"required": ["event_id"], "properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["total_chunks", "total_bytes", "sha256"],
+      "properties": {"total_chunks": {"type": "integer", "minimum": 1, "maximum": 4096},
+        "total_bytes": {"type": "integer", "minimum": 1, "maximum": 2097152}, "sha256": {"$ref": "#/$defs/hash"}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "EVENT_CHUNK"}}}, "then": {"required": ["event_id"], "properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["index", "data", "sha256"],
+      "properties": {"index": {"type": "integer", "minimum": 0, "maximum": 4095},
+        "data": {"type": "string", "minLength": 1, "maxLength": 1400}, "sha256": {"$ref": "#/$defs/hash"}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "EVENT_END"}}}, "then": {"required": ["event_id"], "properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["sha256"],
+      "properties": {"sha256": {"$ref": "#/$defs/hash"}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "ACK"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["ack_sequence"],
+      "properties": {"ack_sequence": {"type": "integer", "minimum": 0}}
+    }}}},
+    {"if": {"properties": {"type": {"const": "ERROR"}}}, "then": {"properties": {"payload": {
+      "type": "object", "additionalProperties": false, "required": ["code", "message"],
+      "properties": {"code": {"$ref": "#/$defs/id"}, "message": {"type": "string", "maxLength": 256}}
+    }}}}
+  ]
+}

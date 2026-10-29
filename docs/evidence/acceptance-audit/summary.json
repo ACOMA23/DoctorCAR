@@ -1,0 +1,64 @@
+{
+  "verdict": "PARTIAL",
+  "client_date": "2026-10-28",
+  "scope": "M1 independent acceptance audit only",
+  "baseline_tests": {
+    "tests": 71,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 13.714
+  },
+  "additional_acceptance_tests": {
+    "tests": 6,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.464
+  },
+  "total_passed": 71,
+  "total_failed": 6,
+  "total_skipped": 0,
+  "requirements": {
+    "Completed": 10,
+    "Partial": 9,
+    "Deferred": 1
+  },
+  "downgraded_from_completed": [
+    "FR-002",
+    "FR-004",
+    "FR-006",
+    "FR-012",
+    "DATA-001",
+    "NFR-001"
+  ],
+  "e2e": {
+    "result": "PASS",
+    "scope": "new thermal simulation through native GUI, SQLite, reload, report",
+    "database": "C:\\doccar\\data\\acceptance-audit\\e2e-1793176291524905200.sqlite3",
+    "event_id": "7af8c73d-3b32-5dad-a97a-2b7ae92fb9e5",
+    "trigger_ms": 89000,
+    "first_ms": 59000,
+    "last_ms": 119000,
+    "sample_count": 301,
+    "report_restored_identically": true,
+    "sqlite_integrity": "ok",
+    "wall_seconds": 10.019,
+    "physical_hardware_tested": false
+  },
+  "product_files_unchanged": 41,
+  "new_features_added": false,
+  "next_milestone_started": false,
+  "firmware_build": "NOT RUN - tools unavailable in PATH",
+  "firmware_physical_test": "NOT RUN",
+  "firmware_static_input_validation_gap": "A07",
+  "quality_checks": "PASS",
+  "fresh_package_install": "PASS",
+  "command_exit_codes": {
+    "baseline_pytest": 0,
+    "additional_acceptance_pytest": 1,
+    "native_gui_e2e": 0,
+    "fresh_wheel_install_and_gui": 0,
+    "firmware_build": null
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "python": "3.14.6",
+  "executable": "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv\\Scripts\\python.exe",
+  "cwd": "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\neutral",
+  "package_file": "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv\\Lib\\site-packages\\doctorcar\\__init__.py",
+  "from_site_packages": true,
+  "sys_path": [
+    "C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.14-64\\python314.zip",
+    "C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs",
+    "C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib",
+    "C:\\Users\\user\\AppData\\Local\\Python\\pythoncore-3.14-64",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv",
+    "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv\\Lib\\site-packages"
+  ],
+  "dev_tree_on_sys_path": [],
+  "models_root": "C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv\\Lib\\site-packages\\doctorcar\\analysis\\models",
+  "models_in_site_packages": true,
+  "available_models": [
+    "cr004-iforest-v1",
+    "cr005-iforest-v2",
+    "cr006-iforest-v3"
+  ],
+  "default_model": "cr006-iforest-v3",
+  "schema_resource": true,
+  "absolute_dev_paths_in_installed_sources": [],
+  "entry_point_help_exit": 0,
+  "entry_point_help_head": "usage: python.exe C:\\Users\\user\\AppData\\Local\\Temp\\doctorcar-qa\\package\\qa-venv\\Scripts\\doctorcar\n       [-h] [--database DATABASE] [--no-splash]\n\nDoctorCAR M1",
+  "load_cr004-iforest-v1": "iforest-cr004-v1",
+  "load_cr005-iforest-v2": "iforest-cr005-v2",
+  "load_cr006-iforest-v3": "iforest-cr006-v3",
+  "short_run": {
+    "accepted": 776,
+    "events": [
+      [
+        "ML_ANOMALY",
+        "COMPLETE"
+      ],
+      [
+        "ML_ANOMALY",
+        "COMPLETE"
+      ]
+    ],
+    "xai_event": "ML_ANOMALY",
+    "report_chars": 2441,
+    "report_has_ai_section": true
+  },
+  "gui_platform": "windows",
+  "gui_backend_ready": true,
+  "gui_event_complete": true,
+  "gui_ai_label": "AI: نشط — نمط معتاد | 0.515 | iforest-cr006-v3",
+  "gui_report_opened": true,
+  "gui_report_chars": 1608,
+  "gui_closed_cleanly": true
+}

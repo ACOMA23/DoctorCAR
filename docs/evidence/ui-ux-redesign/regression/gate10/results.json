@@ -1,0 +1,103 @@
+{
+  "gate": "gate10",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-E2E-001",
+      "requirement": "AT-MS-01",
+      "title": "Normal trip from the app: start, readings, ML on, finish; no unjustified alarms (4 seeds, default scale)",
+      "input": "GUI: simulation NORMAL, AI on, seeds 42/777/2026/4100",
+      "expected": "776 samples each and zero events",
+      "actual": "[{\"seed\": 42, \"samples\": 776, \"events\": [], \"finished\": true}, {\"seed\": 777, \"samples\": 776, \"events\": [], \"finished\": true}, {\"seed\": 2026, \"samples\": 776, \"events\": [], \"finished\": true}, {\"seed\": 4100, \"samples\": 776, \"events\": [], \"finished\": true}]",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/e2e01.json",
+      "duration_s": null,
+      "notes": "Driving scale/warm start are not exposed in the UI, so the high-scale cold-start weakness (QA-AI-011) cannot be reproduced through the GUI."
+    },
+    {
+      "test_id": "QA-E2E-002",
+      "requirement": "AT-MS-02",
+      "title": "Thermal rise through the app: detection, saved event, report with checks",
+      "input": "GUI: S01 at 60 s, AI on",
+      "expected": "MS_THERMAL event COMPLETE; report lists cooling check; AI state stated; hedged",
+      "actual": "events=[('MS_THERMAL', 68.2, 'COMPLETE')]; chars=1597",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/e2e02-thermal-S01-simple-ar.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-003",
+      "requirement": "AT-MS-03",
+      "title": "Air/fuel disturbance through the app: pattern detected, MAF/MAP evidence, readable report",
+      "input": "GUI: S02 at 60 s, AI on",
+      "expected": "MS_AIR_FUEL event; technical report shows MAF and MAP residuals; simple report hedged",
+      "actual": "events=[('MS_AIR_FUEL', 66.0, 'COMPLETE')]",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/e2e03-airfuel-S02-technical.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-009",
+      "requirement": "AI-005/XAI-003",
+      "title": "ML + XAI with the real model through the app: an event whose AI result is anomalous shows computed XAI factors; otherwise the state is stated",
+      "input": "GUI: S05 (voltage) at 60 s, default model v3",
+      "expected": "AI state in the report; if anomalous, factors line + 'not mechanical causes'; technical report lists XAI method and model version",
+      "actual": "xai_in_simple=True; model_in_technical=True; ai_label=AI: نشط — نمط معتاد | 0.502 | iforest-cr006-v3",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/e2e09-supply-S05-technical.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-004",
+      "requirement": "AT-MS-06",
+      "title": "Intermittent fault: it appears and disappears but recording continues to T+30 and the event is saved",
+      "input": "GUI: S06, 9 s",
+      "expected": "MS_COMBUSTION COMPLETE with samples from T-30 to T+30",
+      "actual": "event=('1f0b8080-5422-5b78-99bc-b4f13e2470da', 'MS_COMBUSTION', 68000, 'COMPLETE'); samples 38000..98000 n=301",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-008",
+      "requirement": "AT-014",
+      "title": "Restart: events and reports are restored identically and sessions are not mixed",
+      "input": "close the app, reopen on the same database, open the same report",
+      "expected": "same number of events, identical report text, one session",
+      "actual": "events 1->1; report identical=True; sessions=1",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/screenshots/e2e08-restored-report.png",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-011",
+      "requirement": "SETTINGS-001",
+      "title": "Language/theme change, restart, old report rendered in English; stored data unchanged",
+      "input": "EN + dark -> close -> reopen -> open an Arabic-era report",
+      "expected": "settings persisted; English report text; database logical hash unchanged",
+      "actual": "persisted=('en', 'dark'); english_report_ok=True; same_after_restart=True; db_hash_unchanged=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/screenshots/e2e11-en-dark-report.png",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-E2E-005",
+      "requirement": "AT-003",
+      "title": "RANDOM_FAULTS through the app: 30 s cycles recorded as separate ground truth and compared with detections",
+      "input": "GUI: RANDOM_FAULTS seed 11, max 2 faults",
+      "expected": "cycle schedule stored in simulation_runs; every injected instance listed with detected yes/no",
+      "actual": "cycles=5 injected=7 detected=4/7; events=[('MS_AIRFLOW', 66.2), ('MS_SIGNAL', 68.0), ('DATA_QUALITY', 90.0), ('MS_AIRFLOW', 96.2), ('DATA_QUALITY', 120.0), ('MS_SIGNAL', 120.0)]",
+      "status": "PASS",
+      "evidence": "docs/evidence/ui-ux-redesign/regression/gate10/e2e05.json",
+      "duration_s": null,
+      "notes": "Ground truth lives only in simulation_runs and this QA comparison; the detectors never read it."
+    }
+  ],
+  "defects": []
+}

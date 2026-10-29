@@ -1,0 +1,1459 @@
+{
+  "unit": "Emitted event, greedy one-to-one active injection interval matching; duplicates/outside interval FP. Not causal accuracy.",
+  "hours": 0.6888888888888889,
+  "aggregate": {
+    "rules": {
+      "TP": 11,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarms_per_simulated_hour": 0.0,
+      "full_recordings": 11,
+      "total_events": 11,
+      "delays_seconds": [
+        8.2,
+        6.0,
+        6.0,
+        6.2,
+        1.0,
+        8.0,
+        0.0,
+        6.4,
+        6.0,
+        8.0,
+        0.0
+      ]
+    },
+    "ml": {
+      "TP": 4,
+      "FP": 26,
+      "FN": 7,
+      "precision": 0.13333333333333333,
+      "recall": 0.36363636363636365,
+      "f1": 0.1951219512195122,
+      "false_alarms_per_simulated_hour": 37.74193548387097,
+      "full_recordings": 4,
+      "total_events": 30,
+      "delays_seconds": [
+        3.0,
+        3.0,
+        2.0,
+        23.0
+      ]
+    },
+    "combined": {
+      "TP": 11,
+      "FP": 26,
+      "FN": 0,
+      "precision": 0.2972972972972973,
+      "recall": 1.0,
+      "f1": 0.4583333333333333,
+      "false_alarms_per_simulated_hour": 37.74193548387097,
+      "full_recordings": 11,
+      "total_events": 37,
+      "delays_seconds": [
+        8.2,
+        3.0,
+        3.0,
+        6.2,
+        1.0,
+        8.0,
+        0.0,
+        6.4,
+        3.0,
+        8.0,
+        0.0
+      ]
+    }
+  },
+  "normal_trip_alarms": 8,
+  "AT-E2E-01": "FAIL",
+  "inference_ms": {
+    "mean": 5.122548160149037,
+    "max": 16.3701000274159,
+    "count": 2392
+  },
+  "trips": [
+    {
+      "trip": "test-4000",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "f3de5280-f6f0-5d79-9758-2529c6ce209d",
+              "session_id": "test-4000",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "cf7eaefa-5bfd-5107-851a-7240bd50549e",
+              "session_id": "test-4000",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "f3de5280-f6f0-5d79-9758-2529c6ce209d",
+              "session_id": "test-4000",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "cf7eaefa-5bfd-5107-851a-7240bd50549e",
+              "session_id": "test-4000",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4001",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "9afd2705-36c7-563c-a47d-78f99ebbacdd",
+              "session_id": "test-4001",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "9afd2705-36c7-563c-a47d-78f99ebbacdd",
+              "session_id": "test-4001",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4002",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "d49afdd8-81f9-5095-9191-c0ea1c31beb9",
+              "session_id": "test-4002",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "d49afdd8-81f9-5095-9191-c0ea1c31beb9",
+              "session_id": "test-4002",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4003",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "3f821736-ae68-504b-85e6-ac3762f009c3",
+              "session_id": "test-4003",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "3f821736-ae68-504b-85e6-ac3762f009c3",
+              "session_id": "test-4003",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4004",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "8b37f9a6-ebde-5594-b1aa-a69ae39a8cbd",
+              "session_id": "test-4004",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "07f968a2-ca78-5523-abc6-2ea6dada8c73",
+              "session_id": "test-4004",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "8b37f9a6-ebde-5594-b1aa-a69ae39a8cbd",
+              "session_id": "test-4004",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "07f968a2-ca78-5523-abc6-2ea6dada8c73",
+              "session_id": "test-4004",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4005",
+      "injections": [],
+      "results": {
+        "rules": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "a96045ca-b4ae-5c4c-9087-36c9cda123ee",
+              "session_id": "test-4005",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "a96045ca-b4ae-5c4c-9087-36c9cda123ee",
+              "session_id": "test-4005",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4006",
+      "injections": [
+        {
+          "scenario_id": "S01",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            8.2
+          ],
+          "events": [
+            {
+              "event_id": "accc5a47-9769-58ac-8696-e013c19e113c",
+              "session_id": "test-4006",
+              "trigger_ms": 68200,
+              "kind": "MS_THERMAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "a501157b-c680-59ba-95df-4cbfaded7e18",
+              "session_id": "test-4006",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "dac66a5d-25c1-5dba-b481-6a043320da64",
+              "session_id": "test-4006",
+              "trigger_ms": 149000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            8.2
+          ],
+          "events": [
+            {
+              "event_id": "a501157b-c680-59ba-95df-4cbfaded7e18",
+              "session_id": "test-4006",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "accc5a47-9769-58ac-8696-e013c19e113c",
+              "session_id": "test-4006",
+              "trigger_ms": 68200,
+              "kind": "MS_THERMAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "dac66a5d-25c1-5dba-b481-6a043320da64",
+              "session_id": "test-4006",
+              "trigger_ms": 149000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4007",
+      "injections": [
+        {
+          "scenario_id": "S02",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            6.0
+          ],
+          "events": [
+            {
+              "event_id": "dd5ddd09-93ec-58c0-91f0-ae6889321704",
+              "session_id": "test-4007",
+              "trigger_ms": 66000,
+              "kind": "MS_AIR_FUEL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 1,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [
+            3.0
+          ],
+          "events": [
+            {
+              "event_id": "2922ed09-0ef4-5c68-84c1-698a0cdfefba",
+              "session_id": "test-4007",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "3c4ebf5a-b03b-5c35-b4a5-40c27db10444",
+              "session_id": "test-4007",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [
+            3.0
+          ],
+          "events": [
+            {
+              "event_id": "2922ed09-0ef4-5c68-84c1-698a0cdfefba",
+              "session_id": "test-4007",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "3c4ebf5a-b03b-5c35-b4a5-40c27db10444",
+              "session_id": "test-4007",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4008",
+      "injections": [
+        {
+          "scenario_id": "S03",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            6.0
+          ],
+          "events": [
+            {
+              "event_id": "06993fb9-e95d-5c17-97f9-d6a67e5fb2a2",
+              "session_id": "test-4008",
+              "trigger_ms": 66000,
+              "kind": "MS_FUEL_RESPONSE",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 1,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [
+            3.0
+          ],
+          "events": [
+            {
+              "event_id": "3ae788d5-8af5-5c75-a7ab-a90378e3c380",
+              "session_id": "test-4008",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "3b2c4717-7517-565d-9e85-8c7118bf172b",
+              "session_id": "test-4008",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 1,
+          "FN": 0,
+          "delays_seconds": [
+            3.0
+          ],
+          "events": [
+            {
+              "event_id": "3ae788d5-8af5-5c75-a7ab-a90378e3c380",
+              "session_id": "test-4008",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "3b2c4717-7517-565d-9e85-8c7118bf172b",
+              "session_id": "test-4008",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4009",
+      "injections": [
+        {
+          "scenario_id": "S04",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            6.2
+          ],
+          "events": [
+            {
+              "event_id": "0bfa9332-3ad0-5400-93b5-66c3b94b92af",
+              "session_id": "test-4009",
+              "trigger_ms": 66200,
+              "kind": "MS_AIRFLOW",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "066ccaea-8f0d-5a37-8246-886d8840d92e",
+              "session_id": "test-4009",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "ba6c9db4-3828-593a-9232-b19235d96690",
+              "session_id": "test-4009",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            6.2
+          ],
+          "events": [
+            {
+              "event_id": "066ccaea-8f0d-5a37-8246-886d8840d92e",
+              "session_id": "test-4009",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "0bfa9332-3ad0-5400-93b5-66c3b94b92af",
+              "session_id": "test-4009",
+              "trigger_ms": 66200,
+              "kind": "MS_AIRFLOW",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "ba6c9db4-3828-593a-9232-b19235d96690",
+              "session_id": "test-4009",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4010",
+      "injections": [
+        {
+          "scenario_id": "S05",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            1.0
+          ],
+          "events": [
+            {
+              "event_id": "e77d1fed-ecc1-5ab1-972e-0b22f22b9ff3",
+              "session_id": "test-4010",
+              "trigger_ms": 61000,
+              "kind": "MS_SUPPLY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            2.0
+          ],
+          "events": [
+            {
+              "event_id": "250eaee7-0a4c-5b7d-add2-e164cdf919e6",
+              "session_id": "test-4010",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "f726db8a-247b-52a9-8742-d675f97a5ab6",
+              "session_id": "test-4010",
+              "trigger_ms": 62000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "ff30b40c-5509-55ec-844d-fa52ff560605",
+              "session_id": "test-4010",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            1.0
+          ],
+          "events": [
+            {
+              "event_id": "250eaee7-0a4c-5b7d-add2-e164cdf919e6",
+              "session_id": "test-4010",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "e77d1fed-ecc1-5ab1-972e-0b22f22b9ff3",
+              "session_id": "test-4010",
+              "trigger_ms": 61000,
+              "kind": "MS_SUPPLY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "ff30b40c-5509-55ec-844d-fa52ff560605",
+              "session_id": "test-4010",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4011",
+      "injections": [
+        {
+          "scenario_id": "S06",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            8.0
+          ],
+          "events": [
+            {
+              "event_id": "f84a5f1c-e539-5db5-b5a4-c3ad1033a3a9",
+              "session_id": "test-4011",
+              "trigger_ms": 68000,
+              "kind": "MS_COMBUSTION",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "5275e475-f773-562c-9cdb-19da9c1187aa",
+              "session_id": "test-4011",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "04055490-25e2-5833-8654-e8e2e6e77928",
+              "session_id": "test-4011",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            8.0
+          ],
+          "events": [
+            {
+              "event_id": "5275e475-f773-562c-9cdb-19da9c1187aa",
+              "session_id": "test-4011",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "f84a5f1c-e539-5db5-b5a4-c3ad1033a3a9",
+              "session_id": "test-4011",
+              "trigger_ms": 68000,
+              "kind": "MS_COMBUSTION",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "04055490-25e2-5833-8654-e8e2e6e77928",
+              "session_id": "test-4011",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4012",
+      "injections": [
+        {
+          "scenario_id": "S07",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            0.0
+          ],
+          "events": [
+            {
+              "event_id": "22266ce6-9d59-59ba-9043-5af7e913e878",
+              "session_id": "test-4012",
+              "trigger_ms": 60000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "4fb5ee10-91a4-593a-a234-c567fab7e181",
+              "session_id": "test-4012",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "02e46be6-4e76-50c5-802a-f38a081377a8",
+              "session_id": "test-4012",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            0.0
+          ],
+          "events": [
+            {
+              "event_id": "4fb5ee10-91a4-593a-a234-c567fab7e181",
+              "session_id": "test-4012",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "22266ce6-9d59-59ba-9043-5af7e913e878",
+              "session_id": "test-4012",
+              "trigger_ms": 60000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "02e46be6-4e76-50c5-802a-f38a081377a8",
+              "session_id": "test-4012",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4013",
+      "injections": [
+        {
+          "scenario_id": "S01",
+          "start_ms": 40000,
+          "duration_ms": 45000,
+          "severity": 1.0,
+          "variant": "default"
+        },
+        {
+          "scenario_id": "S02",
+          "start_ms": 60000,
+          "duration_ms": 35000,
+          "severity": 1.0,
+          "variant": "default"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 2,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            6.4,
+            6.0
+          ],
+          "events": [
+            {
+              "event_id": "9d7339c5-f718-53d2-b97c-75ecfda8822d",
+              "session_id": "test-4013",
+              "trigger_ms": 46400,
+              "kind": "MS_THERMAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "e9337d70-4fb1-5aa1-afaa-dff52972f47f",
+              "session_id": "test-4013",
+              "trigger_ms": 66000,
+              "kind": "MS_AIR_FUEL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 2,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [
+            23.0
+          ],
+          "events": [
+            {
+              "event_id": "3fa3ceef-6e14-5abc-abb6-70df839eaaf2",
+              "session_id": "test-4013",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "9926d1b4-7b52-5c89-a601-e8e6d5a47366",
+              "session_id": "test-4013",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "a3a3a57f-6ede-580f-ab3b-dac6ee806218",
+              "session_id": "test-4013",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 2,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            6.4,
+            3.0
+          ],
+          "events": [
+            {
+              "event_id": "3fa3ceef-6e14-5abc-abb6-70df839eaaf2",
+              "session_id": "test-4013",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "9d7339c5-f718-53d2-b97c-75ecfda8822d",
+              "session_id": "test-4013",
+              "trigger_ms": 46400,
+              "kind": "MS_THERMAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "9926d1b4-7b52-5c89-a601-e8e6d5a47366",
+              "session_id": "test-4013",
+              "trigger_ms": 63000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "a3a3a57f-6ede-580f-ab3b-dac6ee806218",
+              "session_id": "test-4013",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 2,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4014",
+      "injections": [
+        {
+          "scenario_id": "S07",
+          "start_ms": 45000,
+          "duration_ms": 20000,
+          "severity": 1.0,
+          "variant": "flatline"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            8.0
+          ],
+          "events": [
+            {
+              "event_id": "fb5ab803-6c05-51f7-ab76-9f0c820c7434",
+              "session_id": "test-4014",
+              "trigger_ms": 53000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "1aad5e3e-454e-5e6b-9555-eeca9cff271e",
+              "session_id": "test-4014",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "95aade04-5c6e-5550-9b43-138a6b51c113",
+              "session_id": "test-4014",
+              "trigger_ms": 149000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            8.0
+          ],
+          "events": [
+            {
+              "event_id": "1aad5e3e-454e-5e6b-9555-eeca9cff271e",
+              "session_id": "test-4014",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "fb5ab803-6c05-51f7-ab76-9f0c820c7434",
+              "session_id": "test-4014",
+              "trigger_ms": 53000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "95aade04-5c6e-5550-9b43-138a6b51c113",
+              "session_id": "test-4014",
+              "trigger_ms": 149000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    },
+    {
+      "trip": "test-4015",
+      "injections": [
+        {
+          "scenario_id": "S07",
+          "start_ms": 65000,
+          "duration_ms": 20000,
+          "severity": 1.0,
+          "variant": "implausible"
+        }
+      ],
+      "results": {
+        "rules": {
+          "TP": 1,
+          "FP": 0,
+          "FN": 0,
+          "delays_seconds": [
+            0.0
+          ],
+          "events": [
+            {
+              "event_id": "c37fdb92-b5fa-5df8-b734-568f84243b96",
+              "session_id": "test-4015",
+              "trigger_ms": 65000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "ml": {
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "delays_seconds": [],
+          "events": [
+            {
+              "event_id": "809fa01a-99a2-5f3b-9345-d9c5d57d1648",
+              "session_id": "test-4015",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "c3fe5918-280a-5114-9ec2-dc7a0c5a8b89",
+              "session_id": "test-4015",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 0,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        },
+        "combined": {
+          "TP": 1,
+          "FP": 2,
+          "FN": 0,
+          "delays_seconds": [
+            0.0
+          ],
+          "events": [
+            {
+              "event_id": "809fa01a-99a2-5f3b-9345-d9c5d57d1648",
+              "session_id": "test-4015",
+              "trigger_ms": 7000,
+              "kind": "ML_ANOMALY",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "c37fdb92-b5fa-5df8-b734-568f84243b96",
+              "session_id": "test-4015",
+              "trigger_ms": 65000,
+              "kind": "MS_SIGNAL",
+              "status": "COMPLETE",
+              "origin": "LIVE"
+            },
+            {
+              "event_id": "c3fe5918-280a-5114-9ec2-dc7a0c5a8b89",
+              "session_id": "test-4015",
+              "trigger_ms": 148000,
+              "kind": "ML_ANOMALY",
+              "status": "PARTIAL",
+              "origin": "LIVE"
+            }
+          ],
+          "full_60s_windows": 1,
+          "accepted_samples": 776,
+          "rejected_samples": 0
+        }
+      }
+    }
+  ]
+}

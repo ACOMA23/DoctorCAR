@@ -1,0 +1,342 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: b5aef306-2d21-5fbd-bd8b-9192aa3cb6ed
+Session: e9f44246-7cf4-43f5-a260-7e9b273584eb
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 66000 ms | correlated-evidence-1
+A. الأعراض المرصودة
+عدم توافق الهواء وتصحيح الوقود
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=36000..96000 ms | min=798.390 max=2889.607 mean=2070.372 delta=1604.551
+SPEED [km/h] n=301 t=36000..96000 ms | min=0.000 max=61.500 mean=43.337 delta=58.642
+COOLANT_TEMP [°C] n=301 t=36000..96000 ms | min=65.689 max=85.622 mean=78.363 delta=19.933
+ENGINE_LOAD [%] n=301 t=36000..96000 ms | min=5.200 max=69.504 mean=40.514 delta=31.737
+THROTTLE_POS [%] n=301 t=36000..96000 ms | min=4.000 max=48.000 mean=26.389 delta=19.000
+INTAKE_PRESSURE [kPa] n=301 t=36000..96000 ms | min=33.380 max=75.178 mean=59.680 delta=20.629
+MAF [g/s] n=301 t=36000..96000 ms | min=1.929 max=21.846 mean=9.898 delta=9.994
+INTAKE_TEMP [°C] n=301 t=36000..96000 ms | min=24.416 max=29.560 mean=27.160 delta=2.539
+SHORT_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=-1.818 max=19.880 mean=9.073 delta=3.642
+LONG_FUEL_TRIM [%] n=301 t=36000..96000 ms | min=1.669 max=5.698 mean=3.137 delta=0.131
+CONTROL_MODULE_VOLTAGE [V] n=301 t=36000..96000 ms | min=13.800 max=14.000 mean=13.919 delta=-0.001
+C. أدلة العلاقات حتى لحظة الكشف فقط
+maf_residual_pct=-13.8170 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2519.7578 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+حدود القاعدة التجريبية: STFT >10%; MAF residual <-12%; MAP residual >4kPa
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: NORMAL
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: ABNORMAL_OPERATION
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: ABNORMAL_OPERATION
+MAF: ABNORMAL_OPERATION
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: ABNORMAL_OPERATION
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. النظام المحتمل المتأثر
+منظومة الهواء والوقود
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+احتمال تسرب هواء غير مقاس
+F. الأدلة الداعمة:
+maf_residual_pct=-13.8170 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2519.7578 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين
+I. الفحوص المقترحة:
+اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة
+احتمال انحراف قياس الهواء أو قصور الوقود
+F. الأدلة الداعمة:
+maf_residual_pct=-13.8170 [58000..66000 ms]
+map_residual_kPa=4.0730 [58000..66000 ms]
+stft_mean_pct=12.0549 [58000..66000 ms]
+load_mean_pct=46.1195 [58000..66000 ms]
+rpm_mean=2519.7578 [58000..66000 ms]
+throttle_mean_pct=29.0976 [58000..66000 ms]
+ltft_mean_pct=2.3851 [58000..66000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين
+I. الفحوص المقترحة:
+الفحص نفسه المذكور تحت الفرضية 1.
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة .
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=66000 ms | requested=36000..96000 ms
+actual=36000..96000 ms | n=301 | COMPLETE
+=== تفاصيل الذكاء الاصطناعي ===
+state: ANALYZED_NORMAL
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.5177329562583713
+threshold: 0.6029934378184284
+window_start_ms: 61000
+window_end_ms: 66000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 66000
+recording_window_ms: 36000..96000
+samples: 301; missing_or_invalid: 0
+detection: rules=['MS_AIR_FUEL'] (first 66000); ml=False (at None); quality=False; combined=False
+
+تحليل AI وXAI المحفوظ — التوقيت والميزات الأصلية
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 1.0,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "NORMAL",
+  "end_ms": 66000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2431.5390769230767,
+    17.142333036000668,
+    -9.615415384615577,
+    1.0,
+    59.7678076923077,
+    0.5320811837442433,
+    -0.3545145299145378,
+    1.0,
+    78.90892307692307,
+    0.47521508677463603,
+    0.31675213675213143,
+    1.0,
+    38.925999999999995,
+    0.31143353408688357,
+    0.18506666666666416,
+    1.0,
+    23.0,
+    0.0,
+    -1.1747711772638558e-15,
+    1.0,
+    61.45811538461539,
+    1.4334845207750846,
+    0.8781418803418721,
+    1.0,
+    9.841423076923077,
+    0.5107895225927529,
+    -0.3199880341880351,
+    1.0,
+    26.965769230769226,
+    0.005108873820714285,
+    -0.003398290598292659,
+    1.0,
+    17.362192307692307,
+    2.975491401164246,
+    1.7843538461538455,
+    1.0,
+    2.7432692307692315,
+    0.4942078788473459,
+    0.3287743589743588,
+    1.0,
+    13.811076923076921,
+    0.010141017537031867,
+    -0.006543589743590531,
+    1.0,
+    -0.20855549965769848,
+    6.1562153846153835,
+    -0.6877813366809801
+  ],
+  "inference_ms": 8.835899992845953,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.5177329562583713,
+  "session_id": "e9f44246-7cf4-43f5-a260-7e9b273584eb",
+  "start_ms": 61000,
+  "threshold": 0.6029934378184284
+}
+Later analysis (after detection):
+null
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "maf_residual_pct=-13.8170 [58000..66000 ms]",
+      "map_residual_kPa=4.0730 [58000..66000 ms]",
+      "stft_mean_pct=12.0549 [58000..66000 ms]",
+      "load_mean_pct=46.1195 [58000..66000 ms]",
+      "rpm_mean=2519.7578 [58000..66000 ms]",
+      "throttle_mean_pct=29.0976 [58000..66000 ms]",
+      "ltft_mean_pct=2.3851 [58000..66000 ms]"
+    ],
+    "kind": "MS_AIR_FUEL",
+    "observation": "عدم توافق الهواء وتصحيح الوقود",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 66000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 66000,
+  "hypotheses": [
+    {
+      "description": "احتمال تسرب هواء غير مقاس",
+      "supporting_evidence": [
+        "maf_residual_pct=-13.8170 [58000..66000 ms]",
+        "map_residual_kPa=4.0730 [58000..66000 ms]",
+        "stft_mean_pct=12.0549 [58000..66000 ms]",
+        "load_mean_pct=46.1195 [58000..66000 ms]",
+        "rpm_mean=2519.7578 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.3851 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين"
+      ],
+      "recommended_check": "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+      "contradicting_evidence": [],
+      "description_en": "Possible unmetered intake air",
+      "missing_evidence_en": [
+        "Independent leak test and actual fuel pressure unavailable"
+      ],
+      "recommended_check_en": "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads"
+    },
+    {
+      "description": "احتمال انحراف قياس الهواء أو قصور الوقود",
+      "supporting_evidence": [
+        "maf_residual_pct=-13.8170 [58000..66000 ms]",
+        "map_residual_kPa=4.0730 [58000..66000 ms]",
+        "stft_mean_pct=12.0549 [58000..66000 ms]",
+        "load_mean_pct=46.1195 [58000..66000 ms]",
+        "rpm_mean=2519.7578 [58000..66000 ms]",
+        "throttle_mean_pct=29.0976 [58000..66000 ms]",
+        "ltft_mean_pct=2.3851 [58000..66000 ms]"
+      ],
+      "missing_evidence": [
+        "اختبار تسرب مستقل وضغط الوقود الفعلي غير متاحين"
+      ],
+      "recommended_check": "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+      "contradicting_evidence": [],
+      "description_en": "Possible air measurement bias or fuel limitation",
+      "missing_evidence_en": [
+        "Independent leak test and actual fuel pressure unavailable"
+      ],
+      "recommended_check_en": "Suitable leak test and hose inspection; compare MAF/MAP and trims across loads"
+    }
+  ]
+}

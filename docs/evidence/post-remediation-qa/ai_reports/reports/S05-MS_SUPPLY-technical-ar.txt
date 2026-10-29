@@ -1,0 +1,974 @@
+DoctorCAR — تقرير أدلة متعدد القياسات
+Event ID: 681c1cd5-5ecb-5bab-8be2-4ff4e172facb
+Session: 57b2f7c5-e4cf-485f-9252-802706044c12
+Source: SIMULATION | LIVE
+Recording: COMPLETE | Detection: 61000 ms | correlated-evidence-1
+A. الأعراض المرصودة
+جهد منخفض متزامن مع اضطراب قياس
+B. القياسات الفعلية في نافذة الحدث
+RPM [rpm] n=301 t=31000..91000 ms | min=798.390 max=2889.607 mean=1895.068 delta=1417.264
+SPEED [km/h] n=301 t=31000..91000 ms | min=0.000 max=61.500 mean=38.468 delta=58.968
+COOLANT_TEMP [°C] n=301 t=31000..91000 ms | min=61.955 max=84.949 mean=76.576 delta=22.994
+ENGINE_LOAD [%] n=301 t=31000..91000 ms | min=5.200 max=69.504 mean=37.216 delta=26.576
+THROTTLE_POS [%] n=301 t=31000..91000 ms | min=4.000 max=48.000 mean=25.076 delta=15.000
+INTAKE_PRESSURE [kPa] n=301 t=31000..91000 ms | min=33.380 max=75.178 mean=54.190 delta=17.274
+MAF [g/s] n=275 t=31000..90800 ms | min=1.929 max=21.846 mean=10.151 delta=9.476
+INTAKE_TEMP [°C] n=301 t=31000..91000 ms | min=24.416 max=29.560 mean=26.977 delta=2.126
+SHORT_FUEL_TRIM [%] n=301 t=31000..91000 ms | min=-2.000 max=2.000 mean=-0.278 delta=2.760
+LONG_FUEL_TRIM [%] n=301 t=31000..91000 ms | min=1.648 max=1.800 mean=1.745 delta=0.152
+CONTROL_MODULE_VOLTAGE [V] n=301 t=31000..91000 ms | min=10.556 max=14.000 mean=12.689 delta=-3.102
+C. أدلة العلاقات حتى لحظة الكشف فقط
+voltage_min_V=10.5860 [53000..61000 ms]
+concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]
+rpm_range=868.7090 [53000..61000 ms]
+throttle_range_pct=25.0000 [53000..61000 ms]
+حدود القاعدة التجريبية: voltage <11.5V and concurrent missing measurements; not a transport-loss inference
+التصنيف المشتق، منفصل عن Quality:
+CONTROL_MODULE_VOLTAGE: ABNORMAL_OPERATION
+COOLANT_TEMP: NORMAL
+ENGINE_LOAD: UNRESOLVED
+INTAKE_PRESSURE: UNRESOLVED
+INTAKE_TEMP: UNRESOLVED
+LONG_FUEL_TRIM: UNRESOLVED
+MAF: SIGNAL_LOSS_OR_SUSPECTED_FLATLINE
+RPM: UNRESOLVED
+SHORT_FUEL_TRIM: UNRESOLVED
+SPEED: UNRESOLVED
+THROTTLE_POS: UNRESOLVED
+D. النظام المحتمل المتأثر
+التغذية أو اكتساب البيانات
+E. الأسباب المحتملة — فرضيات قابلة للفحص
+احتمال اضطراب تغذية أو أرضي
+F. الأدلة الداعمة:
+voltage_min_V=10.5860 [53000..61000 ms]
+concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]
+rpm_range=868.7090 [53000..61000 ms]
+throttle_range_pct=25.0000 [53000..61000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+جهد مستقل وتيار البطارية غير مقاسين
+I. الفحوص المقترحة:
+قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة
+احتمال خطأ إبلاغ الجهد أو اكتساب بيانات مستقل
+F. الأدلة الداعمة:
+voltage_min_V=10.5860 [53000..61000 ms]
+concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]
+rpm_range=868.7090 [53000..61000 ms]
+throttle_range_pct=25.0000 [53000..61000 ms]
+G. الأدلة المعارضة للفرضية:
+لم يتوفر دليل معارض مستقل؛ هذا لا يؤكد الفرضية.
+H. البيانات الناقصة:
+جهد مستقل وتيار البطارية غير مقاسين
+I. الفحوص المقترحة:
+الفحص نفسه المذكور تحت الفرضية 1.
+J. الحدود
+الأدلة غير كافية لتحديد السبب المحتمل.
+هذه علاقات تجريبية معايرة لنموذج محاكاة معلن؛ ليست معايير عامة أو محاكاة فيزيائية دقيقة.
+النمط لا يثبت تلف قطعة أو Misfire أو أسطوانة؛ لا ثقة ميكانيكية معايرة .
+جهد وحدة التحكم ليس تيار البطارية؛ لا Fuel Pressure PID أو DTC أو Freeze Frame مخترع.
+DTC: لا رمز مرصود
+Freeze Frame: غير متاح؛ النافذة ليست ECU Freeze Frame
+K. نافذة الحدث الفعلية
+T=61000 ms | requested=31000..91000 ms
+actual=31000..91000 ms | n=301 | COMPLETE
+=== تفاصيل الذكاء الاصطناعي ===
+state: ANALYZED_ANOMALOUS
+model_version: iforest-cr006-v3
+model_sha256: aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057
+score: 0.615417784287769
+threshold: 0.6029934378184284
+window_start_ms: 56000
+window_end_ms: 61000
+age_ms: 0
+max_age_ms: 2000
+detection_ms: 61000
+recording_window_ms: 31000..91000
+samples: 301; missing_or_invalid: 26
+detection: rules=['MS_SUPPLY'] (first 61000); ml=True (at 64000); quality=False; combined=True
+XAI (at detection) grouped-training-median-perturbation-v2: score 0.6154, threshold 0.6029934378184284
+  group air_fuel_operation: effect +0.09941 (raises_score)
+  group voltage: effect +0.01925 (raises_score)
+  group temperature: effect +0.01722 (raises_score)
+  group speed: effect -0.00301 (lowers_score)
+  feature MAF.relative_residual: value 0.01053 vs reference 1.217e-07, effect +0.01604
+  feature INTAKE_TEMP.slope: value -0.4977 vs reference -2.198e-15, effect +0.01207
+  feature THROTTLE_POS.slope: value -5.128 vs reference -1.778e-16, effect +0.01101
+  feature CONTROL_MODULE_VOLTAGE.slope: value -0.6814 vs reference -0.001841, effect +0.01050
+  feature INTAKE_PRESSURE.slope: value -4.044 vs reference -1.955e-15, effect +0.00823
+  Non-additive effects; correlated groups and median reference may be physically unrealistic. Not mechanical causation or probabilities.
+XAI (later) grouped-training-median-perturbation-v2: score 0.6448, threshold 0.6029934378184284
+  group air_fuel_operation: effect +0.11541 (raises_score)
+  group voltage: effect +0.02947 (raises_score)
+  group temperature: effect +0.02512 (raises_score)
+  group speed: effect -0.00523 (lowers_score)
+  feature CONTROL_MODULE_VOLTAGE.mean: value 12.48 vs reference 13.9, effect +0.01907
+  feature MAF.relative_residual: value 0.01504 vs reference 1.217e-07, effect +0.01608
+  feature THROTTLE_POS.slope: value -7.051 vs reference -1.778e-16, effect +0.01388
+  feature ENGINE_LOAD.slope: value -8.839 vs reference -8.685e-16, effect +0.01235
+  feature RPM.slope: value -85.02 vs reference -5.593, effect +0.01141
+  Non-additive effects; correlated groups and median reference may be physically unrealistic. Not mechanical causation or probabilities.
+
+تحليل AI وXAI المحفوظ — التوقيت والميزات الأصلية
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 0.9615384615384616,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "ANOMALOUS",
+  "end_ms": 61000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2579.012769230769,
+    185.39779102416256,
+    -6.014649572649329,
+    1.0,
+    53.72830769230769,
+    5.609886991657817,
+    3.7068991452991513,
+    1.0,
+    77.20580769230769,
+    0.5483298431272047,
+    0.3654854700854779,
+    1.0,
+    61.34742307692308,
+    13.235636357294815,
+    -6.221810256410247,
+    1.0,
+    42.23076923076923,
+    10.533126105868579,
+    -5.128205128205128,
+    1.0,
+    69.87584615384615,
+    8.603126174614165,
+    -4.044147008547004,
+    1.0,
+    18.335520000000002,
+    3.238325902314342,
+    -0.9214269230769239,
+    0.9615384615384616,
+    28.907769230769233,
+    1.0588799346367517,
+    -0.4977299145299126,
+    1.0,
+    1.7121923076923078,
+    0.20699368612272828,
+    -0.13594700854700856,
+    1.0,
+    1.7482307692307695,
+    0.004245429146629686,
+    0.0028239316239317197,
+    1.0,
+    13.11976923076923,
+    1.3843401457204274,
+    -0.6814256410256391,
+    1.0,
+    0.010528758101026886,
+    2.115384615181553e-05,
+    0.18173028584106052
+  ],
+  "inference_ms": 14.15669999551028,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.615417784287769,
+  "session_id": "57b2f7c5-e4cf-485f-9252-802706044c12",
+  "start_ms": 56000,
+  "threshold": 0.6029934378184284,
+  "xai": {
+    "analysis_run_id": "a44a8d719b47bbd2fa0efca13ba7f4b5c56a79b2869cc7701b418dae5b84f294",
+    "decision": "ANOMALOUS",
+    "effects": [
+      {
+        "direction": "raises_score",
+        "effect": 0.09941088637967777,
+        "feature_indices": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          44,
+          45,
+          46
+        ],
+        "group": "air_fuel_operation",
+        "replacement_score": 0.5160068979080913,
+        "used_by_model": true
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.019246936860477182,
+        "feature_indices": [
+          40,
+          41,
+          42,
+          43
+        ],
+        "group": "voltage",
+        "replacement_score": 0.5961708474272919,
+        "used_by_model": true
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.017216752697192028,
+        "feature_indices": [
+          8,
+          9,
+          10,
+          11,
+          28,
+          29,
+          30,
+          31
+        ],
+        "group": "temperature",
+        "replacement_score": 0.598201031590577,
+        "used_by_model": true
+      },
+      {
+        "direction": "lowers_score",
+        "effect": -0.0030088137226172984,
+        "feature_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "group": "speed",
+        "replacement_score": 0.6184265980103864,
+        "used_by_model": true
+      }
+    ],
+    "elapsed_ms": 42.84679994452745,
+    "end_ms": 61000,
+    "feature_effects": [
+      {
+        "direction": "raises_score",
+        "effect": 0.016039459819695345,
+        "index": 44,
+        "name": "MAF.relative_residual",
+        "reference": 1.2169652320154492e-07,
+        "relation_to_reference": "above",
+        "value": 0.010528758101026886
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.012065655697929278,
+        "index": 30,
+        "name": "INTAKE_TEMP.slope",
+        "reference": -2.197650462332656e-15,
+        "relation_to_reference": "below",
+        "value": -0.4977299145299126
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.011005196737429723,
+        "index": 18,
+        "name": "THROTTLE_POS.slope",
+        "reference": -1.777801498408117e-16,
+        "relation_to_reference": "below",
+        "value": -5.128205128205128
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.01050308488299001,
+        "index": 42,
+        "name": "CONTROL_MODULE_VOLTAGE.slope",
+        "reference": -0.0018410256410250892,
+        "relation_to_reference": "below",
+        "value": -0.6814256410256391
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.008231691685682052,
+        "index": 22,
+        "name": "INTAKE_PRESSURE.slope",
+        "reference": -1.954897746357682e-15,
+        "relation_to_reference": "below",
+        "value": -4.044147008547004
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.007268792368921417,
+        "index": 40,
+        "name": "CONTROL_MODULE_VOLTAGE.mean",
+        "reference": 13.895884615384615,
+        "relation_to_reference": "below",
+        "value": 13.11976923076923
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.00710787042320471,
+        "index": 8,
+        "name": "COOLANT_TEMP.mean",
+        "reference": 87.98392307692308,
+        "relation_to_reference": "below",
+        "value": 77.20580769230769
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.006853152784188521,
+        "index": 12,
+        "name": "ENGINE_LOAD.mean",
+        "reference": 10.983999999999998,
+        "relation_to_reference": "above",
+        "value": 61.34742307692308
+      }
+    ],
+    "limitations": "Non-additive effects; correlated groups and median reference may be physically unrealistic. Not mechanical causation or probabilities.",
+    "method": "grouped-training-median-perturbation-v2",
+    "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+    "model_version": "iforest-cr006-v3",
+    "original_score": 0.615417784287769,
+    "reference": "Per-feature medians of training windows only",
+    "reference_values": [
+      1138.9753461538462,
+      14.284998790132313,
+      -5.593347863247893,
+      1.0,
+      7.5,
+      0.2050626075776204,
+      0.0,
+      1.0,
+      87.98392307692308,
+      0.08637734711297218,
+      0.05757435897435216,
+      1.0,
+      10.983999999999998,
+      0.05183560240870368,
+      -8.685216304399379e-16,
+      1.0,
+      8.349999999999998,
+      8.881784197001252e-16,
+      -1.777801498408117e-16,
+      1.0,
+      38.02676923076923,
+      0.03372299389359405,
+      -1.954897746357682e-15,
+      1.0,
+      3.328673076923077,
+      0.06559874222687714,
+      -0.01952136752136793,
+      1.0,
+      24.879,
+      0.004159718071921593,
+      -2.197650462332656e-15,
+      1.0,
+      0.41326923076923083,
+      0.29981762701258186,
+      -0.018165811965812094,
+      1.0,
+      1.7424615384615387,
+      0.004439601240156336,
+      0.0013692307692307658,
+      1.0,
+      13.895884615384615,
+      0.017231456030268634,
+      -0.0018410256410250892,
+      1.0,
+      1.2169652320154492e-07,
+      5.769230767509288e-06,
+      0.34423679911462535
+    ],
+    "start_ms": 56000,
+    "status": "AVAILABLE",
+    "threshold": 0.6029934378184284
+  }
+}
+Later analysis (after detection):
+{
+  "coverage": {
+    "CONTROL_MODULE_VOLTAGE": 1.0,
+    "COOLANT_TEMP": 1.0,
+    "ENGINE_LOAD": 1.0,
+    "INTAKE_PRESSURE": 1.0,
+    "INTAKE_TEMP": 1.0,
+    "LONG_FUEL_TRIM": 1.0,
+    "MAF": 0.8076923076923077,
+    "RPM": 1.0,
+    "SHORT_FUEL_TRIM": 1.0,
+    "SPEED": 1.0,
+    "THROTTLE_POS": 1.0
+  },
+  "decision": "ANOMALOUS",
+  "end_ms": 62000,
+  "feature_names": [
+    "RPM.mean",
+    "RPM.std",
+    "RPM.slope",
+    "RPM.coverage",
+    "SPEED.mean",
+    "SPEED.std",
+    "SPEED.slope",
+    "SPEED.coverage",
+    "COOLANT_TEMP.mean",
+    "COOLANT_TEMP.std",
+    "COOLANT_TEMP.slope",
+    "COOLANT_TEMP.coverage",
+    "ENGINE_LOAD.mean",
+    "ENGINE_LOAD.std",
+    "ENGINE_LOAD.slope",
+    "ENGINE_LOAD.coverage",
+    "THROTTLE_POS.mean",
+    "THROTTLE_POS.std",
+    "THROTTLE_POS.slope",
+    "THROTTLE_POS.coverage",
+    "INTAKE_PRESSURE.mean",
+    "INTAKE_PRESSURE.std",
+    "INTAKE_PRESSURE.slope",
+    "INTAKE_PRESSURE.coverage",
+    "MAF.mean",
+    "MAF.std",
+    "MAF.slope",
+    "MAF.coverage",
+    "INTAKE_TEMP.mean",
+    "INTAKE_TEMP.std",
+    "INTAKE_TEMP.slope",
+    "INTAKE_TEMP.coverage",
+    "SHORT_FUEL_TRIM.mean",
+    "SHORT_FUEL_TRIM.std",
+    "SHORT_FUEL_TRIM.slope",
+    "SHORT_FUEL_TRIM.coverage",
+    "LONG_FUEL_TRIM.mean",
+    "LONG_FUEL_TRIM.std",
+    "LONG_FUEL_TRIM.slope",
+    "LONG_FUEL_TRIM.coverage",
+    "CONTROL_MODULE_VOLTAGE.mean",
+    "CONTROL_MODULE_VOLTAGE.std",
+    "CONTROL_MODULE_VOLTAGE.slope",
+    "CONTROL_MODULE_VOLTAGE.coverage",
+    "MAF.relative_residual",
+    "INTAKE_PRESSURE.residual",
+    "RPM.trim_correlation"
+  ],
+  "feature_schema": "timeseries-1",
+  "feature_units": [
+    "rpm",
+    "rpm",
+    "rpm/s",
+    "ratio",
+    "km/h",
+    "km/h",
+    "km/h/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "kPa",
+    "kPa",
+    "kPa/s",
+    "ratio",
+    "g/s",
+    "g/s",
+    "g/s/s",
+    "ratio",
+    "°C",
+    "°C",
+    "°C/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "%",
+    "%",
+    "%/s",
+    "ratio",
+    "V",
+    "V",
+    "V/s",
+    "ratio",
+    "ratio",
+    "kPa",
+    "correlation"
+  ],
+  "features": [
+    2553.458269230769,
+    207.57937047670328,
+    -85.02214529914512,
+    1.0,
+    56.5848076923077,
+    4.365764458737049,
+    2.7305965811965893,
+    1.0,
+    77.56623076923077,
+    0.5327749783114746,
+    0.35511794871795327,
+    1.0,
+    55.44019230769231,
+    15.641443871525885,
+    -8.838986324786324,
+    1.0,
+    37.42307692307692,
+    12.351185171793395,
+    -7.051282051282051,
+    1.0,
+    66.03611538461539,
+    10.16695053867762,
+    -5.745352136752123,
+    1.0,
+    18.05809523809524,
+    3.771839792395898,
+    -1.8948415023974414,
+    0.8076923076923077,
+    28.43523076923077,
+    1.2513443942014557,
+    -0.7071282051282041,
+    1.0,
+    1.5605384615384617,
+    0.2564921997268339,
+    -0.16961709401709382,
+    1.0,
+    1.7510384615384615,
+    0.004155448408931289,
+    0.0027641025641027047,
+    1.0,
+    12.480730769230767,
+    1.6221244749186718,
+    -0.9299914529914532,
+    1.0,
+    0.015039852357597652,
+    -9.61538461652367e-06,
+    0.6692790465456424
+  ],
+  "inference_ms": 9.46139998268336,
+  "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+  "model_version": "iforest-cr006-v3",
+  "score": 0.6447988605555469,
+  "session_id": "57b2f7c5-e4cf-485f-9252-802706044c12",
+  "start_ms": 57000,
+  "threshold": 0.6029934378184284,
+  "xai": {
+    "analysis_run_id": "1b5496a6e19afb4db22ce3fb4ca0912f6f41c1688815eeaf52d354aebe1074a9",
+    "decision": "ANOMALOUS",
+    "effects": [
+      {
+        "direction": "raises_score",
+        "effect": 0.11540555585418888,
+        "feature_indices": [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          44,
+          45,
+          46
+        ],
+        "group": "air_fuel_operation",
+        "replacement_score": 0.529393304701358,
+        "used_by_model": true
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.02947291401325991,
+        "feature_indices": [
+          40,
+          41,
+          42,
+          43
+        ],
+        "group": "voltage",
+        "replacement_score": 0.615325946542287,
+        "used_by_model": true
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.025119122705389185,
+        "feature_indices": [
+          8,
+          9,
+          10,
+          11,
+          28,
+          29,
+          30,
+          31
+        ],
+        "group": "temperature",
+        "replacement_score": 0.6196797378501577,
+        "used_by_model": true
+      },
+      {
+        "direction": "lowers_score",
+        "effect": -0.005231673516353674,
+        "feature_indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "group": "speed",
+        "replacement_score": 0.6500305340719006,
+        "used_by_model": true
+      }
+    ],
+    "elapsed_ms": 30.194499995559454,
+    "end_ms": 62000,
+    "feature_effects": [
+      {
+        "direction": "raises_score",
+        "effect": 0.019072700299713974,
+        "index": 40,
+        "name": "CONTROL_MODULE_VOLTAGE.mean",
+        "reference": 13.895884615384615,
+        "relation_to_reference": "below",
+        "value": 12.480730769230767
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.016079333752520242,
+        "index": 44,
+        "name": "MAF.relative_residual",
+        "reference": 1.2169652320154492e-07,
+        "relation_to_reference": "above",
+        "value": 0.015039852357597652
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.013884716806073727,
+        "index": 18,
+        "name": "THROTTLE_POS.slope",
+        "reference": -1.777801498408117e-16,
+        "relation_to_reference": "below",
+        "value": -7.051282051282051
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.012346721639103886,
+        "index": 14,
+        "name": "ENGINE_LOAD.slope",
+        "reference": -8.685216304399379e-16,
+        "relation_to_reference": "below",
+        "value": -8.838986324786324
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.011409931903909487,
+        "index": 2,
+        "name": "RPM.slope",
+        "reference": -5.593347863247893,
+        "relation_to_reference": "below",
+        "value": -85.02214529914512
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.01128593637440245,
+        "index": 26,
+        "name": "MAF.slope",
+        "reference": -0.01952136752136793,
+        "relation_to_reference": "below",
+        "value": -1.8948415023974414
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.01076202966949702,
+        "index": 42,
+        "name": "CONTROL_MODULE_VOLTAGE.slope",
+        "reference": -0.0018410256410250892,
+        "relation_to_reference": "below",
+        "value": -0.9299914529914532
+      },
+      {
+        "direction": "raises_score",
+        "effect": 0.009876760697555276,
+        "index": 22,
+        "name": "INTAKE_PRESSURE.slope",
+        "reference": -1.954897746357682e-15,
+        "relation_to_reference": "below",
+        "value": -5.745352136752123
+      }
+    ],
+    "limitations": "Non-additive effects; correlated groups and median reference may be physically unrealistic. Not mechanical causation or probabilities.",
+    "method": "grouped-training-median-perturbation-v2",
+    "model_sha256": "aae2f3ccc379335c4cde52ef001c6b68826b98a58fd6cd18b9e8043bb3bd3057",
+    "model_version": "iforest-cr006-v3",
+    "original_score": 0.6447988605555469,
+    "reference": "Per-feature medians of training windows only",
+    "reference_values": [
+      1138.9753461538462,
+      14.284998790132313,
+      -5.593347863247893,
+      1.0,
+      7.5,
+      0.2050626075776204,
+      0.0,
+      1.0,
+      87.98392307692308,
+      0.08637734711297218,
+      0.05757435897435216,
+      1.0,
+      10.983999999999998,
+      0.05183560240870368,
+      -8.685216304399379e-16,
+      1.0,
+      8.349999999999998,
+      8.881784197001252e-16,
+      -1.777801498408117e-16,
+      1.0,
+      38.02676923076923,
+      0.03372299389359405,
+      -1.954897746357682e-15,
+      1.0,
+      3.328673076923077,
+      0.06559874222687714,
+      -0.01952136752136793,
+      1.0,
+      24.879,
+      0.004159718071921593,
+      -2.197650462332656e-15,
+      1.0,
+      0.41326923076923083,
+      0.29981762701258186,
+      -0.018165811965812094,
+      1.0,
+      1.7424615384615387,
+      0.004439601240156336,
+      0.0013692307692307658,
+      1.0,
+      13.895884615384615,
+      0.017231456030268634,
+      -0.0018410256410250892,
+      1.0,
+      1.2169652320154492e-07,
+      5.769230767509288e-06,
+      0.34423679911462535
+    ],
+    "start_ms": 57000,
+    "status": "AVAILABLE",
+    "threshold": 0.6029934378184284
+  }
+}
+Detection sources (each at its own timestamp):
+[
+  {
+    "evidence": [
+      "voltage_min_V=10.5860 [53000..61000 ms]",
+      "concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]",
+      "rpm_range=868.7090 [53000..61000 ms]",
+      "throttle_range_pct=25.0000 [53000..61000 ms]"
+    ],
+    "kind": "MS_SUPPLY",
+    "observation": "جهد منخفض متزامن مع اضطراب قياس",
+    "reason": "علاقات متعددة القياسات ضمن معايرة نموذج محاكاة معلن؛ لا تثبت سببًا ميكانيكيًا",
+    "rule_version": "correlated-evidence-1",
+    "timestamp_ms": 61000
+  },
+  {
+    "evidence": [
+      "score=0.610060",
+      "threshold=0.602993"
+    ],
+    "kind": "ML_ANOMALY",
+    "observation": "نمط غير معتاد في مجموعة من القياسات",
+    "reason": "IsolationForest: 4 نوافذ متتالية فوق العتبة؛ لا يحدد قطعة تالفة",
+    "rule_version": "iforest-cr006-v3",
+    "timestamp_ms": 64000
+  }
+]
+Mechanical hypotheses — evidence time explicitly separate from ML:
+{
+  "evidence_time_ms": 61000,
+  "hypotheses": [
+    {
+      "description": "احتمال اضطراب تغذية أو أرضي",
+      "supporting_evidence": [
+        "voltage_min_V=10.5860 [53000..61000 ms]",
+        "concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]",
+        "rpm_range=868.7090 [53000..61000 ms]",
+        "throttle_range_pct=25.0000 [53000..61000 ms]"
+      ],
+      "missing_evidence": [
+        "جهد مستقل وتيار البطارية غير مقاسين"
+      ],
+      "recommended_check": "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة",
+      "contradicting_evidence": [],
+      "description_en": "Possible supply or ground disturbance",
+      "missing_evidence_en": [
+        "Independent voltage and battery current are not measured"
+      ],
+      "recommended_check_en": "Measure supply voltage independently; inspect connections, ground and charging as warranted"
+    },
+    {
+      "description": "احتمال خطأ إبلاغ الجهد أو اكتساب بيانات مستقل",
+      "supporting_evidence": [
+        "voltage_min_V=10.5860 [53000..61000 ms]",
+        "concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]",
+        "rpm_range=868.7090 [53000..61000 ms]",
+        "throttle_range_pct=25.0000 [53000..61000 ms]"
+      ],
+      "missing_evidence": [
+        "جهد مستقل وتيار البطارية غير مقاسين"
+      ],
+      "recommended_check": "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة",
+      "contradicting_evidence": [],
+      "description_en": "Possible voltage-reporting or separate acquisition issue",
+      "missing_evidence_en": [
+        "Independent voltage and battery current are not measured"
+      ],
+      "recommended_check_en": "Measure supply voltage independently; inspect connections, ground and charging as warranted"
+    }
+  ]
+}

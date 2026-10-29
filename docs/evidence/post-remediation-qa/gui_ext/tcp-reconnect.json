@@ -1,0 +1,14 @@
+{
+ "verify": "فحص ناجح | HELLO → CAPABILITIES → تصل البيانات |  | Firmware: software-tcp-1 | JSONL: 1",
+ "running_status": "قيد التشغيل — DEVICE_TEST",
+ "after_disconnect_status": "خطأ — المصدر متوقف؛ البيانات ليست حية",
+ "after_disconnect_error": "تعذر إكمال العملية: تعذر الاتصال بالجهاز أو المنفذ؛ تأكد أنه يعمل وأن العنوان صحيح",
+ "seconds_to_notice": 2.7,
+ "status_says_not_live": true,
+ "controls_unlocked_or_stoppable": true,
+ "window_alive": true,
+ "age_label_after_drop": "قديمة — ليست قراءة حية • منذ 3.6 ثانية • SIMULATION",
+ "reconnect_status": "قيد التشغيل — DEVICE_TEST",
+ "reconnect_samples_advancing": true,
+ "historical_events_in_db": 2
+}

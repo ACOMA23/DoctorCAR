@@ -1,0 +1,86 @@
+[
+  {
+    "scenario": "S01",
+    "kind": "MS_THERMAL",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1597,
+    "en_len": 1804,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  },
+  {
+    "scenario": "S02",
+    "kind": "MS_AIR_FUEL",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1608,
+    "en_len": 1794,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  },
+  {
+    "scenario": "S03",
+    "kind": "MS_FUEL_RESPONSE",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1622,
+    "en_len": 1838,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  },
+  {
+    "scenario": "S04",
+    "kind": "MS_AIRFLOW",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1640,
+    "en_len": 1834,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  },
+  {
+    "scenario": "S05",
+    "kind": "MS_SUPPLY",
+    "ai_state": "ANALYZED_ANOMALOUS",
+    "ar_len": 2315,
+    "en_len": 2630,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": true,
+    "analysis_decision": "ANOMALOUS"
+  },
+  {
+    "scenario": "S06",
+    "kind": "MS_COMBUSTION",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1629,
+    "en_len": 1856,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  },
+  {
+    "scenario": "S07",
+    "kind": "MS_SIGNAL",
+    "ai_state": "ANALYZED_NORMAL",
+    "ar_len": 1635,
+    "en_len": 1856,
+    "en_arabic_chars": 0,
+    "ar_has_ai_section": true,
+    "model_in_technical": true,
+    "xai_in_simple": false,
+    "analysis_decision": "NORMAL"
+  }
+]

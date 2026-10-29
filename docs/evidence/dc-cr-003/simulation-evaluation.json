@@ -1,0 +1,1298 @@
+{
+  "scope": "Toy-model pattern agreement only; parameter variations are NOT independent vehicle validation",
+  "causal_diagnostic_accuracy": "NOT_MEASURED",
+  "scheduled_cases": 21,
+  "expected_pattern_detected": 16,
+  "missed_or_unmanifested": [
+    {
+      "group": "parameter_variation",
+      "scenario": "S01",
+      "configuration": {
+        "scenario_id": "S01",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S02",
+      "configuration": {
+        "scenario_id": "S02",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S04",
+      "configuration": {
+        "scenario_id": "S04",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S05",
+      "configuration": {
+        "scenario_id": "S05",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S07",
+      "configuration": {
+        "scenario_id": "S07",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "flatline"
+      },
+      "detected_patterns": []
+    }
+  ],
+  "normal_runs": 3,
+  "normal_run_false_alarms": 0,
+  "unmatched_events": 0,
+  "known_normal_period_false_positive_events": 0,
+  "cases": [
+    {
+      "group": "development",
+      "scenario": "S01",
+      "configuration": {
+        "scenario_id": "S01",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S01",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S01",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "af4e04f5-48e2-57e3-85e5-42996b89b1d1"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "af4e04f5-48e2-57e3-85e5-42996b89b1d1",
+                "pattern": "MS_THERMAL",
+                "hypotheses": [
+                  "احتمال انخفاض فعالية التبريد",
+                  "احتمال انحراف قياس الحرارة"
+                ],
+                "evidence": [
+                  "coolant_current_C=106.5350 [61000..69000 ms]",
+                  "coolant_slope_C_per_s=2.9909 [61000..69000 ms]",
+                  "load_mean_pct=37.0253 [61000..69000 ms]",
+                  "speed_mean_km_h=59.3778 [61000..69000 ms]",
+                  "rpm_mean=2424.6524 [61000..69000 ms]",
+                  "throttle_mean_pct=23.0000 [61000..69000 ms]"
+                ],
+                "checks": [
+                  "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة",
+                  "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_THERMAL"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S02",
+      "configuration": {
+        "scenario_id": "S02",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S02",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S02",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "2a7e3273-1ad7-5d5c-86d3-c73c2423b36e"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "2a7e3273-1ad7-5d5c-86d3-c73c2423b36e",
+                "pattern": "MS_AIR_FUEL",
+                "hypotheses": [
+                  "احتمال تسرب هواء غير مقاس",
+                  "احتمال انحراف قياس الهواء أو قصور الوقود"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-16.1897 [59000..67000 ms]",
+                  "map_residual_kPa=4.7775 [59000..67000 ms]",
+                  "stft_mean_pct=13.7160 [59000..67000 ms]",
+                  "load_mean_pct=42.0739 [59000..67000 ms]",
+                  "rpm_mean=2476.1514 [59000..67000 ms]",
+                  "throttle_mean_pct=25.7778 [59000..67000 ms]",
+                  "ltft_mean_pct=2.6173 [59000..67000 ms]"
+                ],
+                "checks": [
+                  "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+                  "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_AIR_FUEL"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S03",
+      "configuration": {
+        "scenario_id": "S03",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S03",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S03",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "b2ad9fb0-b353-52d8-a6be-d4994edcc452"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "b2ad9fb0-b353-52d8-a6be-d4994edcc452",
+                "pattern": "MS_FUEL_RESPONSE",
+                "hypotheses": [
+                  "احتمال قصور إمداد الوقود",
+                  "احتمال تسرب هواء أو انحراف قياس"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-2.2760 [59000..67000 ms]",
+                  "map_residual_kPa=0.0395 [59000..67000 ms]",
+                  "stft_mean_pct=11.4384 [59000..67000 ms]",
+                  "load_mean_pct=43.0064 [59000..67000 ms]",
+                  "rpm_mean=2418.7244 [59000..67000 ms]",
+                  "throttle_mean_pct=25.7778 [59000..67000 ms]",
+                  "ltft_mean_pct=2.3429 [59000..67000 ms]"
+                ],
+                "checks": [
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال",
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_FUEL_RESPONSE"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S04",
+      "configuration": {
+        "scenario_id": "S04",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S04",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S04",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "8fef683a-7db5-5b5c-b3ba-37ef8ca4c3a8"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "8fef683a-7db5-5b5c-b3ba-37ef8ca4c3a8",
+                "pattern": "MS_AIRFLOW",
+                "hypotheses": [
+                  "احتمال انحراف قياس MAF أو توصيلاته",
+                  "احتمال تغير حقيقي للهواء أو عدم ملاءمة النموذج المرجعي"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-21.1576 [59000..67000 ms]",
+                  "map_residual_kPa=0.0000 [59000..67000 ms]",
+                  "stft_mean_pct=0.7691 [59000..67000 ms]",
+                  "load_mean_pct=40.6353 [59000..67000 ms]",
+                  "rpm_mean=2476.3040 [59000..67000 ms]",
+                  "throttle_mean_pct=25.7778 [59000..67000 ms]",
+                  "ltft_mean_pct=1.7600 [59000..67000 ms]"
+                ],
+                "checks": [
+                  "مراجعة MAF والتوصيلات ومقارنة MAF/MAP وRPM والخانق في عدة ظروف",
+                  "مراجعة MAF والتوصيلات ومقارنة MAF/MAP وRPM والخانق في عدة ظروف"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_AIRFLOW"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S05",
+      "configuration": {
+        "scenario_id": "S05",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S05",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S05",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "817a5060-4177-50f9-ab4f-ddc0be752b1b"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "817a5060-4177-50f9-ab4f-ddc0be752b1b",
+                "pattern": "MS_SUPPLY",
+                "hypotheses": [
+                  "احتمال اضطراب تغذية أو أرضي",
+                  "احتمال خطأ إبلاغ الجهد أو اكتساب بيانات مستقل"
+                ],
+                "evidence": [
+                  "voltage_min_V=10.5860 [53000..61000 ms]",
+                  "concurrent_low_voltage_missing_samples=1.0000 [53000..61000 ms]",
+                  "rpm_range=754.6270 [53000..61000 ms]",
+                  "throttle_range_pct=25.0000 [53000..61000 ms]"
+                ],
+                "checks": [
+                  "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة",
+                  "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [
+          "b62295c3-21a8-5fab-8749-473cb909f7ce"
+        ],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_SUPPLY"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S06",
+      "configuration": {
+        "scenario_id": "S06",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S06",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S06",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "932e9d6a-ccf2-5c33-86f4-b5893aa2046c"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "932e9d6a-ccf2-5c33-86f4-b5893aa2046c",
+                "pattern": "MS_COMBUSTION",
+                "hypotheses": [
+                  "احتمال عدم استقرار اشتعال أو وقود",
+                  "احتمال تغير تشغيل أو عدم اتساق قياس"
+                ],
+                "evidence": [
+                  "rpm_range=360.9560 [60000..68000 ms]",
+                  "load_range_pct=11.3080 [60000..68000 ms]",
+                  "stft_range_pct=10.8300 [60000..68000 ms]",
+                  "rpm_stft_correlation=-0.9438 [60000..68000 ms]",
+                  "throttle_range_pct=0.0000 [60000..68000 ms]",
+                  "rpm_reversals=3.0000 [60000..68000 ms]"
+                ],
+                "checks": [
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة",
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_COMBUSTION"
+      ]
+    },
+    {
+      "group": "development",
+      "scenario": "S07",
+      "configuration": {
+        "scenario_id": "S07",
+        "start_ms": 60000,
+        "duration_ms": 35000,
+        "severity": 1.0,
+        "variant": "default"
+      },
+      "seed": 42,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S07",
+            "start_ms": 60000,
+            "duration_ms": 35000,
+            "severity": 1.0,
+            "variant": "default",
+            "fault_id": "S07",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "1fce64fe-0189-5ff9-a775-8ad4fa843a05"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "1fce64fe-0189-5ff9-a775-8ad4fa843a05",
+                "pattern": "MS_SIGNAL",
+                "hypotheses": [
+                  "احتمال خلل إشارة أو توصيل أو اكتساب",
+                  "احتمال ظروف تشغيل ثابتة أو مرجع غير ملائم"
+                ],
+                "evidence": [
+                  "map_missing_invalid_samples=1.0000 [52000..60000 ms]",
+                  "rpm_range=898.7000 [52000..60000 ms]",
+                  "maf_range_g_s=8.6810 [52000..60000 ms]",
+                  "reference_samples=9.0000 [52000..60000 ms]",
+                  "map_range_kPa=2.1840 [52000..60000 ms]"
+                ],
+                "checks": [
+                  "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة",
+                  "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [
+          "d609b4a8-4778-54f3-b4ea-cc3fed316990",
+          "c20e189a-2862-58db-9f8f-c12ac0afc016"
+        ],
+        "seed": 42,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_SIGNAL"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S01",
+      "configuration": {
+        "scenario_id": "S01",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S01",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S01",
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [],
+            "unverified_event_ids": [],
+            "detections": []
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S02",
+      "configuration": {
+        "scenario_id": "S02",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S02",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S02",
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [],
+            "unverified_event_ids": [],
+            "detections": []
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S03",
+      "configuration": {
+        "scenario_id": "S03",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S03",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S03",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "1cbca1f0-6dd7-5d5e-ad8d-3e2ff4d2a568"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "1cbca1f0-6dd7-5d5e-ad8d-3e2ff4d2a568",
+                "pattern": "MS_FUEL_RESPONSE",
+                "hypotheses": [
+                  "احتمال قصور إمداد الوقود",
+                  "احتمال تسرب هواء أو انحراف قياس"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-1.2764 [54000..62000 ms]",
+                  "map_residual_kPa=0.0324 [54000..62000 ms]",
+                  "stft_mean_pct=10.3746 [54000..62000 ms]",
+                  "load_mean_pct=59.6013 [54000..62000 ms]",
+                  "rpm_mean=2415.9152 [54000..62000 ms]",
+                  "throttle_mean_pct=39.6667 [54000..62000 ms]",
+                  "ltft_mean_pct=2.1902 [54000..62000 ms]"
+                ],
+                "checks": [
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال",
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_FUEL_RESPONSE"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S04",
+      "configuration": {
+        "scenario_id": "S04",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S04",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S04",
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [],
+            "unverified_event_ids": [],
+            "detections": []
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S05",
+      "configuration": {
+        "scenario_id": "S05",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S05",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S05",
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [],
+            "unverified_event_ids": [],
+            "detections": []
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [
+          "daf1fc39-649b-53d5-ad24-16d4bc08559a"
+        ],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": []
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S06",
+      "configuration": {
+        "scenario_id": "S06",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "default"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S06",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "default",
+            "fault_id": "S06",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "fc1ab361-c2ad-57f5-a496-d0f7c1401eee"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "fc1ab361-c2ad-57f5-a496-d0f7c1401eee",
+                "pattern": "MS_COMBUSTION",
+                "hypotheses": [
+                  "احتمال عدم استقرار اشتعال أو وقود",
+                  "احتمال تغير تشغيل أو عدم اتساق قياس"
+                ],
+                "evidence": [
+                  "rpm_range=245.5160 [60000..68000 ms]",
+                  "load_range_pct=7.5670 [60000..68000 ms]",
+                  "stft_range_pct=8.7970 [60000..68000 ms]",
+                  "rpm_stft_correlation=-0.9015 [60000..68000 ms]",
+                  "throttle_range_pct=0.0000 [60000..68000 ms]",
+                  "rpm_reversals=4.0000 [60000..68000 ms]"
+                ],
+                "checks": [
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة",
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_COMBUSTION"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S07",
+      "configuration": {
+        "scenario_id": "S07",
+        "start_ms": 55000,
+        "duration_ms": 9000,
+        "severity": 0.65,
+        "variant": "flatline"
+      },
+      "seed": 73,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S07",
+            "start_ms": 55000,
+            "duration_ms": 9000,
+            "severity": 0.65,
+            "variant": "flatline",
+            "fault_id": "S07",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "2ef30f6a-0e2b-5a09-9d7b-6512cdb0b36a"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "2ef30f6a-0e2b-5a09-9d7b-6512cdb0b36a",
+                "pattern": "MS_SIGNAL",
+                "hypotheses": [
+                  "احتمال خلل إشارة أو توصيل أو اكتساب",
+                  "احتمال ظروف تشغيل ثابتة أو مرجع غير ملائم"
+                ],
+                "evidence": [
+                  "map_missing_invalid_samples=0.0000 [55000..63000 ms]",
+                  "rpm_range=524.3240 [55000..63000 ms]",
+                  "maf_range_g_s=9.0000 [55000..63000 ms]",
+                  "reference_samples=9.0000 [55000..63000 ms]",
+                  "map_range_kPa=0.0000 [55000..63000 ms]"
+                ],
+                "checks": [
+                  "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة",
+                  "مقارنة مراجع الحساس وفحص التوصيلات وتوقيت الاكتساب؛ قياس ضغط مستقل عند الحاجة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 73,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_SIGNAL"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S01",
+      "configuration": {
+        "scenario_id": "S01",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S01",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S01",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "e79abef9-9b22-5646-a12b-558724d44242"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "e79abef9-9b22-5646-a12b-558724d44242",
+                "pattern": "MS_THERMAL",
+                "hypotheses": [
+                  "احتمال انخفاض فعالية التبريد",
+                  "احتمال انحراف قياس الحرارة"
+                ],
+                "evidence": [
+                  "coolant_current_C=106.3370 [80000..88000 ms]",
+                  "coolant_slope_C_per_s=2.9066 [80000..88000 ms]",
+                  "load_mean_pct=37.2210 [80000..88000 ms]",
+                  "speed_mean_km_h=61.0090 [80000..88000 ms]",
+                  "rpm_mean=2463.2122 [80000..88000 ms]",
+                  "throttle_mean_pct=23.0000 [80000..88000 ms]"
+                ],
+                "checks": [
+                  "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة",
+                  "فحص مستوى السائل وحركة المروحة وفعالية الدورة؛ قارن بحرارة مستقلة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_THERMAL"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S02",
+      "configuration": {
+        "scenario_id": "S02",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S02",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S02",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "c87c355c-b870-57e3-89f5-7784674a8b69"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "c87c355c-b870-57e3-89f5-7784674a8b69",
+                "pattern": "MS_AIR_FUEL",
+                "hypotheses": [
+                  "احتمال تسرب هواء غير مقاس",
+                  "احتمال انحراف قياس الهواء أو قصور الوقود"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-14.6111 [79000..87000 ms]",
+                  "map_residual_kPa=4.2932 [79000..87000 ms]",
+                  "stft_mean_pct=10.4368 [79000..87000 ms]",
+                  "load_mean_pct=38.5317 [79000..87000 ms]",
+                  "rpm_mean=2467.4491 [79000..87000 ms]",
+                  "throttle_mean_pct=23.0000 [79000..87000 ms]",
+                  "ltft_mean_pct=2.5662 [79000..87000 ms]"
+                ],
+                "checks": [
+                  "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة",
+                  "اختبار تسرب مناسب وفحص الأنابيب؛ قارن MAF/MAP وFuel Trims عبر أحمال مختلفة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_AIR_FUEL"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S03",
+      "configuration": {
+        "scenario_id": "S03",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S03",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S03",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "0ffb2398-bd46-59e2-a04f-13c551071c97"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "0ffb2398-bd46-59e2-a04f-13c551071c97",
+                "pattern": "MS_FUEL_RESPONSE",
+                "hypotheses": [
+                  "احتمال قصور إمداد الوقود",
+                  "احتمال تسرب هواء أو انحراف قياس"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-2.4017 [80000..88000 ms]",
+                  "map_residual_kPa=0.0417 [80000..88000 ms]",
+                  "stft_mean_pct=10.2352 [80000..88000 ms]",
+                  "load_mean_pct=39.7181 [80000..88000 ms]",
+                  "rpm_mean=2401.7989 [80000..88000 ms]",
+                  "throttle_mean_pct=23.0000 [80000..88000 ms]",
+                  "ltft_mean_pct=2.4691 [80000..88000 ms]"
+                ],
+                "checks": [
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال",
+                  "قياس ضغط الوقود بأداة خارج OBD مناسبة ومراجعة الإمداد؛ قارن التصحيحات عبر الأحمال"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_FUEL_RESPONSE"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S04",
+      "configuration": {
+        "scenario_id": "S04",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S04",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S04",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "de4a6239-1500-5c4e-b31d-49899142587a"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "de4a6239-1500-5c4e-b31d-49899142587a",
+                "pattern": "MS_AIRFLOW",
+                "hypotheses": [
+                  "احتمال انحراف قياس MAF أو توصيلاته",
+                  "احتمال تغير حقيقي للهواء أو عدم ملاءمة النموذج المرجعي"
+                ],
+                "evidence": [
+                  "maf_residual_pct=-19.0537 [79000..87000 ms]",
+                  "map_residual_kPa=0.0001 [79000..87000 ms]",
+                  "stft_mean_pct=-1.2154 [79000..87000 ms]",
+                  "load_mean_pct=37.2369 [79000..87000 ms]",
+                  "rpm_mean=2467.5863 [79000..87000 ms]",
+                  "throttle_mean_pct=23.0000 [79000..87000 ms]",
+                  "ltft_mean_pct=1.7946 [79000..87000 ms]"
+                ],
+                "checks": [
+                  "مراجعة MAF والتوصيلات ومقارنة MAF/MAP وRPM والخانق في عدة ظروف",
+                  "مراجعة MAF والتوصيلات ومقارنة MAF/MAP وRPM والخانق في عدة ظروف"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_AIRFLOW"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S05",
+      "configuration": {
+        "scenario_id": "S05",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S05",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S05",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "e3180597-6bca-5eaf-a70e-3fa16c1a1c35"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "e3180597-6bca-5eaf-a70e-3fa16c1a1c35",
+                "pattern": "MS_SUPPLY",
+                "hypotheses": [
+                  "احتمال اضطراب تغذية أو أرضي",
+                  "احتمال خطأ إبلاغ الجهد أو اكتساب بيانات مستقل"
+                ],
+                "evidence": [
+                  "voltage_min_V=11.0470 [73000..81000 ms]",
+                  "concurrent_low_voltage_missing_samples=1.0000 [73000..81000 ms]",
+                  "rpm_range=102.5610 [73000..81000 ms]",
+                  "throttle_range_pct=0.0000 [73000..81000 ms]"
+                ],
+                "checks": [
+                  "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة",
+                  "قياس جهد التغذية بأداة مستقلة وفحص التوصيلات والأرضي والشحن حسب الأدلة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [
+          "643bc147-442e-506c-9b95-552061320ab0"
+        ],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_SUPPLY"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S06",
+      "configuration": {
+        "scenario_id": "S06",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "default"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S06",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "default",
+            "fault_id": "S06",
+            "status": "PATTERN_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [
+              "650db30a-669a-559b-b935-23bc93ca4465"
+            ],
+            "unverified_event_ids": [],
+            "detections": [
+              {
+                "event_id": "650db30a-669a-559b-b935-23bc93ca4465",
+                "pattern": "MS_COMBUSTION",
+                "hypotheses": [
+                  "احتمال عدم استقرار اشتعال أو وقود",
+                  "احتمال تغير تشغيل أو عدم اتساق قياس"
+                ],
+                "evidence": [
+                  "rpm_range=236.0320 [72000..80000 ms]",
+                  "load_range_pct=8.9390 [72000..80000 ms]",
+                  "stft_range_pct=8.8250 [72000..80000 ms]",
+                  "rpm_stft_correlation=-0.9758 [72000..80000 ms]",
+                  "throttle_range_pct=0.0000 [72000..80000 ms]",
+                  "rpm_reversals=3.0000 [72000..80000 ms]"
+                ],
+                "checks": [
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة",
+                  "قراءة عدادات Misfire المتاحة بأداة مناسبة وفحص الاشتعال والوقود؛ لا تحديد أسطوانة"
+                ]
+              }
+            ]
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": [
+        "MS_COMBUSTION"
+      ]
+    },
+    {
+      "group": "parameter_variation",
+      "scenario": "S07",
+      "configuration": {
+        "scenario_id": "S07",
+        "start_ms": 80000,
+        "duration_ms": 20000,
+        "severity": 0.9,
+        "variant": "flatline"
+      },
+      "seed": 97,
+      "comparison": {
+        "faults": [
+          {
+            "index": 0,
+            "scenario_id": "S07",
+            "start_ms": 80000,
+            "duration_ms": 20000,
+            "severity": 0.9,
+            "variant": "flatline",
+            "fault_id": "S07",
+            "status": "NOT_DETECTED",
+            "detectable_in_m1": true,
+            "event_ids": [],
+            "unverified_event_ids": [],
+            "detections": []
+          }
+        ],
+        "unmatched_events": [],
+        "false_positive_events_on_known_normal": [],
+        "auxiliary_quality_events": [],
+        "seed": 97,
+        "cycles": [],
+        "schedule_version": "correlated-schedule-1",
+        "causal_diagnostic_accuracy": "NOT_MEASURED"
+      },
+      "all_detected_patterns": []
+    },
+    {
+      "group": "normal",
+      "seed": 42,
+      "false_alarms": 0
+    },
+    {
+      "group": "normal",
+      "seed": 73,
+      "false_alarms": 0
+    },
+    {
+      "group": "normal",
+      "seed": 97,
+      "false_alarms": 0
+    }
+  ],
+  "database": "C:\\doccar\\data\\cr003-audit-1793187116776439000\\cohort.sqlite3"
+}

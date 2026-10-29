@@ -1,0 +1,10 @@
+{
+  "python_rejects_incomplete_hello": true,
+  "python_error": "Invalid protocol message: ValidationError",
+  "c_review": "firmware/main/device_protocol.c:104-118 checks object, numeric version==1 and type; HELLO branch announces without checking other required envelope fields. Static observation only; C not executed.",
+  "outbound_review": "C constructs v1 envelope, DEVICE_TEST, SAMPLE v1 with numeric readings/units/quality and separate DTC; HELLO/CAPABILITIES/HEARTBEAT/ERROR paths contain substantive code.",
+  "can_enabled": false,
+  "microsd_implemented": false,
+  "sdk_build_executed": false,
+  "physical_device_tested": false
+}

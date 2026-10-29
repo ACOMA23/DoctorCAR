@@ -1,0 +1,142 @@
+{
+  "gate": "gui_ext",
+  "environment": {
+    "qt_platform": "windows",
+    "interaction": "QTest events on real widgets + OS-level screen capture"
+  },
+  "cases": [
+    {
+      "test_id": "QA-EXT-001",
+      "requirement": "UI-001",
+      "title": "Live window inventory: number of interactive widgets (spin-box internals excluded)",
+      "input": "findChildren over the 9 interactive classes",
+      "expected": "40 (the figure used by the original campaign)",
+      "actual": "40 widgets: navigation, language_combo, theme_combo, <QLineEdit:C:\\Users\\user\\AppData\\L>, simple_report_text, technical_button, report_text, <QComboBox:>, <QPushButton:تحديث السجل>, events_table, <QPushButton:عرض تقرير الحدث المحدد>, sensor_table, ai_enabled, source_combo, host_input, network_port, family_combo, mode_combo, scenario_combo, fault_list, multisensor_list, variant_combo, fault_start, fault_duration, severity_input, seed_input, max_faults_input, normal_probability, speed_combo, path_input, port_combo, port_input, refresh_ports, browse_button, verify_button, start_button, stop_button, <QPushButton:تصدير الجلسة لـ Replay>, simulation_summary, <QPushButton:اختيار مصدر البيانات>",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/element-inventory.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-002",
+      "requirement": "NFR-001",
+      "title": "OS-level screenshot of the visible application window is not blank",
+      "input": "GDI CopyFromScreen of the window rectangle",
+      "expected": "luminance range > 40 (content visible)",
+      "actual": "screen luminance min/max/mean=(8, 178, 59.7); window visible=True active=True geometry=(340, 75, 1240, 851)",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/screenshots/os-01-dashboard-ar-light.png",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-003",
+      "requirement": "NFR-001",
+      "title": "Start (AI on, first session in this process): the UI locks and shows running; latency recorded",
+      "input": "click start_button",
+      "expected": "controls lock within 10 s",
+      "actual": "start-to-locked latency=3.91 s; status='قيد التشغيل — SIMULATION'",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": 3.91,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-004",
+      "requirement": "SIM-001 / UI",
+      "title": "Sensor table shows the live simulator values (11 sensors match the values stored in SQLite, unit and AVAILABLE state shown)",
+      "input": "compare displayed text with stored measurements while running",
+      "expected": "every sensor value equals a recent stored value",
+      "actual": "12 sensors; mismatches={'DTC': ('unparsed', '\\u2066لا رمز مرصود\\u2069')}; states=['متاحة']",
+      "status": "FAIL",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/sensor-table-vs-db.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-005",
+      "requirement": "AI-005 (DEF-001)",
+      "title": "Events page lists the rule-detected fault; detection method column shows rules and no ML-only event exists (ML is advisory)",
+      "input": "S01 fault run in the window",
+      "expected": ">=1 event; no row with ML-only method/ML_ANOMALY",
+      "actual": "1 rows; methods=['RULE']; first=['نمط حراري متصاعد تحت حمل', '68.2', 'مكتمل', 'e6248143-fd3b-500c-a64e-b2fbed967ed8', 'LIVE', 'منظومة التبريد أو قياس الحرارة']",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/events-table-run1.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-006",
+      "requirement": "UX/RPT",
+      "title": "Report regenerated in English from the window has no Arabic text and keeps the AI section; Arabic report has the Arabic sections",
+      "input": "switch language to EN, reopen the same event",
+      "expected": "EN: >300 chars, 0 Arabic chars, AI heading; AR: sections present",
+      "actual": "EN chars=1804 arabic_in_en=0; head='DoctorCAR — Rising thermal pattern under load\\n\\nWhat happened?\\nA change was observed 68.2 s'",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/report-window-en.txt",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-007",
+      "requirement": "SETTINGS-001",
+      "title": "Dark theme visibly changes the window (mean luminance drops) and survives a page change; light restores it",
+      "input": "theme_combo light->dark->light",
+      "expected": "dark mean < light mean - 30",
+      "actual": "light=169.9 dark=45.1; OS capture dark luminance=(0, 253, 74.4)",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/screenshots/os-06-dark-theme.png",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-008",
+      "requirement": "SIM-003",
+      "title": "Random multisensor faults from the window: the session runs through, data saved, events recorded",
+      "input": "mode RANDOM_FAULTS seed 311 max 3 at 30x",
+      "expected": "samples saved >= 700 and the window stays alive",
+      "actual": "samples=776 events=5 status='اكتمل المصدر — آخر بيانات مستلمة'",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-009",
+      "requirement": "NFR-001",
+      "title": "Stop and restart: after three sessions in one window the start button is enabled and a new session starts",
+      "input": "start again after stop",
+      "expected": "controls lock again",
+      "actual": "fourth session started=True",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-010",
+      "requirement": "IOT-001..003",
+      "title": "TCP loopback from the window: verify, run, device killed mid-run (UI notices, not shown as live, stays alive), new device on a new port reconnects",
+      "input": "network_simulator subprocess killed with the session running; second simulator started",
+      "expected": "disconnect noticed within 40 s, window alive, controls recoverable, second session starts, HISTORICAL events imported",
+      "actual": "{\"verify\": \"فحص ناجح | HELLO → CAPABILITIES → تصل البيانات |  | Firmware: software-tcp-1 | JSONL: 1\", \"running_status\": \"قيد التشغيل — DEVICE_TEST\", \"after_disconnect_status\": \"قيد التشغيل — DEVICE_TEST\", \"after_disconnect_error\": \"تعذر إكمال العملية: تعذر الاتصال بالجهاز أو المنفذ؛ تأكد أنه يعمل وأن العنوان صحيح\", \"seconds_to_notice\": 2.8, \"controls_unlocked_or_stoppable\": true, \"window_alive\": true, \"age_label_after_drop\": \"قديمة — ليست قراءة حية • منذ 8.1 ثانية • SIMULATION\", \"reconnect_status\": \"قيد التشغيل — DEVICE_TEST\", \"reconnect_samples_advancing\": true, \"historical_events_in_db\": 2}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/tcp-reconnect.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-EXT-011",
+      "requirement": "UI-001",
+      "title": "Element matrix (this script): PASS / FAIL / delegated counts",
+      "input": "all rows of element-matrix.json",
+      "expected": "FAIL = 0",
+      "actual": "rows=40 PASS=34 FAIL=1 delegated/not-testable-here=5",
+      "status": "FAIL",
+      "evidence": "docs/evidence/post-remediation-qa/gui_ext/element-matrix.json",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

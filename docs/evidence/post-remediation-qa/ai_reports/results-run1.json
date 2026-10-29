@@ -1,0 +1,151 @@
+{
+  "gate": "ai_reports",
+  "environment": {},
+  "cases": [
+    {
+      "test_id": "QA-V3-001",
+      "requirement": "AI-007",
+      "title": "Default model is cr006-iforest-v3, loaded through the trusted-SHA gate",
+      "input": "AnomalyModel() with no name",
+      "expected": "DEFAULT_MODEL == cr006-iforest-v3 == MODEL_V3; metadata sha256 == TRUSTED_SHA256; IsolationForest; schema 47 features",
+      "actual": "default=cr006-iforest-v3 version=iforest-cr006-v3 sha=aae2f3ccc379335c.. threshold=0.6030 policy={'consecutive': 4, 'hysteresis': 0.02}",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-002",
+      "requirement": "AI-007",
+      "title": "Unknown model names are refused",
+      "input": "AnomalyModel('no-such-model')",
+      "expected": "ModelLoadError",
+      "actual": "ModelLoadError",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-003",
+      "requirement": "AI-001",
+      "title": "v3 produces real, finite, deterministic scores that vary with the data",
+      "input": "windows of a normal trip and an S05 trip, two model instances",
+      "expected": "finite, std > 0, identical on a fresh instance, S05 peak differs from normal peak",
+      "actual": "151 windows, score 0.397..0.615 std=0.053; S05 peak=0.645 vs normal peak=0.615; threshold=0.603; deterministic=True",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/ai_reports/v3-scores.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-004",
+      "requirement": "AI-004",
+      "title": "No future/label leakage with v3: windows ending before the injection are bit-identical; scenario labels do not change scores",
+      "input": "same seed with/without S05 at 60 s; samples relabelled as fault",
+      "expected": "identical features and scores",
+      "actual": "60 pre-injection windows compared",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-005",
+      "requirement": "AI-002",
+      "title": "Incomplete, gapped and stale windows get no score",
+      "input": "3 crafted windows",
+      "expected": "no score for any",
+      "actual": "scored=[]",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-006",
+      "requirement": "XAI-001",
+      "title": "ANOMALOUS windows exist to be explained (v3 flags windows rarely by design)",
+      "input": "scan cold high-scale trips + S05",
+      "expected": ">= 1 window",
+      "actual": "13 ANOMALOUS windows found (seeds [4100, 15000])",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-007",
+      "requirement": "XAI-001/002",
+      "title": "XAI for v3: deterministic, equals an independent recomputation from the pipeline, bound to the model SHA, strongest group raises the score",
+      "input": "explain ANOMALOUS window twice + another, recompute counterfactuals",
+      "expected": "identical; |diff| < 1e-12; sha matches v3; top effect > 0",
+      "actual": "max_independent_diff=0.00e+00 top_group=air_fuel_operation effect=0.1470 window_end=47000 score=0.629 thr=0.603",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/ai_reports/xai-v3.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-008",
+      "requirement": "XAI-001",
+      "title": "XAI refuses a NORMAL-decision window, insufficient data, another model's result and tampered features",
+      "input": "four invalid inputs",
+      "expected": "ValueError each",
+      "actual": "['normal decision: EXPLAINED']",
+      "status": "FAIL",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-009",
+      "requirement": "UX/RPT",
+      "title": "Reports for all seven faults exist in Arabic and English (simple + technical) with an AI section and the v3 model version",
+      "input": "7 faulted sessions with the real analyzer under the app policy (ml_alerts=False)",
+      "expected": "non-empty reports; AI section; v3 version in both technical reports",
+      "actual": "7 events; states={'S01:MS_THERMAL': 'ANALYZED_NORMAL', 'S02:MS_AIR_FUEL': 'ANALYZED_NORMAL', 'S03:MS_FUEL_RESPONSE': 'ANALYZED_NORMAL', 'S04:MS_AIRFLOW': 'ANALYZED_NORMAL', 'S05:MS_SUPPLY': 'ANALYZED_ANOMALOUS', 'S06:MS_COMBUSTION': 'ANALYZED_NORMAL', 'S07:MS_SIGNAL': 'ANALYZED_NORMAL'}",
+      "status": "PASS",
+      "evidence": "docs/evidence/post-remediation-qa/ai_reports/report-matrix.json",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-010",
+      "requirement": "UX/RPT",
+      "title": "English reports contain no Arabic text",
+      "input": "scan the 7 English simple reports",
+      "expected": "0 Arabic characters",
+      "actual": "none",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-011",
+      "requirement": "XAI-003",
+      "title": "Report XAI section appears if and only if the linked analysis is ANOMALOUS (decision/explanation consistency)",
+      "input": "compare stored linked decision with the simple report wording",
+      "expected": "no mismatch",
+      "actual": "decisions=[('S01', 'NORMAL'), ('S02', 'NORMAL'), ('S03', 'NORMAL'), ('S04', 'NORMAL'), ('S05', 'ANOMALOUS'), ('S06', 'NORMAL'), ('S07', 'NORMAL')]; mismatches=[]",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    },
+    {
+      "test_id": "QA-V3-012",
+      "requirement": "INT-003",
+      "title": "Analysis linking: age limit 2000 ms, other session and future windows never linked (real v3 analyzer)",
+      "input": "latest_before at boundary times",
+      "expected": "all true",
+      "actual": "{\"2000 ms old\": true, \"2001 ms old\": true, \"other session\": true, \"future window not returned\": true}",
+      "status": "PASS",
+      "evidence": "",
+      "duration_s": null,
+      "notes": ""
+    }
+  ],
+  "defects": []
+}

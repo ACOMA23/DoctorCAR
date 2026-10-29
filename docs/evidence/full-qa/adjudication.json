@@ -1,0 +1,47 @@
+{
+  "note": "Adjudication of recorded results. results.json files are never edited; a recorded FAIL caused by the QA script itself stays recorded and is classified here with the evidence that proves the cause.",
+  "adjudicated": {
+    "QA-UI-039": {
+      "recorded": "FAIL",
+      "adjudicated_status": "BLOCKED",
+      "cause_type": "QA-SCRIPT-ERROR (timing)",
+      "reason": "The Replay source plays in recorded real time (documented). The script waited 60 s but the detection in the exported session is at 68.2 s.",
+      "evidence": "gate2_controls/results.json (replay events=[]); scratch controls.sqlite3: REPLAY session STOPPED with 296 measurements, last timestamp 59000 ms (the detection time 68200 ms was never reached).",
+      "verified_part": "Export (776 samples) -> browse dialog -> verify -> start Replay through the UI -> 296 samples ingested as a REPLAY session (all evidenced).",
+      "not_verified": "Event detection during a UI-driven Replay. Indirect evidence only: the pytest suite (test_at014 export->Replay->event) passed in the baseline run; not a GUI test.",
+      "manual_steps": "Source=Replay, Browse the exported trip.jsonl, Start, wait ~100 s, open the event list: expect MS_THERMAL with origin REPLAY."
+    },
+    "QA-UI-041": {
+      "recorded": "FAIL",
+      "adjudicated_status": "PARTIAL",
+      "cause_type": "QA-SCRIPT-ERROR (criterion)",
+      "reason": "The pass criterion looked for the English stage name RECEIVING; the UI correctly shows localized Arabic stage names.",
+      "evidence": "gate2_controls/results.json actual text: 'فحص ناجح / HELLO -> CAPABILITIES -> تصل البيانات / Firmware: software-tcp-1 | JSONL: 1', historical=2, status 'قيد التشغيل — DEVICE_TEST'; screenshot gate2_controls/screenshots/controls-verify-network.png; scratch DB holds 2 HISTORICAL events.",
+      "verified_part": "Network source from the UI: host/port typed, verify succeeds with handshake stages, session runs, 2 historical events imported.",
+      "not_verified": "The script's own English-string criterion (invalid); behaviour is evidenced by the recorded values above."
+    }
+  },
+  "qa_script_corrections_log": [
+    {"test": "QA-UI-005", "was": "FAIL", "cause": "read the identifier column instead of the value column of the sensor table", "fixed_in": "audits/qa/qa_gui.py"},
+    {"test": "QA-UI-010/011", "was": "FAIL", "cause": "QTest.mouseDClick alone is not registered as a double-click; click then double-click is what a user does", "fixed_in": "audits/qa/qa_gui.py"},
+    {"test": "QA-EVENT-004/005/007/009", "was": "FAIL", "cause": "chosen scenarios produced no event (a real coverage gap, now DEF-003); scenarios changed to ones that do and the gap recorded as QA-EVENT-015", "fixed_in": "audits/qa/qa_events_db.py"},
+    {"test": "QA-DB-008", "was": "FAIL", "cause": "assumed a missing parent folder raises; the repository creates parent folders by design", "fixed_in": "audits/qa/qa_events_db.py"},
+    {"test": "QA-IOT-007/010/011", "was": "FAIL", "cause": "the generated upload stream was cut after 400 messages, dropping later HELLO messages; the product correctly rejected it", "fixed_in": "audits/qa/qa_iot.py"},
+    {"test": "QA-IOT-013", "was": "FAIL", "cause": "Windows reports a closed local port as TimeoutError (an OSError), not ConnectionRefusedError", "fixed_in": "audits/qa/qa_iot.py"},
+    {"test": "QA-PERF-002", "was": "PASS (invalid)", "cause": "memory probe returned 0.0 MB because ctypes types were missing; the PASS was meaningless and was rebuilt with a working probe", "fixed_in": "audits/qa/qa_perf_neg.py"},
+    {"test": "QA-PERF-001", "was": "PASS (misleading)", "cause": "a 30-minute single session was mostly a parked vehicle (DEF-006); rebuilt as 12 consecutive real trips", "fixed_in": "audits/qa/qa_perf_neg.py"},
+    {"test": "QA-SEC-001", "was": "FAIL", "cause": "NaN was injected with a text pattern that did not match the compact JSON, so the line was unchanged", "fixed_in": "audits/qa/qa_perf_neg.py"},
+    {"test": "QA-PKG-004", "was": "FAIL", "cause": "the 'development tree on sys.path' check matched the substring 'doccar' in the scratch venv path; now compares against the real project root", "fixed_in": "audits/qa/qa_installed_e2e.py, qa_package.py"},
+    {"test": "QA-UI-033..038", "was": "FAIL", "cause": "spin-box test left severity at its minimum so no event existed; QCheckBox only reacts on its indicator; file dialog selectFile does not rename the default file; origin is stored in metadata_json", "fixed_in": "audits/qa/qa_gui_controls.py"},
+    {"test": "QA-AI-LINK-003", "was": "PASS (weak)", "cause": "stub ignored age so the refusal was not demonstrated; reclassified PARTIAL and recorded as DEF-012", "fixed_in": "audits/qa/qa_ai_diag.py"}
+  ],
+  "environment_limits": [
+    "No ESP-IDF/CMake/Ninja/gcc: firmware build NOT TESTED",
+    "No ESP32 board connected: USB, Wi-Fi, CAN, MicroSD, ADC/RTC NOT TESTED (and Wi-Fi/CAN/MicroSD/ADC/RTC are not implemented in M1)",
+    "No OS-level UI Automation tool: interaction is QTest events inside the process; screenshots are QWidget.grab renders of the real window",
+    "No line-coverage tool installed (the environment was not modified); coverage is functional, not line-based",
+    "psutil not installed: memory measured with the Windows psapi working-set counter",
+    "Visual review of every DPI/screen-reader scenario not performed",
+    "Serial source tested with a fake port only"
+  ]
+}

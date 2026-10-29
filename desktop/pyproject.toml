@@ -7,12 +7,17 @@ name = "doctorcar"
 version = "0.1.0"
 description = "DoctorCAR M1 Arabic desktop monitoring and end-to-end simulation"
 requires-python = ">=3.11"
+authors = [{ name = "Omar Alsalamah" }]
 dependencies = ["PySide6>=6.8,<7", "pyserial>=3.5,<4", "jsonschema>=4.23,<5"]
 
 [project.optional-dependencies]
 ml = ["numpy==2.5.4", "scikit-learn==1.9.1", "joblib==1.6.0"]
 train = ["pandas==3.1.0"]
 dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "types-pyserial>=3.5", "types-jsonschema>=4.23"]
+
+[project.urls]
+Repository = "https://github.com/ACOMA23/DoctorCAR"
+Author = "https://www.linkedin.com/in/omar-alsalamah-6b5568406/"
 
 [project.scripts]
 doctorcar = "doctorcar.__main__:main"

@@ -2,6 +2,8 @@
 
 **A Python/PySide6 desktop prototype that monitors vehicle-style sensor data, records what happened around transient events, and explains its findings — without pretending to diagnose a part.**
 
+**Author:** Omar Alsalamah · [LinkedIn](https://www.linkedin.com/in/omar-alsalamah-6b5568406/) · [GitHub](https://github.com/ACOMA23)
+
 > **Status: prototype (M1).** All data today is **simulated, device-simulator or replayed**. No real vehicle, no real OBD/CAN adapter and no ESP32-S3 board has been used or verified. Nothing in this repository is a mechanical diagnosis.
 
 ## 1. Overview
@@ -155,6 +157,13 @@ The authoritative status is [`docs/DOCTORCAR_PROJECT_CONTROL.md`](docs/DOCTORCAR
 4. Collect real driving data before retraining/evaluating ML.
 5. Expandable report sections, severity levels once defined, packaging for end users.
 
-## 21. License
+## 21. Author
 
-**No license file exists in this repository.** Until the owner chooses one, all rights are reserved and no usage rights are granted.
+**Omar Alsalamah** — creator and maintainer of DoctorCAR.
+
+- LinkedIn: [linkedin.com/in/omar-alsalamah-6b5568406](https://www.linkedin.com/in/omar-alsalamah-6b5568406/)
+- GitHub: [@ACOMA23](https://github.com/ACOMA23)
+
+## 22. License
+
+**No license file exists in this repository.** Until the owner (Omar Alsalamah) chooses one, all rights are reserved and no usage rights are granted.

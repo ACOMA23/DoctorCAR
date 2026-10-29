@@ -159,10 +159,23 @@ The authoritative status is [`docs/DOCTORCAR_PROJECT_CONTROL.md`](docs/DOCTORCAR
 
 ## 21. Author
 
-**Omar Alsalamah** — creator and maintainer of DoctorCAR.
+**Omar Alsalamah**: creator and maintainer of DoctorCAR.
+
+Software Engineering student at Umm Al-Qura University · Building software systems with Python & JavaScript · Exploring backend development & AI · Makkah, Saudi Arabia.
+
+| | |
+| --- | --- |
+| Education | B.Sc. Computer Software Engineering, Umm Al-Qura University (Aug 2025 – Jul 2030, expected) |
+| Skills | Python · Java · JavaScript · HTML · CSS · SQL |
+| Currently learning | Backend development · APIs · Databases · AI engineering |
+| Certifications (Tuwaiq Academy) | Java 101 (Sep 2025) · Python 101, 102, 103 (Jan 2026) · HTML (Feb 2026) |
+| Other projects | **FitTik**: a web-based calorie and macronutrient calculator (HTML, CSS, JavaScript) |
+| Volunteering | Project Manager, Creativity & Entrepreneurship Club (Jan 2026 – present) · Ambassador, Tuwaiq Club, UQU (Aug 2026 – present) |
 
 - LinkedIn: [linkedin.com/in/omar-alsalamah-6b5568406](https://www.linkedin.com/in/omar-alsalamah-6b5568406/)
 - GitHub: [@ACOMA23](https://github.com/ACOMA23)
+
+*Author details are taken from the LinkedIn profile above.*
 
 ## 22. License
 
